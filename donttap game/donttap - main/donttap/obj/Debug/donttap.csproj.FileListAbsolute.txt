@@ -1,0 +1,34 @@
+C:\Users\matta\source\repos\JSON\donttap\donttap\bin\Debug\donttap.exe.config
+C:\Users\matta\source\repos\JSON\donttap\donttap\bin\Debug\donttap.exe
+C:\Users\matta\source\repos\JSON\donttap\donttap\bin\Debug\donttap.pdb
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.csproj.AssemblyReference.cache
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.csproj.SuggestedBindingRedirects.cache
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\MainWindow.g.cs
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\App.g.cs
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap_MarkupCompile.cache
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap_MarkupCompile.lref
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\MainWindow.baml
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.g.resources
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.Properties.Resources.resources
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.csproj.GenerateResource.cache
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.csproj.CoreCompileInputs.cache
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.exe
+C:\Users\matta\source\repos\JSON\donttap\donttap\obj\Debug\donttap.pdb
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\bin\Debug\donttap.exe.config
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\bin\Debug\donttap.exe
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\bin\Debug\donttap.pdb
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.AssemblyReference.cache
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.SuggestedBindingRedirects.cache
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\MainWindow.g.cs
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\App.g.cs
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap_MarkupCompile.cache
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap_MarkupCompile.lref
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\MainWindow.baml
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.g.resources
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.Properties.Resources.resources
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.GenerateResource.cache
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.CoreCompileInputs.cache
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.exe
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\donttap.pdb
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\Endurence\Settings\Settings.g.cs
+C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\Endurence\Settings\Settings.baml

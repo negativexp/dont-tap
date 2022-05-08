@@ -1,0 +1,17 @@
+﻿<Page x:Class="donttap.Viewmodels.Endurence.Settings.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:donttap.Viewmodels.Endurence.Settings"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="700"
+      Title="Settings">
+
+    <Grid>
+        <Grid>
+            <Image Source="/Images/leaderboard.png" Stretch="Uniform" Margin="177,0,186,688"/>
+            
+        </Grid>
+    </Grid>
+</Page>

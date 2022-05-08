@@ -1,0 +1,16 @@
+﻿<Window x:Class="testing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid Name="mainGrid">
+
+        </Grid>
+        <Button x:Name="ButtonTest" VerticalAlignment="Bottom" Width="100" Height="30" Margin="10" Content="bruh" Click="ButtonTest_Click"/>
+    </Grid>
+</Window>
