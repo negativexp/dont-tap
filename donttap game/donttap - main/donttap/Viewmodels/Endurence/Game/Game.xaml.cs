@@ -13,29 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace donttap
+namespace donttap.Viewmodels.Endurence.Game
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interakční logika pro Game.xaml
+    /// </summary>
+    public partial class Game : Page
     {
-        public MainWindow()
+        public Game()
         {
             InitializeComponent();
         }
 
-        private void ChangeContent()
-        {
-            
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void ButtonEndurence_Click(object sender, RoutedEventArgs e)
-        {
-            FramePage.Content = new Viewmodels.Endurence.Settings.Settings(this);
-            GridAll.Visibility = Visibility.Hidden;
         }
     }
 }

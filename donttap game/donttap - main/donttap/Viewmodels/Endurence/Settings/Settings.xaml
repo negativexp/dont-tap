@@ -14,18 +14,37 @@
             <ListBox Width="600" Height="300" VerticalAlignment="Bottom" Margin="15" Background="Black"/>
         </Grid>
         <Grid Height="400" VerticalAlignment="Bottom">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            
-            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Settings" FontSize="40" Margin="0" Grid.ColumnSpan="2"/>
-            <TextBlock Text="Box size: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 200"/>
-            <TextBlock Text="Board size: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 150"/>
-            <TextBlock Text="Spacing: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 100"/>
-            <TextBlock Text="Amount of starting boxes: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 50"/>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-            <TextBox Height="30" Width="200" />
+            <Image Source="/Images/settings.png" Stretch="Uniform" Margin="258,29,258,25" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            </Image>
+
+            <TextBlock Text="Time (in seconds):" FontSize="20" Margin="25 0 0 0 " Grid.Row="1" HorizontalAlignment="Left"/>
+            <TextBox Name="TextBoxTime" Text="30" FontSize="16" Grid.Row="1" Height="25" VerticalAlignment="Top" Margin="25,32,25,0"/>
+
+            <TextBlock Text="Board size (ex. 4 = 4x4):" FontSize="20" Margin="25 0 0 0 " Grid.Row="2" HorizontalAlignment="Left"/>
+            <TextBox Name="TextBoxBoardSize" Text="4" FontSize="16" Grid.Row="2" Height="25" VerticalAlignment="Top" Margin="25,32,25,0"/>
+
+            <TextBlock Text="Box size (in pixels):" FontSize="20" Margin="25 0 0 0 " Grid.Row="3" HorizontalAlignment="Left"/>
+            <TextBox Name="TextBoxBoxSize" Text="165" FontSize="16" Grid.Row="3" Height="25" VerticalAlignment="Top" Margin="25,33,25,0" Grid.RowSpan="2"/>
+
+            <TextBlock Text="Spacing (in pixels):" FontSize="20" Margin="25 0 0 0 " Grid.Row="4" HorizontalAlignment="Left"/>
+            <TextBox Name="TextBoxSpacing" Text="0" FontSize="16" Grid.Row="4" Height="25" VerticalAlignment="Top" Margin="25,32,25,0" Grid.RowSpan="2"/>
+
+            <TextBlock Text="Amount of starting boxes (min. 1):" FontSize="20" Margin="25 0 0 0 " Grid.Row="5" HorizontalAlignment="Left"/>
+            <TextBox Name="TextBoxAmountOfStartingBoxes" Text="3" FontSize="16" Grid.Row="5" Height="25" VerticalAlignment="Top" Margin="25,32,25,0" Grid.RowSpan="2"/>
+
+            <Button Name="ButtonStart" Click="ButtonStart_Click" Height="30" Width="120" Content="Start" FontSize="20" HorizontalAlignment="Right" Margin="0 0 25 0" Grid.Row="6"/>
+            <Button Name="ButtonBack" Click="ButtonBack_Click" Height="30" Width="120" Content="Back" FontSize="20" HorizontalAlignment="Left" Margin="25 0 0 0" Grid.Row="6"/>
+
         </Grid>
     </Grid>
 </Page>

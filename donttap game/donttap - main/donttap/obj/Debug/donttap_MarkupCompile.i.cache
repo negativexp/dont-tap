@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\matta\source\repos\donttap game\donttap - main\donttap\obj\Debug\
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\
 donttap
 none
 false
 DEBUG;TRACE
-C:\Users\matta\source\repos\donttap game\donttap - main\donttap\App.xaml
-2-1733258941
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\App.xaml
+3234710007
 
-71353480333
+9-487677623
 13-1310406943
-MainWindow.xaml;Viewmodels\Endurence\Settings\Settings.xaml;
+MainWindow.xaml;Viewmodels\Endurence\Game\Game.xaml;Viewmodels\Endurence\Settings\Settings.xaml;
 
 True
 
