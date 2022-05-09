@@ -9,9 +9,23 @@
       Title="Settings">
 
     <Grid>
-        <Grid>
-            <Image Source="/Images/leaderboard.png" Stretch="Uniform" Margin="177,0,186,688"/>
+        <Grid Height="400" VerticalAlignment="Top">
+            <Image Source="/Images/leaderboard.png" Stretch="Uniform" Margin="161,10,161,325" />
+            <ListBox Width="600" Height="300" VerticalAlignment="Bottom" Margin="15" Background="Black"/>
+        </Grid>
+        <Grid Height="400" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Settings" FontSize="40" Margin="0" Grid.ColumnSpan="2"/>
+            <TextBlock Text="Box size: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 200"/>
+            <TextBlock Text="Board size: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 150"/>
+            <TextBlock Text="Spacing: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 100"/>
+            <TextBlock Text="Amount of starting boxes: " FontSize="25" VerticalAlignment="Bottom" Margin="50 0 0 50"/>
+
+            <TextBox Height="30" Width="200" />
         </Grid>
     </Grid>
 </Page>

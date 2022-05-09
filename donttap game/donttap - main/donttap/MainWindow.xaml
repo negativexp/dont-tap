@@ -42,6 +42,11 @@
                     Width="175" Height="50" BorderBrush="#7160E8"
                     BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
                     HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50"/>
+                
+                <Button Background="Transparent" Content="Settings"
+                    Width="175" Height="50" BorderBrush="#7160E8"
+                    BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 50 125"/>
 
                 <Image Margin="94,83,84,250" Source="/Images/Untitled-1.png" Stretch="Fill"/>
 
