@@ -24,7 +24,7 @@ namespace testing
         {
             InitializeComponent();
         }
-        static int size = 100;
+        static int size = 50;
         static int boardsize = 4;
         static int amountOfStartingBoxes = 3;
         static int spacing = 5;

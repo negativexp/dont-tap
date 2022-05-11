@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace donttap.Viewmodels.Endurence.Settings
 {
@@ -44,16 +46,7 @@ namespace donttap.Viewmodels.Endurence.Settings
                 spacing = Convert.ToInt32(TextBoxSpacing.Text);
                 amountOfStartingBoxes = Convert.ToInt32(TextBoxAmountOfStartingBoxes.Text);
 
-                if (time <= 0)
-                {
-                    MessageBox.Show("Sure, 0 seconds, makes sense", "are you retarted");
-                    if (amountOfStartingBoxes > boardSize*boardSize)
-                    {
-                        MessageBox.Show(String.Format("Dude, how do you want more starting boxes ({0}) when there are less boxes? ({1})", amountOfStartingBoxes, boardSize*boardSize), "3rd grade");
-                        ableToStart = false;
-                    }
-                }
-                else ableToStart = true;
+                ableToStart = true;
             }
             catch (Exception er)
             {
@@ -62,16 +55,10 @@ namespace donttap.Viewmodels.Endurence.Settings
             if (ableToStart)
             {
                 //json
-                Models.Settings settings = new Models.Settings();
+                CreateSettings(time, boardSize, boxSize,
+                                            spacing, amountOfStartingBoxes);
 
-                settings.time = time;
-                settings.boardSize = boardSize;
-                settings.boxSize = boxSize;
-                settings.spacing = spacing;
-                settings.amountOfStartingBoxes = amountOfStartingBoxes;
-
-                _mainwindow.FramePage.Content = new Viewmodels.Endurence.Game.Game();
-
+                _mainwindow.FramePage.Content = new Viewmodels.Endurence.Game.Game(_mainwindow);
             }
         }
 
@@ -79,6 +66,30 @@ namespace donttap.Viewmodels.Endurence.Settings
         {
             _mainwindow.FramePage.Content = null;
             _mainwindow.GridAll.Visibility = Visibility.Visible;
+        }
+
+        private void CreateSettings(int time, int boardSize, int boxSize, int spacing,
+                                         int amountOfStartingBoxes)
+        {
+            Classes.CreateSettingsJson.CreateFolder();
+            Classes.CreateSettingsJson.Create(time, boardSize, boxSize,
+                                        spacing, amountOfStartingBoxes);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            //checks if settings.json exist to paste settings
+
+            if (File.Exists("data/settings.json"))
+            {
+                var data = File.ReadAllText("data/settings.json");
+                Models.Settings settings = JsonConvert.DeserializeObject<Models.Settings>(data);
+                TextBoxTime.Text = settings.time.ToString();
+                TextBoxBoardSize.Text = settings.boardSize.ToString();
+                TextBoxBoxSize.Text = settings.boxSize.ToString();
+                TextBoxSpacing.Text = settings.spacing.ToString();
+                TextBoxAmountOfStartingBoxes.Text = settings.amountOfStartingBoxes.ToString();
+            }
         }
     }
 }

@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:donttap.Viewmodels.Endurence.Settings"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="700"
-      Title="Settings">
+      Title="Settings"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid Height="400" VerticalAlignment="Top">
