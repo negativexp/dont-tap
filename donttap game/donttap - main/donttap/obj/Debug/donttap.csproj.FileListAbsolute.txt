@@ -73,3 +73,8 @@ C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\bin\Debug\Newtonsoft.Json.dll
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\bin\Debug\Newtonsoft.Json.xml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.CopyComplete
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\bin\Debug\Newtonsoft.Json.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\bin\Debug\Newtonsoft.Json.xml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\Endurence\Game\Game.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\Endurence\Game\Game.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.CopyComplete

@@ -10,8 +10,6 @@
       Loaded="Page_Loaded">
 
     <Grid>
-        <Grid Name="mainGrid" VerticalAlignment="Center" HorizontalAlignment="Center">
-
-        </Grid>
+        <Grid Name="mainGrid" />
     </Grid>
 </Page>

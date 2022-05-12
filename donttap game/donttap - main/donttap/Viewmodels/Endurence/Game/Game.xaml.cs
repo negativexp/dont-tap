@@ -29,10 +29,14 @@ namespace donttap.Viewmodels.Endurence.Game
             _mainWindow = mainWindow;
         }
 
-        static Label[] labels;
+        static Rectangle[] boxes;
+        static int[] inUse;
+        static bool[] clickable;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            mainGrid.Background = new SolidColorBrush(Colors.Green);
+
             GameStart(sender);
         }
 
@@ -58,65 +62,120 @@ namespace donttap.Viewmodels.Endurence.Game
                                           "box size: {2} \n" +
                                           "spacing: {3} \n" +
                                           "aosb: {4}", values[0], values[1], values[2], values[3], values[4]));
+            
 
+            GenerateDefinitions(boardSize);
             AdjustSize(boardSize, boxSize, spacing);
-            CreateDefinitions(boardSize);
-            AddLabels(boardSize, boxSize);
+            AddBoxes(boardSize, boxSize);
+            GenerateFirstBoxes(amountOfStartingBoxes, boardSize);
         }
-
-        private void AddLabels(int boardSize, int boxSize)
+        
+        private void AddBoxes(int boardSize, int boxSize)
         {
-            labels = new Label[boardSize * boardSize];
-            int index = -1;
+            //all boxes
+            boxes = new Rectangle[boardSize * boardSize];
 
-            for (int i = 0; i < boardSize; i++)
+            int index = -1;
+            for(int i = 0; i < boardSize; i++)
             {
-                for (int j = 0; j < boardSize; j++)
+                for(int j = 0; j < boardSize; j++)
                 {
                     index++;
-                    labels[index] = GenerateLabel(boxSize);
 
-                    labels[index].Tag = index;
-                    labels[index].SetValue(Grid.RowProperty, i);
-                    labels[index].SetValue(Grid.ColumnProperty, j);
-                    mainGrid.Children.Add(labels[index]);
+                    boxes[index] = GenerateLabel(boxSize);
+                    boxes[index].Tag = index;
+                    boxes[index].MouseDown += Box_MouseDown;
+                    boxes[index].SetValue(Grid.RowProperty, i);
+                    boxes[index].SetValue(Grid.ColumnProperty, j);
+                    mainGrid.Children.Add(boxes[index]);
+
                 }
             }
         }
 
-        private Label GenerateLabel(int boxSize)
+        private void Box_MouseDown(object sender, MouseEventArgs e)
         {
-            Label label = new Label();
-            label.MouseDown += Label_MouseDown;
-            label.Background = new SolidColorBrush(Colors.White);
-            label.Width = boxSize;
-            label.Height = boxSize;
-            return label;
+            int number = Convert.ToInt32((sender as Rectangle).Tag);
+
+            if (!clickable[number])
+                MessageBox.Show("spatne mrdko");
+            else
+            {
+                clickable[number] = false;
+                ChangeColorToNotClickable(boxes[number]);
+            }
+
         }
 
-        private void CreateDefinitions(int boardSize)
+        private void GenerateNewClickableBox()
         {
-            for (int i = 0; i < boardSize; i++)
+
+        }
+
+        private void GenerateDefinitions(int boardSize)
+        {
+            for(int i = 0; i < boardSize; i++)
             {
                 RowDefinition row = new RowDefinition();
                 mainGrid.RowDefinitions.Add(row);
             }
+
             for (int i = 0; i < boardSize; i++)
             {
-                ColumnDefinition column = new ColumnDefinition();
-                mainGrid.ColumnDefinitions.Add(column);
+                ColumnDefinition col = new ColumnDefinition();
+                mainGrid.ColumnDefinitions.Add(col);
             }
         }
 
         private void AdjustSize(int boardSize, int boxSize, int spacing)
         {
-            mainGrid.Width = boxSize * boardSize + spacing;
-            mainGrid.Height = boxSize * boardSize + spacing;
+            this.Width = boardSize * boxSize + spacing;
+            this.Height = boardSize * boxSize + spacing;
+            _mainWindow.Height = boardSize * boxSize + 250;
+            _mainWindow.Width = boardSize * boxSize + 100;
+
+
+            mainGrid.Width = boardSize * boxSize + spacing;
+            mainGrid.Height = boardSize * boxSize + spacing;
         }
 
-        private void Label_MouseDown(object sender, MouseEventArgs e)
+        private Rectangle GenerateLabel(int boxSize)
         {
-            MessageBox.Show((sender as Label).Tag.ToString());
+            Rectangle box = new Rectangle();
+            box.Width = boxSize;
+            box.Height = boxSize;
+            box.HorizontalAlignment = HorizontalAlignment.Center;
+            box.VerticalAlignment = VerticalAlignment.Center;
+            box.Fill = new SolidColorBrush(Colors.White);
+            return box;
+        }
+
+        private void ChangeColorToClickable(Rectangle box)
+        {
+            box.Fill = new SolidColorBrush(Colors.Black);
+        }
+        private void ChangeColorToNotClickable(Rectangle box)
+        {
+            box.Fill = new SolidColorBrush(Colors.White);
+        }
+
+        private void GenerateFirstBoxes(int amountOfStartingBoxes, int boardSize)
+        {
+            clickable = new bool[boardSize * boardSize];
+            inUse = new int[amountOfStartingBoxes];
+            Random rdm = new Random();
+
+            for(int i = 0; i < inUse.Length; i++)
+            {
+                int number = rdm.Next(0, boardSize * boardSize);
+
+                while (inUse.Contains(number))
+                    number = rdm.Next(0, boardSize * boardSize);
+
+                inUse[i] = number;
+                clickable[number] = true;
+                ChangeColorToClickable(boxes[number]);
+            }
         }
     }
 }
