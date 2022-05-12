@@ -10,6 +10,14 @@
       Loaded="Page_Loaded">
 
     <Grid>
-        <Grid Name="mainGrid" />
+        <Grid Name="mainGrid">
+            <ProgressBar Name="ProgressBarScore" Height="20"/>
+            <TextBlock Name="TextBlockPoints" Text="Points:" FontSize="25"/>
+            <TextBlock Name="TextBlockPointsReal" Text="0" FontSize="50"/>
+            <TextBlock Name="TextBlockTime" Text="Time:" FontSize="25"/>
+            <TextBlock Name="TextBlockHiScore" Text="Hi-score:" FontSize="25"/>
+            
+            
+        </Grid>
     </Grid>
 </Page>

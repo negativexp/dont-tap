@@ -1,7 +1,7 @@
 {
   "time": 10,
   "boardSize": 4,
-  "boxSize": 100,
-  "spacing": 10,
+  "boxSize": 165,
+  "spacing": 5,
   "amountOfStartingBoxes": 3
 }

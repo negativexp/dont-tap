@@ -32,11 +32,10 @@ namespace donttap.Viewmodels.Endurence.Game
         static Rectangle[] boxes;
         static int[] inUse;
         static bool[] clickable;
+        static int Points;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            mainGrid.Background = new SolidColorBrush(Colors.Green);
-
             GameStart(sender);
         }
 
@@ -103,12 +102,26 @@ namespace donttap.Viewmodels.Endurence.Game
             {
                 clickable[number] = false;
                 ChangeColorToNotClickable(boxes[number]);
+                GenerateNewClickableBox(number);
+                Points++;
+                TextBlockPointsReal.Text = Points.ToString();
             }
 
         }
 
-        private void GenerateNewClickableBox()
+        private void GenerateNewClickableBox(int clicked)
         {
+            Random rdm = new Random();
+
+            int index = Array.IndexOf(inUse, clicked);
+            int number = rdm.Next(0, boxes.Length);
+
+            while (inUse.Contains(number))
+                number = rdm.Next(0, boxes.Length);
+
+            inUse[index] = number;
+            clickable[number] = true;
+            ChangeColorToClickable(boxes[number]);
 
         }
 
@@ -129,11 +142,32 @@ namespace donttap.Viewmodels.Endurence.Game
 
         private void AdjustSize(int boardSize, int boxSize, int spacing)
         {
+
+
             this.Width = boardSize * boxSize + spacing;
             this.Height = boardSize * boxSize + spacing;
-            _mainWindow.Height = boardSize * boxSize + 250;
-            _mainWindow.Width = boardSize * boxSize + 100;
+            _mainWindow.Height = boardSize * boxSize + 250 + spacing;
+            _mainWindow.Width = boardSize * boxSize + 100 + spacing;
 
+            ProgressBarScore.SetValue(Grid.ColumnSpanProperty, boardSize);
+            ProgressBarScore.SetValue(Grid.RowSpanProperty, boardSize);
+
+            TextBlockPoints.SetValue(Grid.ColumnSpanProperty, boardSize);
+            TextBlockPointsReal.SetValue(Grid.ColumnSpanProperty, boardSize);
+            TextBlockTime.SetValue(Grid.ColumnProperty, boardSize-1);
+            TextBlockHiScore.SetValue(Grid.ColumnProperty, 0);
+
+            ProgressBarScore.VerticalAlignment = VerticalAlignment.Bottom;
+            TextBlockPoints.HorizontalAlignment = HorizontalAlignment.Center;
+            TextBlockPointsReal.HorizontalAlignment = HorizontalAlignment.Center;
+            TextBlockTime.HorizontalAlignment = HorizontalAlignment.Center;
+            TextBlockHiScore.HorizontalAlignment = HorizontalAlignment.Center;
+
+            TextBlockHiScore.Margin = new Thickness(0, -100, 0, 0);
+            ProgressBarScore.Margin = new Thickness(0, 0, 0, -50);
+            TextBlockTime.Margin = new Thickness(0, -100, 0, 0);
+            TextBlockPoints.Margin = new Thickness(0, -100, 0, 0);
+            TextBlockPointsReal.Margin = new Thickness(0, -70, 0, 0);
 
             mainGrid.Width = boardSize * boxSize + spacing;
             mainGrid.Height = boardSize * boxSize + spacing;
