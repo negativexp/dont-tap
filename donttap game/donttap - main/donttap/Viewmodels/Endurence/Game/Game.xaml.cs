@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Newtonsoft.Json;
+using System.Timers;
 
 namespace donttap.Viewmodels.Endurence.Game
 {
@@ -34,6 +35,12 @@ namespace donttap.Viewmodels.Endurence.Game
         static bool[] clickable;
         static int Points;
 
+        static int time;
+        static int boardSize;
+        static int boxSize;
+        static int spacing;
+        static int amountOfStartingBoxes;
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameStart(sender);
@@ -50,26 +57,74 @@ namespace donttap.Viewmodels.Endurence.Game
         private void GameStart(object sender)
         {
             int[] values = GetSettingsData();
-            int time = values[0];
-            int boardSize = values[1];
-            int boxSize = values[2];
-            int spacing = values[3];
-            int amountOfStartingBoxes = values[4];
+            time = values[0];
+            boardSize = values[1];
+            boxSize = values[2];
+            spacing = values[3];
+            amountOfStartingBoxes = values[4];
 
-            MessageBox.Show(string.Format("time: {0} \n" +
-                                          "board size: {1} \n" +
-                                          "box size: {2} \n" +
-                                          "spacing: {3} \n" +
-                                          "aosb: {4}", values[0], values[1], values[2], values[3], values[4]));
-            
-
-            GenerateDefinitions(boardSize);
-            AdjustSize(boardSize, boxSize, spacing);
-            AddBoxes(boardSize, boxSize);
-            GenerateFirstBoxes(amountOfStartingBoxes, boardSize);
+            GenerateDefinitions();
+            AdjustTextBoxSize();
+            AdjustSize();
+            AddBoxes();
+            _mainWindow.IsEnabled = false;
+            AddCountDown();
         }
-        
-        private void AddBoxes(int boardSize, int boxSize)
+
+        static System.Windows.Threading.DispatcherTimer timerCountDown = new System.Windows.Threading.DispatcherTimer();
+        static System.Windows.Threading.DispatcherTimer timerProgressBar = new System.Windows.Threading.DispatcherTimer();
+        static TextBlock text = new TextBlock();
+
+        private void StartProgressBar()
+        {
+            timerProgressBar.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            timerProgressBar.Tick += TimerProgressBar_Tick;
+            timerProgressBar.Start();
+        }
+
+        private void TimerProgressBar_Tick(object sender, EventArgs e)
+        {
+            ProgressBarScore.Value = ProgressBarScore.Value - 0.3;
+        }
+
+        private void AddCountDown()
+        {
+            //text
+            text.SetValue(Grid.ColumnSpanProperty, boardSize);
+            text.SetValue(Grid.RowSpanProperty, boardSize);
+
+            text.Background = new SolidColorBrush(Colors.Black);
+            text.Background.Opacity = 0.7;
+            text.Text = "3";
+            text.FontSize = 140;
+            text.TextAlignment = TextAlignment.Center;
+            text.Width = 200;
+            text.Height = 200;
+            text.VerticalAlignment = VerticalAlignment.Center;
+            text.HorizontalAlignment = HorizontalAlignment.Center;
+            mainGrid.Children.Add(text);
+
+            //timer
+            timerCountDown.Interval = new TimeSpan(0, 0, 1);
+            timerCountDown.Tick += Timer_Elapsed;
+            timerCountDown.Start();
+        }
+
+        private void Timer_Elapsed(object sender, EventArgs e)
+        {
+            int number = Convert.ToInt32(text.Text) -1;
+            text.Text = number--.ToString();
+            if (text.Text == "0")
+            {
+                mainGrid.Children.Remove(text);
+                GenerateFirstBoxes();
+                StartProgressBar();
+                _mainWindow.IsEnabled = true;
+                timerCountDown.Stop();
+            }
+        }
+
+        private void AddBoxes()
         {
             //all boxes
             boxes = new Rectangle[boardSize * boardSize];
@@ -81,7 +136,7 @@ namespace donttap.Viewmodels.Endurence.Game
                 {
                     index++;
 
-                    boxes[index] = GenerateLabel(boxSize);
+                    boxes[index] = GenerateLabel();
                     boxes[index].Tag = index;
                     boxes[index].MouseDown += Box_MouseDown;
                     boxes[index].SetValue(Grid.RowProperty, i);
@@ -103,9 +158,25 @@ namespace donttap.Viewmodels.Endurence.Game
                 clickable[number] = false;
                 ChangeColorToNotClickable(boxes[number]);
                 GenerateNewClickableBox(number);
-                Points++;
+                AddScore();
+                ProgressBarScore.Value = ProgressBarScore.Value + 5;
                 TextBlockPointsReal.Text = Points.ToString();
             }
+
+        }
+
+        private void AddScore()
+        {
+            if (ProgressBarScore.Value < 20)
+                Points = Points + 1;
+            if (ProgressBarScore.Value > 20)
+                Points = Points + 2;
+            if (ProgressBarScore.Value > 40)
+                Points = Points + 3;
+            if (ProgressBarScore.Value > 60)
+                Points = Points + 4;
+            if (ProgressBarScore.Value > 80)
+                Points = Points + 4;
 
         }
 
@@ -125,7 +196,7 @@ namespace donttap.Viewmodels.Endurence.Game
 
         }
 
-        private void GenerateDefinitions(int boardSize)
+        private void GenerateDefinitions()
         {
             for(int i = 0; i < boardSize; i++)
             {
@@ -140,21 +211,14 @@ namespace donttap.Viewmodels.Endurence.Game
             }
         }
 
-        private void AdjustSize(int boardSize, int boxSize, int spacing)
+        private void AdjustTextBoxSize()
         {
-
-
-            this.Width = boardSize * boxSize + spacing;
-            this.Height = boardSize * boxSize + spacing;
-            _mainWindow.Height = boardSize * boxSize + 250 + spacing;
-            _mainWindow.Width = boardSize * boxSize + 100 + spacing;
-
             ProgressBarScore.SetValue(Grid.ColumnSpanProperty, boardSize);
             ProgressBarScore.SetValue(Grid.RowSpanProperty, boardSize);
 
             TextBlockPoints.SetValue(Grid.ColumnSpanProperty, boardSize);
             TextBlockPointsReal.SetValue(Grid.ColumnSpanProperty, boardSize);
-            TextBlockTime.SetValue(Grid.ColumnProperty, boardSize-1);
+            TextBlockTime.SetValue(Grid.ColumnProperty, boardSize - 1);
             TextBlockHiScore.SetValue(Grid.ColumnProperty, 0);
 
             ProgressBarScore.VerticalAlignment = VerticalAlignment.Bottom;
@@ -163,17 +227,28 @@ namespace donttap.Viewmodels.Endurence.Game
             TextBlockTime.HorizontalAlignment = HorizontalAlignment.Center;
             TextBlockHiScore.HorizontalAlignment = HorizontalAlignment.Center;
 
+            TextBlockTime.Margin = new Thickness(0, -50, 0, 0);
+
             TextBlockHiScore.Margin = new Thickness(0, -100, 0, 0);
             ProgressBarScore.Margin = new Thickness(0, 0, 0, -50);
             TextBlockTime.Margin = new Thickness(0, -100, 0, 0);
             TextBlockPoints.Margin = new Thickness(0, -100, 0, 0);
             TextBlockPointsReal.Margin = new Thickness(0, -70, 0, 0);
+        }
+
+        private void AdjustSize()
+        {
+            this.Width = boardSize * boxSize + spacing;
+            this.Height = boardSize * boxSize + spacing;
+
+            _mainWindow.Height = boardSize * boxSize + 250 + spacing;
+            _mainWindow.Width = boardSize * boxSize + 100 + spacing;
 
             mainGrid.Width = boardSize * boxSize + spacing;
             mainGrid.Height = boardSize * boxSize + spacing;
         }
 
-        private Rectangle GenerateLabel(int boxSize)
+        private Rectangle GenerateLabel()
         {
             Rectangle box = new Rectangle();
             box.Width = boxSize;
@@ -193,7 +268,7 @@ namespace donttap.Viewmodels.Endurence.Game
             box.Fill = new SolidColorBrush(Colors.White);
         }
 
-        private void GenerateFirstBoxes(int amountOfStartingBoxes, int boardSize)
+        private void GenerateFirstBoxes()
         {
             clickable = new bool[boardSize * boardSize];
             inUse = new int[amountOfStartingBoxes];
