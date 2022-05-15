@@ -78,3 +78,5 @@ C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\d
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\Endurence\Game\Game.g.cs
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\Endurence\Game\Game.baml
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\donttap.csproj.CopyComplete
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\GameOver\GameOver.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\obj\Debug\Viewmodels\GameOver\GameOver.baml

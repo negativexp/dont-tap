@@ -68,12 +68,38 @@ namespace donttap.Viewmodels.Endurence.Game
             AdjustSize();
             AddBoxes();
             _mainWindow.IsEnabled = false;
+            mainGrid.Children.Remove(text);
             AddCountDown();
         }
 
         static System.Windows.Threading.DispatcherTimer timerCountDown = new System.Windows.Threading.DispatcherTimer();
         static System.Windows.Threading.DispatcherTimer timerProgressBar = new System.Windows.Threading.DispatcherTimer();
+        static System.Windows.Threading.DispatcherTimer timerGameOver = new System.Windows.Threading.DispatcherTimer();
+        static System.Windows.Threading.DispatcherTimer timerTime = new System.Windows.Threading.DispatcherTimer();
         static TextBlock text = new TextBlock();
+        static TextBlock textGameOver = new TextBlock();
+
+        private void StartTime()
+        {
+            timerTime.Interval = new TimeSpan(0, 0, 1);
+            timerTime.Tick += TimerTime_Tick;
+            timerTime.Start();
+        }
+
+        int ex = 10;
+        private void TimerTime_Tick(object sender, EventArgs e)
+        {
+            if(ex == 0)
+            {
+                _mainWindow.IsEnabled = false;
+                GameOver();
+            }
+            else
+            {
+                TextBlockTimeReal.Text = ex.ToString();
+                ex = ex - 1;
+            }
+        }
 
         private void StartProgressBar()
         {
@@ -84,12 +110,50 @@ namespace donttap.Viewmodels.Endurence.Game
 
         private void TimerProgressBar_Tick(object sender, EventArgs e)
         {
-            ProgressBarScore.Value = ProgressBarScore.Value - 0.3;
+            ProgressBarScore.Value = ProgressBarScore.Value - 0.55;
+        }
+
+        private void GameOver()
+        {
+            //text
+            textGameOver.SetValue(Grid.ColumnSpanProperty, boardSize);
+            textGameOver.SetValue(Grid.RowSpanProperty, boardSize);
+            textGameOver.Background = new SolidColorBrush(Colors.Black);
+            textGameOver.Background.Opacity = 1;
+            textGameOver.FontSize = 140 / (boardSize / 2);
+            textGameOver.Foreground = new SolidColorBrush(Colors.Red);
+            textGameOver.Text = "GAME" + Environment.NewLine + "OVER";
+            textGameOver.Width = 500 / (boardSize / 2);
+            textGameOver.Height = 375 / (boardSize / 2);
+            textGameOver.TextAlignment = TextAlignment.Center;
+            textGameOver.VerticalAlignment = VerticalAlignment.Center;
+            textGameOver.HorizontalAlignment = HorizontalAlignment.Center;
+
+            mainGrid.Children.Add(textGameOver);
+
+            //timer
+            timerGameOver.Interval = new TimeSpan(0, 0, 1);
+            timerGameOver.Tick += TimerGameOver_Tick;
+            timerGameOver.Start();
+
+        }
+        int x = 0;
+        private void TimerGameOver_Tick(object sender, EventArgs e)
+        {
+            if(x == 1)
+            {
+                mainGrid.Children.Remove(textGameOver);
+                _mainWindow.FramePage.Content = new Viewmodels.GameOver.GameOver(_mainWindow, Points);
+                Points = Classes.ReturnPoints.Return(Points);
+
+            }
+            x++;
         }
 
         private void AddCountDown()
         {
             //text
+
             text.SetValue(Grid.ColumnSpanProperty, boardSize);
             text.SetValue(Grid.RowSpanProperty, boardSize);
 
@@ -98,7 +162,7 @@ namespace donttap.Viewmodels.Endurence.Game
             text.Text = "3";
             text.FontSize = 140;
             text.TextAlignment = TextAlignment.Center;
-            text.Width = 200;
+            text.Width = 240;
             text.Height = 200;
             text.VerticalAlignment = VerticalAlignment.Center;
             text.HorizontalAlignment = HorizontalAlignment.Center;
@@ -110,13 +174,20 @@ namespace donttap.Viewmodels.Endurence.Game
             timerCountDown.Start();
         }
 
+        int number = 3;
         private void Timer_Elapsed(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(text.Text) -1;
-            text.Text = number--.ToString();
-            if (text.Text == "0")
+            number = number - 1;
+            text.Text = number.ToString();
+
+            if (number == 0)
+            {
+                text.Text = "Go!";
+            }
+            if (number == -1)
             {
                 mainGrid.Children.Remove(text);
+                StartTime();
                 GenerateFirstBoxes();
                 StartProgressBar();
                 _mainWindow.IsEnabled = true;
@@ -152,14 +223,17 @@ namespace donttap.Viewmodels.Endurence.Game
             int number = Convert.ToInt32((sender as Rectangle).Tag);
 
             if (!clickable[number])
-                MessageBox.Show("spatne mrdko");
+            {
+                _mainWindow.IsEnabled = false;
+                GameOver();
+            }
             else
             {
                 clickable[number] = false;
                 ChangeColorToNotClickable(boxes[number]);
                 GenerateNewClickableBox(number);
                 AddScore();
-                ProgressBarScore.Value = ProgressBarScore.Value + 5;
+                ProgressBarScore.Value = ProgressBarScore.Value + 5.25;
                 TextBlockPointsReal.Text = Points.ToString();
             }
 
@@ -219,12 +293,14 @@ namespace donttap.Viewmodels.Endurence.Game
             TextBlockPoints.SetValue(Grid.ColumnSpanProperty, boardSize);
             TextBlockPointsReal.SetValue(Grid.ColumnSpanProperty, boardSize);
             TextBlockTime.SetValue(Grid.ColumnProperty, boardSize - 1);
+            TextBlockTimeReal.SetValue(Grid.ColumnProperty, boardSize - 1);
             TextBlockHiScore.SetValue(Grid.ColumnProperty, 0);
 
             ProgressBarScore.VerticalAlignment = VerticalAlignment.Bottom;
             TextBlockPoints.HorizontalAlignment = HorizontalAlignment.Center;
             TextBlockPointsReal.HorizontalAlignment = HorizontalAlignment.Center;
             TextBlockTime.HorizontalAlignment = HorizontalAlignment.Center;
+            TextBlockTimeReal.HorizontalAlignment = HorizontalAlignment.Center;
             TextBlockHiScore.HorizontalAlignment = HorizontalAlignment.Center;
 
             TextBlockTime.Margin = new Thickness(0, -50, 0, 0);
@@ -232,8 +308,11 @@ namespace donttap.Viewmodels.Endurence.Game
             TextBlockHiScore.Margin = new Thickness(0, -100, 0, 0);
             ProgressBarScore.Margin = new Thickness(0, 0, 0, -50);
             TextBlockTime.Margin = new Thickness(0, -100, 0, 0);
+            TextBlockTimeReal.Margin = new Thickness(0, -70, 0, 0);
             TextBlockPoints.Margin = new Thickness(0, -100, 0, 0);
             TextBlockPointsReal.Margin = new Thickness(0, -70, 0, 0);
+
+            TextBlockTimeReal.Text = "10";
         }
 
         private void AdjustSize()

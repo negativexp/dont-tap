@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttap - main\donttap\App.xaml
-3234710007
+41101703450
 
-10678958768
+1246476716
 14-1107347134
-MainWindow.xaml;Viewmodels\Endurence\Game\Game.xaml;Viewmodels\Endurence\Settings\Settings.xaml;
+MainWindow.xaml;Viewmodels\Endurence\Game\Game.xaml;Viewmodels\Endurence\Settings\Settings.xaml;Viewmodels\GameOver\GameOver.xaml;
 
-False
+True
 
