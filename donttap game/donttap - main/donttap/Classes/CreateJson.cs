@@ -10,11 +10,10 @@ namespace donttap.Classes
             Directory.CreateDirectory("data");
         }
 
-        public static void CreateSettings(int time, int boardSize, int boxSize, int spacing,
+        public static void CreateSettings(int boardSize, int boxSize, int spacing,
                                 int amountOfStartingBoxes)
         {
             Models.Settings settings = new Models.Settings();
-            settings.time = time;
             settings.boardSize = boardSize;
             settings.boxSize = boxSize;
             settings.spacing = spacing;

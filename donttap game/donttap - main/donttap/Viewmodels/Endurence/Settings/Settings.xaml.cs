@@ -34,7 +34,6 @@ namespace donttap.Viewmodels.Endurence.Settings
             bool ableToStart = false;
             int boardSize = 0;
             int boxSize = 0;
-            int time = 0;
             int spacing = 0;
             int amountOfStartingBoxes = 0;
 
@@ -42,9 +41,8 @@ namespace donttap.Viewmodels.Endurence.Settings
             {
                 boardSize = Convert.ToInt32(TextBoxBoardSize.Text);
                 boxSize = Convert.ToInt32(TextBoxBoxSize.Text);
-                time = Convert.ToInt32(TextBoxTime.Text);
-                spacing = Convert.ToInt32(TextBoxSpacing.Text);
-                amountOfStartingBoxes = Convert.ToInt32(TextBoxAmountOfStartingBoxes.Text);
+                spacing = Convert.ToInt32(TextBoxSpacingSize.Text);
+                amountOfStartingBoxes = Convert.ToInt32(TextBoxAOSB.Text);
 
                 ableToStart = true;
             }
@@ -55,7 +53,7 @@ namespace donttap.Viewmodels.Endurence.Settings
             if (ableToStart)
             {
                 //json
-                CreateSettings(time, boardSize, boxSize,
+                CreateSettings(boardSize, boxSize,
                                             spacing, amountOfStartingBoxes);
 
                 _mainwindow.FramePage.Content = new Viewmodels.Endurence.Game.Game(_mainwindow);
@@ -68,11 +66,11 @@ namespace donttap.Viewmodels.Endurence.Settings
             _mainwindow.GridAll.Visibility = Visibility.Visible;
         }
 
-        private void CreateSettings(int time, int boardSize, int boxSize, int spacing,
+        private void CreateSettings(int boardSize, int boxSize, int spacing,
                                          int amountOfStartingBoxes)
         {
             Classes.CreateJson.CreateFolder();
-            Classes.CreateJson.CreateSettings(time, boardSize, boxSize,
+            Classes.CreateJson.CreateSettings(boardSize, boxSize,
                                         spacing, amountOfStartingBoxes);
         }
 
@@ -84,11 +82,10 @@ namespace donttap.Viewmodels.Endurence.Settings
             {
                 var data = File.ReadAllText("data/settings.json");
                 Models.Settings settings = JsonConvert.DeserializeObject<Models.Settings>(data);
-                TextBoxTime.Text = settings.time.ToString();
                 TextBoxBoardSize.Text = settings.boardSize.ToString();
                 TextBoxBoxSize.Text = settings.boxSize.ToString();
-                TextBoxSpacing.Text = settings.spacing.ToString();
-                TextBoxAmountOfStartingBoxes.Text = settings.amountOfStartingBoxes.ToString();
+                TextBoxSpacingSize.Text = settings.spacing.ToString();
+                TextBoxAOSB.Text = settings.amountOfStartingBoxes.ToString();
             }
         }
     }

@@ -21,7 +21,6 @@ namespace donttap.Models
 
     public class Settings
     {
-        public int time { get; set; }
         public int boardSize { get; set; }
         public int boxSize { get; set; }
         public int spacing { get; set; }

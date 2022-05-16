@@ -35,7 +35,7 @@ namespace donttap.Viewmodels.Endurence.Game
         static bool[] clickable;
         static int Points;
 
-        static int time;
+        static int time = 10;
         static int boardSize;
         static int boxSize;
         static int spacing;
@@ -50,20 +50,20 @@ namespace donttap.Viewmodels.Endurence.Game
         {
             var data = File.ReadAllText("data/settings.json");
             Models.Settings settings = JsonConvert.DeserializeObject<Models.Settings>(data);
-            int[] values = { settings.time, settings.boardSize, settings.boxSize, settings.spacing, settings.amountOfStartingBoxes };
+            int[] values = { settings.boardSize, settings.boxSize, settings.spacing, settings.amountOfStartingBoxes };
             return values;
         }
 
         private void GameStart(object sender)
         {
+            Reset();
             int[] values = GetSettingsData();
-            time = values[0];
-            boardSize = values[1];
-            boxSize = values[2];
-            spacing = values[3];
-            amountOfStartingBoxes = values[4];
+            boardSize = values[0];
+            boxSize = values[1];
+            spacing = values[2];
+            amountOfStartingBoxes = values[3];
 
-            TextBlockTimeReal.Text = time.ToString();
+            TextBlockTimeReal.Text = 10.ToString();
 
             GenerateDefinitions();
             AdjustTextBoxSize();
@@ -89,10 +89,8 @@ namespace donttap.Viewmodels.Endurence.Game
         //Declares time remaining
         private void TimerTime_Tick(object sender, EventArgs e)
         {
-            int number = Convert.ToInt32(TextBlockTimeReal.Text);
-            number = number - 1;
-
-            if (number == 0)
+            time = time - 1;
+            if (time == 0)
             {
                 _mainWindow.IsEnabled = false;
                 TextBlockTimeReal.Text = "0";
@@ -100,8 +98,7 @@ namespace donttap.Viewmodels.Endurence.Game
             }
             else
             {
-                TextBlockTimeReal.Text = number.ToString();
-                TextBlockTimeReal.Text = number.ToString();
+                TextBlockTimeReal.Text = time.ToString();
             }
         }
 
@@ -203,11 +200,23 @@ namespace donttap.Viewmodels.Endurence.Game
                 clickable[number] = false;
                 ChangeColorToNotClickable(boxes[number]);
                 GenerateNewClickableBox(number);
-                AddScore();
+                Points++;
+                TextBlockPointsReal.Text = Points.ToString();
+                GameRules();
+                //AddScore();
                 ProgressBarScore.Value = ProgressBarScore.Value + 5.25;
                 TextBlockPointsReal.Text = Points.ToString();
             }
 
+        }
+        private void GameRules()
+        {
+            if (Points % 40 == 0)
+            {
+                time += 10;
+
+                TextBlockTimeReal.Text = time.ToString();
+            }
         }
 
         private void AddScore()
@@ -343,6 +352,12 @@ namespace donttap.Viewmodels.Endurence.Game
             timerTime.Stop();
 
             _mainWindow.FramePage.Content = new Viewmodels.GameOver.GameOver(_mainWindow, Points, 0);
+
+        }
+        private void Reset()
+        {
+            Points = 0;
+            time = 10;
         }
     }
 }

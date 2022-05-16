@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:donttap"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="700"
+        Title="MainWindow" Height="800" Width="800"
         Loaded="Window_Loaded"
         Background="#1F1F1F"
         ResizeMode="NoResize">
@@ -26,31 +26,28 @@
                 <Button Name="ButtonFrenzy" Background="Transparent" Content="Frenzy"
                     Width="175" Height="50" BorderBrush="#7160E8"
                     BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
-                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50"/>
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50" Foreground="White"/>
 
                 <Button Name="ButtonPattern" Background="Transparent" Content="Pattern"
                     Width="175" Height="50" BorderBrush="#7160E8"
                     BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
-                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 125"/>
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 125" Foreground="White"/>
 
                 <Button Name="ButtonEndurence" Background="Transparent" Content="Endurence"
                     Width="175" Height="50" BorderBrush="#7160E8"
                     BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
-                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 200"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 200" Foreground="White"
                     Click="ButtonEndurence_Click"/>
 
                 <Button Background="Transparent" Content="About"
                     Width="175" Height="50" BorderBrush="#7160E8"
                     BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
-                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50"/>
-                
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50" Foreground="White"/>
+
                 <Button Background="Transparent" Content="Settings"
                     Width="175" Height="50" BorderBrush="#7160E8"
                     BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
-                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 50 125"/>
-
-                <Image Margin="94,83,84,250" Source="/Images/main.png" Stretch="Fill"/>
-
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 50 125" Foreground="White"/>
 
             </Grid>
         </Grid>

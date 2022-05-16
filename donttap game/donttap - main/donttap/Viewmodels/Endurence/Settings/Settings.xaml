@@ -5,47 +5,70 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:donttap.Viewmodels.Endurence.Settings"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="900"
+      d:DesignHeight="800" d:DesignWidth="800"
       Title="Settings"
       Loaded="Page_Loaded">
 
     <Grid>
-        <Grid Height="400" VerticalAlignment="Top">
-            <Image Source="/Images/leaderboard.png" Stretch="Uniform" Margin="161,10,161,325" />
-            <ListBox Width="600" Height="300" VerticalAlignment="Bottom" Margin="15" Background="Black"/>
-        </Grid>
-        <Grid Height="400" VerticalAlignment="Bottom">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <!--Start BoardSize-->
+        <TextBlock Text="Board size:" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Margin="25" Foreground="White"/>
 
-            <Image Source="/Images/settings.png" Stretch="Uniform" Margin="258,29,258,25" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
-            </Image>
+        <TextBlock Text="Example: 4 = board size of 4 x 4" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Right"
+                   Margin="25" Foreground="White"/>
 
-            <TextBlock Text="Clicks for regen (10 seconds):" FontSize="20" Margin="25 0 0 0 " Grid.Row="1" HorizontalAlignment="Left"/>
-            <TextBox Name="TextBoxTime" Text="30" FontSize="16" Grid.Row="1" Height="25" VerticalAlignment="Top" Margin="25,32,25,0"/>
+        <TextBox Name="TextBoxBoardSize" FontSize="25" BorderThickness="3"
+                 BorderBrush="#7160E8" Background="Transparent" VerticalAlignment="Top"
+                 Margin="25 65 25 0" Foreground="White"/>
 
-            <TextBlock Text="Board size (ex. 4 = 4x4):" FontSize="20" Margin="25 0 0 0 " Grid.Row="2" HorizontalAlignment="Left"/>
-            <TextBox Name="TextBoxBoardSize" Text="4" FontSize="16" Grid.Row="2" Height="25" VerticalAlignment="Top" Margin="25,32,25,0"/>
+        <!--End BoardSize-->
 
-            <TextBlock Text="Box size (in pixels):" FontSize="20" Margin="25 0 0 0 " Grid.Row="3" HorizontalAlignment="Left"/>
-            <TextBox Name="TextBoxBoxSize" Text="165" FontSize="16" Grid.Row="3" Height="25" VerticalAlignment="Top" Margin="25,33,25,0" Grid.RowSpan="2"/>
+        <!--Start BoxSize-->
+        <TextBlock Text="Box size:" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Margin="25 130 0 0" Foreground="White"/>
 
-            <TextBlock Text="Spacing (in pixels):" FontSize="20" Margin="25 0 0 0 " Grid.Row="4" HorizontalAlignment="Left"/>
-            <TextBox Name="TextBoxSpacing" Text="0" FontSize="16" Grid.Row="4" Height="25" VerticalAlignment="Top" Margin="25,32,25,0" Grid.RowSpan="2"/>
+        <TextBlock Text="In pixels" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Right"
+                   Margin="0 130 25 0" Foreground="White"/>
 
-            <TextBlock Text="Amount of starting boxes (min. 1):" FontSize="20" Margin="25 0 0 0 " Grid.Row="5" HorizontalAlignment="Left"/>
-            <TextBox Name="TextBoxAmountOfStartingBoxes" Text="3" FontSize="16" Grid.Row="5" Height="25" VerticalAlignment="Top" Margin="25,32,25,0" Grid.RowSpan="2"/>
 
-            <Button Name="ButtonStart" Click="ButtonStart_Click" Height="30" Width="120" Content="Start" FontSize="20" HorizontalAlignment="Right" Margin="0 0 25 0" Grid.Row="6"/>
-            <Button Name="ButtonBack" Click="ButtonBack_Click" Height="30" Width="120" Content="Back" FontSize="20" HorizontalAlignment="Left" Margin="25 0 0 0" Grid.Row="6"/>
+        <TextBox Name="TextBoxBoxSize"  FontSize="25" BorderThickness="3"
+                 BorderBrush="#7160E8" Background="Transparent" VerticalAlignment="Top" 
+                 Margin="25,170,25,0" Foreground="White"/>
+        <!--End BoxSize-->
+        
+        <!--Start SpacingSize-->
+        <TextBlock Text="Spacing:" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Margin="25 235 0 0" Foreground="White"/>
 
-        </Grid>
+        <TextBlock Text="In pixels" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Right"
+                   Margin="0 235 25 0" Foreground="White"/>
+
+        <TextBox Name="TextBoxSpacingSize"  FontSize="25" BorderThickness="3"
+                 BorderBrush="#7160E8" Background="Transparent" VerticalAlignment="Top" 
+                 Margin="25,275,25,0" Foreground="White"/>
+        <!--End SpacingSize-->
+        
+        <!--Start AmountOfStartingBoxes-->
+        <TextBlock Text="Amount of starting boxes:" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Margin="25 340 0 0" Foreground="White"/>
+
+        <TextBlock Text="Can't be less than 1" FontSize="25" VerticalAlignment="Top" HorizontalAlignment="Right"
+                   Margin="0 340 25 0" Foreground="White"/>
+
+        <TextBox Name="TextBoxAOSB"  FontSize="25" BorderThickness="3"
+                 BorderBrush="#7160E8" Background="Transparent" VerticalAlignment="Top"
+                 Margin="25,380,25,0" Foreground="White"/>
+
+        <!--Start Buttons-->
+        <Button Name="ButtonStart" Click="ButtonStart_Click" Background="Transparent" Content="GO"
+                    Width="175" Height="50" BorderBrush="#7160E8"
+                    BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="25" Foreground="White"/>
+
+        <Button Name="ButtonBack" Click="ButtonBack_Click" Background="Transparent" Content="Back"
+                    Width="175" Height="50" BorderBrush="#7160E8"
+                    BorderThickness="3" FontFamily="Segoe UI" FontSize="25"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25" Foreground="White"/>
+        <!--End Buttons-->
     </Grid>
 </Page>
