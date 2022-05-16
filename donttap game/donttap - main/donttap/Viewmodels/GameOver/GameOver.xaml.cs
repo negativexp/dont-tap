@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace donttap.Viewmodels.GameOver
 {
@@ -21,9 +23,14 @@ namespace donttap.Viewmodels.GameOver
     public partial class GameOver : Page
     {
         private readonly MainWindow _mainWindow;
-        public GameOver(MainWindow mainWindow, int points)
+        static int GameMode;
+        static int Points;
+        public GameOver(MainWindow mainWindow, int points, int gamemode)
         {
             InitializeComponent();
+
+            GameMode = gamemode;
+            Points = points;
 
             _mainWindow = mainWindow;
             TextBlockPoints.Text = "Points: " + points.ToString();
@@ -31,7 +38,9 @@ namespace donttap.Viewmodels.GameOver
 
         private void ButtonContinue_Click(object sender, RoutedEventArgs e)
         {
-           
+            //create json
+            Classes.CreateJson.CreateScore(Points, GameMode, TextBoxName.Text);
+
 
             _mainWindow.FramePage.Content = new Viewmodels.Endurence.Settings.Settings(_mainWindow);
         }

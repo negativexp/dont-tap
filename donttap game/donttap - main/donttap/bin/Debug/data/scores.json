@@ -1,0 +1,28 @@
+{
+  "gamer": [
+    {
+      "name": "matt",
+      "score": 6,
+      "gamemode": 0,
+      "settings": {
+        "time": 10,
+        "boardSize": 4,
+        "boxSize": 165,
+        "spacing": 5,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "jsi spatnej",
+      "score": 34,
+      "gamemode": 0,
+      "settings": {
+        "time": 10,
+        "boardSize": 4,
+        "boxSize": 165,
+        "spacing": 5,
+        "amountOfStartingBoxes": 3
+      }
+    }
+  ]
+}

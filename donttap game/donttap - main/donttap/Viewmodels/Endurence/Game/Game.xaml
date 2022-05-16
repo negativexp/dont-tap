@@ -18,8 +18,8 @@
             <TextBlock Name="TextBlockTimeReal" Text="0" FontSize="50"/>
             <TextBlock Name="TextBlockHiScore" Text="Hiscore:" FontSize="25"/>
             <TextBlock Name="TextBlockCountDown" Text="4" FontSize="50"/>
-            
-            
+
+
         </Grid>
     </Grid>
 </Page>

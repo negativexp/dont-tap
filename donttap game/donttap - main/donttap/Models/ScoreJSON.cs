@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace donttap.Models
 {
-    public class ScoreJSON
+    public class Gamer
     {
-        public int score { get; set; }
-        public string name { get; set; }
-        public Settings settings { get; set; }
-
+        public List<Score> gamer { get; set; }
     }
+    public class Score
+    {
+        public string name { get; set; }
+        public int score { get; set; }
+        public int gamemode { get; set; }
+
+        public Settings settings { get; set; }
+    }
+
     public class Settings
     {
         public int time { get; set; }

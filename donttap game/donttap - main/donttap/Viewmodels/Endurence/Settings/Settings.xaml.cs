@@ -71,8 +71,8 @@ namespace donttap.Viewmodels.Endurence.Settings
         private void CreateSettings(int time, int boardSize, int boxSize, int spacing,
                                          int amountOfStartingBoxes)
         {
-            Classes.CreateSettingsJson.CreateFolder();
-            Classes.CreateSettingsJson.Create(time, boardSize, boxSize,
+            Classes.CreateJson.CreateFolder();
+            Classes.CreateJson.CreateSettings(time, boardSize, boxSize,
                                         spacing, amountOfStartingBoxes);
         }
 

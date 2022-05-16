@@ -58,8 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\CreateSettingsJson.cs" />
+    <Compile Include="Classes\CreateJson.cs" />
     <Compile Include="Classes\ReturnPoints.cs" />
+    <Compile Include="Classes\DisplayTextBlocks.cs" />
     <Compile Include="Models\ScoreJSON.cs" />
     <Compile Include="Viewmodels\Endurence\Game\Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>

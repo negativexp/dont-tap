@@ -29,8 +29,8 @@ namespace donttap
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Maximized;
-            this.WindowStyle = WindowStyle.None;
+            //this.WindowState = WindowState.Maximized;
+            //this.WindowStyle = WindowStyle.None;
         }
 
         private void ButtonEndurence_Click(object sender, RoutedEventArgs e)

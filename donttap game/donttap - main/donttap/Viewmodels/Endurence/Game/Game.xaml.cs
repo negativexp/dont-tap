@@ -63,21 +63,20 @@ namespace donttap.Viewmodels.Endurence.Game
             spacing = values[3];
             amountOfStartingBoxes = values[4];
 
+            TextBlockTimeReal.Text = time.ToString();
+
             GenerateDefinitions();
             AdjustTextBoxSize();
             AdjustSize();
             AddBoxes();
             _mainWindow.IsEnabled = false;
-            mainGrid.Children.Remove(text);
             AddCountDown();
         }
 
         static System.Windows.Threading.DispatcherTimer timerCountDown = new System.Windows.Threading.DispatcherTimer();
         static System.Windows.Threading.DispatcherTimer timerProgressBar = new System.Windows.Threading.DispatcherTimer();
-        static System.Windows.Threading.DispatcherTimer timerGameOver = new System.Windows.Threading.DispatcherTimer();
         static System.Windows.Threading.DispatcherTimer timerTime = new System.Windows.Threading.DispatcherTimer();
         static TextBlock text = new TextBlock();
-        static TextBlock textGameOver = new TextBlock();
 
         private void StartTime()
         {
@@ -86,21 +85,27 @@ namespace donttap.Viewmodels.Endurence.Game
             timerTime.Start();
         }
 
-        int ex = 10;
+        //timer tick
+        //Declares time remaining
         private void TimerTime_Tick(object sender, EventArgs e)
         {
-            if(ex == 0)
+            int number = Convert.ToInt32(TextBlockTimeReal.Text);
+            number = number - 1;
+
+            if (number == 0)
             {
                 _mainWindow.IsEnabled = false;
+                TextBlockTimeReal.Text = "0";
                 GameOver();
             }
             else
             {
-                TextBlockTimeReal.Text = ex.ToString();
-                ex = ex - 1;
+                TextBlockTimeReal.Text = number.ToString();
+                TextBlockTimeReal.Text = number.ToString();
             }
         }
 
+        //start progressBar
         private void StartProgressBar()
         {
             timerProgressBar.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -108,46 +113,10 @@ namespace donttap.Viewmodels.Endurence.Game
             timerProgressBar.Start();
         }
 
+        //every 1 millisecons 0.45 gets removed from progressbar
         private void TimerProgressBar_Tick(object sender, EventArgs e)
         {
-            ProgressBarScore.Value = ProgressBarScore.Value - 0.55;
-        }
-
-        private void GameOver()
-        {
-            //text
-            textGameOver.SetValue(Grid.ColumnSpanProperty, boardSize);
-            textGameOver.SetValue(Grid.RowSpanProperty, boardSize);
-            textGameOver.Background = new SolidColorBrush(Colors.Black);
-            textGameOver.Background.Opacity = 1;
-            textGameOver.FontSize = 140 / (boardSize / 2);
-            textGameOver.Foreground = new SolidColorBrush(Colors.Red);
-            textGameOver.Text = "GAME" + Environment.NewLine + "OVER";
-            textGameOver.Width = 500 / (boardSize / 2);
-            textGameOver.Height = 375 / (boardSize / 2);
-            textGameOver.TextAlignment = TextAlignment.Center;
-            textGameOver.VerticalAlignment = VerticalAlignment.Center;
-            textGameOver.HorizontalAlignment = HorizontalAlignment.Center;
-
-            mainGrid.Children.Add(textGameOver);
-
-            //timer
-            timerGameOver.Interval = new TimeSpan(0, 0, 1);
-            timerGameOver.Tick += TimerGameOver_Tick;
-            timerGameOver.Start();
-
-        }
-        int x = 0;
-        private void TimerGameOver_Tick(object sender, EventArgs e)
-        {
-            if(x == 1)
-            {
-                mainGrid.Children.Remove(textGameOver);
-                _mainWindow.FramePage.Content = new Viewmodels.GameOver.GameOver(_mainWindow, Points);
-                Points = Classes.ReturnPoints.Return(Points);
-
-            }
-            x++;
+            ProgressBarScore.Value = ProgressBarScore.Value - 0.45;
         }
 
         private void AddCountDown()
@@ -218,6 +187,8 @@ namespace donttap.Viewmodels.Endurence.Game
             }
         }
 
+        //checks if box is clickable, if it is add points
+        //if its not declare gameover
         private void Box_MouseDown(object sender, MouseEventArgs e)
         {
             int number = Convert.ToInt32((sender as Rectangle).Tag);
@@ -311,8 +282,6 @@ namespace donttap.Viewmodels.Endurence.Game
             TextBlockTimeReal.Margin = new Thickness(0, -70, 0, 0);
             TextBlockPoints.Margin = new Thickness(0, -100, 0, 0);
             TextBlockPointsReal.Margin = new Thickness(0, -70, 0, 0);
-
-            TextBlockTimeReal.Text = "10";
         }
 
         private void AdjustSize()
@@ -364,6 +333,16 @@ namespace donttap.Viewmodels.Endurence.Game
                 clickable[number] = true;
                 ChangeColorToClickable(boxes[number]);
             }
+        }
+
+        private void GameOver()
+        {
+            //ey goulg wher walma at
+            //jogle: k
+            //STOP THE COUNT
+            timerTime.Stop();
+
+            _mainWindow.FramePage.Content = new Viewmodels.GameOver.GameOver(_mainWindow, Points, 0);
         }
     }
 }
