@@ -59,6 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\CreateJson.cs" />
+    <Compile Include="Classes\GetHighScore.cs" />
     <Compile Include="Classes\ReturnPoints.cs" />
     <Compile Include="Classes\DisplayTextBlocks.cs" />
     <Compile Include="Models\ScoreJSON.cs" />

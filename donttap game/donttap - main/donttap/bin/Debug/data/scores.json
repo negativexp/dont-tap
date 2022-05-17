@@ -2,84 +2,7 @@
   "gamer": [
     {
       "name": "",
-      "score": 32,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 4,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "",
-      "score": 30,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 2,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "",
-      "score": 40,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 2,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "",
-      "score": 37,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 2,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "",
-      "score": 111,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 2,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "",
-      "score": 26,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 2,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "",
-      "score": 40,
-      "gamemode": 0,
-      "settings": {
-        "boardSize": 2,
-        "boxSize": 165,
-        "spacing": 0,
-        "amountOfStartingBoxes": 3
-      }
-    },
-    {
-      "name": "mrdo",
-      "score": 243,
+      "score": 7,
       "gamemode": 0,
       "settings": {
         "boardSize": 4,
@@ -90,7 +13,7 @@
     },
     {
       "name": "",
-      "score": 31,
+      "score": 12,
       "gamemode": 0,
       "settings": {
         "boardSize": 4,
@@ -101,7 +24,7 @@
     },
     {
       "name": "",
-      "score": 16,
+      "score": 38,
       "gamemode": 0,
       "settings": {
         "boardSize": 4,
@@ -112,7 +35,18 @@
     },
     {
       "name": "",
-      "score": 0,
+      "score": 14,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 4,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 15
+      }
+    },
+    {
+      "name": "",
+      "score": 34,
       "gamemode": 0,
       "settings": {
         "boardSize": 4,
@@ -134,7 +68,7 @@
     },
     {
       "name": "",
-      "score": 0,
+      "score": 31,
       "gamemode": 0,
       "settings": {
         "boardSize": 4,
@@ -145,13 +79,288 @@
     },
     {
       "name": "",
-      "score": 16,
+      "score": 14,
       "gamemode": 0,
       "settings": {
         "boardSize": 4,
         "boxSize": 165,
         "spacing": 0,
         "amountOfStartingBoxes": 15
+      }
+    },
+    {
+      "name": "",
+      "score": 29,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 4,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 15
+      }
+    },
+    {
+      "name": "",
+      "score": 11,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 4,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 34,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 4,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 2,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 100,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 0,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 11,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 30,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 11,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 27,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 12,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 25,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 3
+      }
+    },
+    {
+      "name": "",
+      "score": 12,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 165,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 205,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 67,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 36,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 15,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 33,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 14,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 27,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 11,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 168,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 54,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 16,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 21,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 0,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
       }
     }
   ]

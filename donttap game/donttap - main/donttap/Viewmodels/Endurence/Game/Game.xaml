@@ -13,13 +13,11 @@
         <Grid Name="mainGrid">
             <ProgressBar Name="ProgressBarScore" Height="20" Value="0"/>
             <TextBlock Name="TextBlockPoints" Text="Points:" FontSize="25"/>
-            <TextBlock Name="TextBlockPointsReal" Text="0" FontSize="50"/>
+            <TextBlock Name="TextBlockPointsReal" Text="0" FontSize="50" Foreground="White"/>
             <TextBlock Name="TextBlockTime" Text="Time:" FontSize="25"/>
-            <TextBlock Name="TextBlockTimeReal" Text="0" FontSize="50"/>
+            <TextBlock Name="TextBlockTimeReal" Text="10" FontSize="50" Foreground="White"/>
             <TextBlock Name="TextBlockHiScore" Text="Hiscore:" FontSize="25"/>
             <TextBlock Name="TextBlockCountDown" Text="4" FontSize="50"/>
-
-
         </Grid>
     </Grid>
 </Page>

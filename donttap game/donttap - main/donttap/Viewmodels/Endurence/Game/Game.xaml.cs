@@ -35,15 +35,19 @@ namespace donttap.Viewmodels.Endurence.Game
         static bool[] clickable;
         static int Points;
 
-        static int time = 10;
         static int boardSize;
         static int boxSize;
         static int spacing;
         static int amountOfStartingBoxes;
 
+        static System.Windows.Threading.DispatcherTimer timerCountDown = new System.Windows.Threading.DispatcherTimer();
+        static System.Windows.Threading.DispatcherTimer timerProgressBar = new System.Windows.Threading.DispatcherTimer();
+        static System.Windows.Threading.DispatcherTimer timerTime = new System.Windows.Threading.DispatcherTimer();
+        static TextBlock text = new TextBlock();
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            GameStart(sender);
+            Setup();
         }
 
         private int[] GetSettingsData()
@@ -54,7 +58,7 @@ namespace donttap.Viewmodels.Endurence.Game
             return values;
         }
 
-        private void GameStart(object sender)
+        private void Setup()
         {
             Reset();
             int[] values = GetSettingsData();
@@ -63,7 +67,6 @@ namespace donttap.Viewmodels.Endurence.Game
             spacing = values[2];
             amountOfStartingBoxes = values[3];
 
-            TextBlockTimeReal.Text = 10.ToString();
 
             GenerateDefinitions();
             AdjustTextBoxSize();
@@ -73,56 +76,46 @@ namespace donttap.Viewmodels.Endurence.Game
             AddCountDown();
         }
 
-        static System.Windows.Threading.DispatcherTimer timerCountDown = new System.Windows.Threading.DispatcherTimer();
-        static System.Windows.Threading.DispatcherTimer timerProgressBar = new System.Windows.Threading.DispatcherTimer();
-        static System.Windows.Threading.DispatcherTimer timerTime = new System.Windows.Threading.DispatcherTimer();
-        static TextBlock text = new TextBlock();
-
+        private void GameStart()
+        {
+            mainGrid.Children.Remove(text);
+            GenerateFirstBoxes();
+            StartProgressBar();
+            StartTime();
+            _mainWindow.IsEnabled = true;
+        }
         private void StartTime()
         {
             timerTime.Interval = new TimeSpan(0, 0, 1);
             timerTime.Tick += TimerTime_Tick;
             timerTime.Start();
         }
-
-        //timer tick
-        //Declares time remaining
+        int time = 10;
         private void TimerTime_Tick(object sender, EventArgs e)
         {
-            time = time - 1;
+            time--;
+            TextBlockTimeReal.Text = time.ToString();
             if (time == 0)
             {
-                _mainWindow.IsEnabled = false;
-                TextBlockTimeReal.Text = "0";
+                MessageBox.Show("time bye");
+                timerTime.Stop();
                 GameOver();
             }
-            else
-            {
-                TextBlockTimeReal.Text = time.ToString();
-            }
         }
-
-        //start progressBar
         private void StartProgressBar()
         {
             timerProgressBar.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timerProgressBar.Tick += TimerProgressBar_Tick;
             timerProgressBar.Start();
         }
-
-        //every 1 millisecons 0.45 gets removed from progressbar
         private void TimerProgressBar_Tick(object sender, EventArgs e)
         {
-            ProgressBarScore.Value = ProgressBarScore.Value - 0.45;
+            ProgressBarScore.Value = ProgressBarScore.Value - 0.35;
         }
-
         private void AddCountDown()
         {
-            //text
-
             text.SetValue(Grid.ColumnSpanProperty, boardSize);
             text.SetValue(Grid.RowSpanProperty, boardSize);
-
             text.Background = new SolidColorBrush(Colors.Black);
             text.Background.Opacity = 0.7;
             text.Text = "3";
@@ -134,29 +127,25 @@ namespace donttap.Viewmodels.Endurence.Game
             text.HorizontalAlignment = HorizontalAlignment.Center;
             mainGrid.Children.Add(text);
 
-            //timer
             timerCountDown.Interval = new TimeSpan(0, 0, 1);
-            timerCountDown.Tick += Timer_Elapsed;
+            timerCountDown.Tick += TimerCountDown_Elapsed;
             timerCountDown.Start();
         }
 
-        int number = 3;
-        private void Timer_Elapsed(object sender, EventArgs e)
+        int numberCountDown = 3;
+        private void TimerCountDown_Elapsed(object sender, EventArgs e)
         {
-            number = number - 1;
-            text.Text = number.ToString();
+            numberCountDown = numberCountDown - 1;
+            text.Text = numberCountDown.ToString();
 
-            if (number == 0)
+            if (numberCountDown == 0)
             {
                 text.Text = "Go!";
             }
-            if (number == -1)
+            if (numberCountDown == -1)
             {
                 mainGrid.Children.Remove(text);
-                StartTime();
-                GenerateFirstBoxes();
-                StartProgressBar();
-                _mainWindow.IsEnabled = true;
+                GameStart();
                 timerCountDown.Stop();
             }
         }
@@ -192,6 +181,7 @@ namespace donttap.Viewmodels.Endurence.Game
 
             if (!clickable[number])
             {
+                MessageBox.Show("u cant klik");
                 _mainWindow.IsEnabled = false;
                 GameOver();
             }
@@ -209,12 +199,12 @@ namespace donttap.Viewmodels.Endurence.Game
             }
 
         }
+
         private void GameRules()
         {
             if (Points % 40 == 0)
             {
                 time += 10;
-
                 TextBlockTimeReal.Text = time.ToString();
             }
         }
@@ -346,10 +336,6 @@ namespace donttap.Viewmodels.Endurence.Game
 
         private void GameOver()
         {
-            //ey goulg wher walma at
-            //jogle: k
-            //STOP THE COUNT
-            timerTime.Stop();
 
             _mainWindow.FramePage.Content = new Viewmodels.GameOver.GameOver(_mainWindow, Points, 0);
 
