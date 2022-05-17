@@ -81,26 +81,7 @@ namespace donttap.Viewmodels.Endurence.Game
             mainGrid.Children.Remove(text);
             GenerateFirstBoxes();
             StartProgressBar();
-            StartTime();
             _mainWindow.IsEnabled = true;
-        }
-        private void StartTime()
-        {
-            timerTime.Interval = new TimeSpan(0, 0, 1);
-            timerTime.Tick += TimerTime_Tick;
-            timerTime.Start();
-        }
-        int time = 10;
-        private void TimerTime_Tick(object sender, EventArgs e)
-        {
-            time--;
-            TextBlockTimeReal.Text = time.ToString();
-            if (time == 0)
-            {
-                MessageBox.Show("time bye");
-                timerTime.Stop();
-                GameOver();
-            }
         }
         private void StartProgressBar()
         {
@@ -192,20 +173,9 @@ namespace donttap.Viewmodels.Endurence.Game
                 GenerateNewClickableBox(number);
                 Points++;
                 TextBlockPointsReal.Text = Points.ToString();
-                GameRules();
                 //AddScore();
                 ProgressBarScore.Value = ProgressBarScore.Value + 5.25;
                 TextBlockPointsReal.Text = Points.ToString();
-            }
-
-        }
-
-        private void GameRules()
-        {
-            if (Points % 40 == 0)
-            {
-                time += 10;
-                TextBlockTimeReal.Text = time.ToString();
             }
         }
 
@@ -340,10 +310,10 @@ namespace donttap.Viewmodels.Endurence.Game
             _mainWindow.FramePage.Content = new Viewmodels.GameOver.GameOver(_mainWindow, Points, 0);
 
         }
+
         private void Reset()
         {
             Points = 0;
-            time = 10;
         }
     }
 }

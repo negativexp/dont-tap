@@ -362,6 +362,39 @@
         "spacing": 0,
         "amountOfStartingBoxes": 8
       }
+    },
+    {
+      "name": "",
+      "score": 52,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 0,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
+    },
+    {
+      "name": "",
+      "score": 27,
+      "gamemode": 0,
+      "settings": {
+        "boardSize": 3,
+        "boxSize": 200,
+        "spacing": 0,
+        "amountOfStartingBoxes": 8
+      }
     }
   ]
 }
