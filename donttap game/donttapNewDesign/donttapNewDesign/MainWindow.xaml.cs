@@ -24,13 +24,30 @@ namespace donttapNewDesign
         public MainWindow()
         {
             InitializeComponent();
-            DoubleAnimation myAnimation = new System.Windows.Media.Animation();
-
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        static Pages.MenuPage menuPage;
+        static Pages.SettingsPage settingsPage;
+
+
+        private void LoadPages()
         {
-            this.DragMove();
+            menuPage = new Pages.MenuPage(this);
+            settingsPage = new Pages.SettingsPage(this);
+        }
+
+        public void ChangeContent(int x)
+        {
+            if (x == 0)
+                this.Content = menuPage;
+            if (x == 1)
+                this.Content = settingsPage;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadPages();
+            this.Content = menuPage;
         }
     }
 }

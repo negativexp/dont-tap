@@ -5,60 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:donttapNewDesign"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="850"
+        Title="MainWindow" Height="700" Width="450"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent">
-
-    <Grid>
-        <Border Name="MainBorderBrush" CornerRadius="15" BorderThickness="10" BorderBrush="Black" Grid.RowSpan="2">
-            <Border.Style>
-                <Style TargetType="Border">
-                    <Setter Property="BorderBrush" Value="White"/>
-                    <Style.Triggers>
-                        <EventTrigger RoutedEvent="Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimationUsingKeyFrames BeginTime="0:0:0"
-                                                                  Duration="0:0:5"
-                                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                                  RepeatBehavior="Forever"
-                                                                  AutoReverse="True">
-
-                                        <LinearColorKeyFrame KeyTime="0:0:0" Value="#D1D5DE"/>
-                                        <LinearColorKeyFrame KeyTime="0:0:5" Value="#a7aab2"/>
-                                    </ColorAnimationUsingKeyFrames>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Border.Style>
-        </Border>
-
-        <Border Name="MainBorderBackground" CornerRadius="10" BorderThickness="10" Background="#D1D5DE" Grid.Row="1">
-            <Border.Style>
-                <Style TargetType="Border">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Style.Triggers>
-                        <EventTrigger RoutedEvent="Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ColorAnimationUsingKeyFrames BeginTime="0:0:0"
-                                                                  Duration="0:0:5"
-                                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                                  RepeatBehavior="Forever"
-                                                                  AutoReverse="True">
-                                        <LinearColorKeyFrame KeyTime="0:0:0" Value="#D1D5DE"/>
-                                        <LinearColorKeyFrame KeyTime="0:0:5" Value="#a7aab2"/>
-                                    </ColorAnimationUsingKeyFrames>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Border.Style>
-        </Border>
-    </Grid>
+        Background="Transparent"
+        Loaded="Window_Loaded">
 
 </Window>

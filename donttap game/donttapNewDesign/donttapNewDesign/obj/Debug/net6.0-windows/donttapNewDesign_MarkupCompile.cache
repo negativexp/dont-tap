@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
-11407045341
+3805943960
 
-3-1233169557
+51405715957
 1941905061893
-MainWindow.xaml;
+MainWindow.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
 
 False
 
