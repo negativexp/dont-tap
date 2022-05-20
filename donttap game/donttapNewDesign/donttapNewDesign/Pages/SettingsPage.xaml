@@ -6,74 +6,73 @@
       xmlns:local="clr-namespace:donttapNewDesign.Pages"
       mc:Ignorable="d" 
         Title="MainWindow" Height="700" Width="450"
-        Background="Transparent">
+        Background="Transparent"
+      Loaded="Page_Loaded">
 
-    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0" MouseDown="MainBorder_MouseDown">
-        <Border.Style>
-            <Style TargetType="Border">
-                <Setter Property="BorderBrush" Value="White"/>
-                <Setter Property="Background" Value="White"/>
-                <Style.Triggers>
-                    <EventTrigger RoutedEvent="Loaded">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <ColorAnimationUsingKeyFrames BeginTime="0:0:0"
-                                                                  Duration="0:0:5"
-                                                                  Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                                  RepeatBehavior="Forever"
-                                                                  AutoReverse="True">
-
-                                    <LinearColorKeyFrame KeyTime="0:0:0" Value="#D1D5DE"/>
-                                    <LinearColorKeyFrame KeyTime="0:0:5" Value="#a7aab2"/>
-                                </ColorAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </BeginStoryboard>
-
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <ColorAnimationUsingKeyFrames BeginTime="0:0:0"
-                                                                  Duration="0:0:5"
-                                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                                  RepeatBehavior="Forever"
-                                                                  AutoReverse="True">
-
-                                    <LinearColorKeyFrame KeyTime="0:0:0" Value="#D1D5DE"/>
-                                    <LinearColorKeyFrame KeyTime="0:0:5" Value="#a7aab2"/>
-                                </ColorAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </BeginStoryboard>
-
-                    </EventTrigger>
-                </Style.Triggers>
-            </Style>
-        </Border.Style>
+    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0" MouseDown="MainBorder_MouseDown"
+            Background="#D1D5DE">
 
         <!--main grid-->
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="6*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
 
+            <Button Content="X" Background="Transparent" Width="20" Height="20"
+                    VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0"
+                    BorderThickness="0" Click="ButtonClose_Click"/>
+            <Button Content="_" Background="Transparent" Width="20" Height="20"
+                    VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,40,0"
+                    BorderThickness="0" Click="ButtonMinimize_Click"/>
+
+
             <!--title-->
-            <Border Margin="5 5 5 -1" CornerRadius="25" BorderThickness="0 1 0 1"
+            <Border Margin="5,30,5,0" CornerRadius="25" BorderThickness="0 1 0 1"
                     BorderBrush="Black" Grid.Row="0">
                 <Grid>
-                    <TextBlock Text="Settigns" VerticalAlignment="Center" HorizontalAlignment="Center"
-                               FontSize="45" Margin="0 0 0 10"/>
+                    <TextBlock Name="TextBlockTitle" Text="Settings" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontSize="45" Margin="0 0 0 10">
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="TextBlockTitle"
+                                            Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                            From="0" To="1" Duration="0:0:0.75"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
                 </Grid>
             </Border>
 
             <!--Buttons-->
-            <Border Margin="5 0 5 5" CornerRadius="25" BorderThickness="0 1 0 1"
+            <Border Margin="5 -1 5 0" CornerRadius="25" BorderThickness="0 1 0 0"
                     BorderBrush="Black" Grid.Row="1">
                 <Grid>
+                    <!--Board size-->
+                    <TextBlock Text="Board size: " FontSize="24" HorizontalAlignment="Left"
+                               VerticalAlignment="Top" Margin="20 20 0 0"/>
+                    <TextBox Name="TextBoxBoardSize" Height="25" Margin="20,52,20,463" FontSize="18"/>
+
+                    <!--box size-->
+                    <TextBlock Text="Box size: " FontSize="24" HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Margin="20,90,0,0"/>
+                    <TextBox x:Name="TextBoxBoxSize" Height="25" Margin="20,127,20,388" FontSize="18"/>
+                    
+                    <!--spacing-->
+                    <TextBlock Text="Spacing: " FontSize="24" HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Margin="20,170,0,0"/>
+                    <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="20,207,20,308" FontSize="18"/>
+
+                    <!--back button-->
                     <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                            Margin="30 0 0 30" Background="Transparent" BorderBrush="Purple" BorderThickness="2"
+                            Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
                             Content="Back" FontSize="18" Click="ButtonBack_Click"/>
-
                 </Grid>
-
             </Border>
         </Grid>
     </Border>

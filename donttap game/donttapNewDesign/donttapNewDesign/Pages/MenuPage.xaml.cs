@@ -52,7 +52,19 @@ namespace donttapNewDesign.Pages
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
+            //edit or create settings.json
+
             _mainwindow.WindowState = WindowState.Minimized;
+        }
+
+        private void ButtonAbout_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.ChangeContent(2);
+        }
+
+        private void ButtonEndurance_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.ChangeContent(3);
         }
     }
 }

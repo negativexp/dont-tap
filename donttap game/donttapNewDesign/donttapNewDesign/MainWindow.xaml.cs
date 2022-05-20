@@ -28,12 +28,16 @@ namespace donttapNewDesign
 
         static Pages.MenuPage menuPage;
         static Pages.SettingsPage settingsPage;
+        static Pages.AboutPage aboutPage;
+        static Pages.Endurence.EndurenceMainPage endurenceMainPage;
 
 
         private void LoadPages()
         {
             menuPage = new Pages.MenuPage(this);
             settingsPage = new Pages.SettingsPage(this);
+            aboutPage = new Pages.AboutPage(this);
+            endurenceMainPage = new Pages.Endurence.EndurenceMainPage(this);
         }
 
         public void ChangeContent(int x)
@@ -42,6 +46,10 @@ namespace donttapNewDesign
                 this.Content = menuPage;
             if (x == 1)
                 this.Content = settingsPage;
+            if (x == 2)
+                this.Content = aboutPage;
+            if (x == 3)
+                this.Content = endurenceMainPage;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
