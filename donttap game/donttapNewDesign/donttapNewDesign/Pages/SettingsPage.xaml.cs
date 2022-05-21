@@ -36,6 +36,13 @@ namespace donttapNewDesign.Pages
         int epicprank = 0;
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
+            if (TextBoxBoardSize.Text == "")
+                TextBoxBoardSize.Text = "4";
+            if (TextBoxBoxSize.Text == "")
+                TextBoxBoxSize.Text = "165";
+            if (TextBoxSpacingSize.Text == "")
+                TextBoxSpacingSize.Text = "1";
+
             try
             {
                 int boxsize = Convert.ToInt32(TextBoxBoxSize.Text);
@@ -48,7 +55,7 @@ namespace donttapNewDesign.Pages
                     data.Boxsize = boxsize;
                     data.Boardsize = boardsize;
                     data.Spacing = spacing;
-                    File.WriteAllText("settings.json", JsonConvert.SerializeObject(data));
+                    File.WriteAllText("settings.json", JsonConvert.SerializeObject(data, Formatting.Indented));
                 }
                 else
                 {
@@ -56,7 +63,7 @@ namespace donttapNewDesign.Pages
                     settings.Boardsize = boardsize;
                     settings.Boxsize = boxsize;
                     settings.Spacing = spacing;
-                    File.WriteAllText("settings.json", JsonConvert.SerializeObject(settings));
+                    File.WriteAllText("settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
                 }
                 _mainwindow.ChangeContent(0);
             }

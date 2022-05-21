@@ -1,1 +1,5 @@
-{"Boardsize":999999,"Boxsize":99967,"Spacing":0}
+{
+  "Boardsize": 4,
+  "Boxsize": 165,
+  "Spacing": 1
+}

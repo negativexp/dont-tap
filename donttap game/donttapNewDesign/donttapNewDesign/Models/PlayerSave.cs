@@ -24,6 +24,10 @@ namespace donttapNewDesign.Models
     }
     public class EndurenceSettings
     {
+        public int Clicks { get; set; }
+    }
+    public class FrenzySettings
+    {
         public int Time { get; set; }
     }
 }

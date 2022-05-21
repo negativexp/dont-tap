@@ -68,10 +68,10 @@
                     <StackPanel Grid.Row="1">
                         <TextBlock Text="Amount of clicks for +10s:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button Content="30" Width="50" Height="50" Margin="10"/>
-                            <Button Content="40" Width="50" Height="50" Margin="10"/>
-                            <Button Content="50" Width="50" Height="50" Margin="10"/>
-                            <Button Content="Custom" Width="50" Height="50" Margin="10"/>
+                            <Button Name="Button30" Click="Button30_Click" Content="30" Background="Transparent" Width="50" Height="50" Margin="10"/>
+                            <Button Name="Button40" Click="Button40_Click" Content="40" Background="Transparent" Width="50" Height="50" Margin="10"/>
+                            <Button Name="Button50" Click="Button50_Click" Content="50" Background="Transparent" Width="50" Height="50" Margin="10"/>
+                            <Button Name="ButtonCustom" Click="ButtonCustom_Click" Content="Custom" Background="Transparent" Width="50" Height="50" Margin="10"/>
                         </StackPanel>
                     </StackPanel>
 

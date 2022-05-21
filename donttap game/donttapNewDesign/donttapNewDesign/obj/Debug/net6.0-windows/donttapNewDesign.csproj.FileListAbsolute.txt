@@ -54,3 +54,7 @@ C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNe
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\AboutPage.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Endurence\EndurenceMainPage.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Endurence\EndurenceMainPage.baml
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyMainPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyMainPage.baml
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Pattern\PatternMainPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Pattern\PatternMainPage.baml

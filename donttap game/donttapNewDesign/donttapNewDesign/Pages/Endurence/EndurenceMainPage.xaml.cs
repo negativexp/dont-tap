@@ -23,6 +23,7 @@ namespace donttapNewDesign.Pages.Endurence
     public partial class EndurenceMainPage : Page
     {
         private readonly MainWindow _mainwindow;
+        static int clicks;
         public EndurenceMainPage(MainWindow mw)
         {
             _mainwindow = mw;
@@ -36,6 +37,8 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            Classes.CreateSettings.Create();
+
             var data = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
             TextBlockBoardSize.Text = "Board size: " + data.Boardsize.ToString();
             TextBlockBoxSize.Text = "Box size: " + data.Boxsize.ToString();
@@ -55,6 +58,7 @@ namespace donttapNewDesign.Pages.Endurence
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("starz");
+            Classes.CreateSettings.Create();
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
@@ -63,6 +67,26 @@ namespace donttapNewDesign.Pages.Endurence
         }
 
         private void ButtonInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonInfo.Content = "Me too...";
+        }
+
+        private void Button30_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button40_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button50_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonCustom_Click(object sender, RoutedEventArgs e)
         {
 
         }

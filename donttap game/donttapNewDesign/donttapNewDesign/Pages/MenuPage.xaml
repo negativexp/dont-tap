@@ -73,11 +73,11 @@
                     <!--left button-->
                     <Button Name="ButtonPattern" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                             Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Pattern" FontSize="18"/>
+                            Content="Pattern" FontSize="18" Click="ButtonPattern_Click"/>
 
                     <Button Name="ButtonFrenzy" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                             Margin="30 0 0 90" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Frenzy" FontSize="18"/>
+                            Content="Frenzy" FontSize="18" Click="ButtonFrenzy_Click"/>
 
                     <Button Name="ButtonEndurance" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                             Margin="30 0 0 150" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"

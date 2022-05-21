@@ -66,5 +66,15 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow.ChangeContent(3);
         }
+
+        private void ButtonFrenzy_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.ChangeContent(4);
+        }
+
+        private void ButtonPattern_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.ChangeContent(5);
+        }
     }
 }
