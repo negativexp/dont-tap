@@ -9,7 +9,7 @@
         Background="Transparent"
       Loaded="Page_Loaded">
 
-    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0" MouseDown="MainBorder_MouseDown"
+    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0"
             Background="#D1D5DE">
 
         <!--main grid-->
@@ -19,12 +19,15 @@
                 <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
 
-            <Button Content="X" Background="Transparent" Width="20" Height="20"
+            <Grid VerticalAlignment="Top" Height="30" MouseDown="Grid_MouseDown">
+                <TextBlock Text="a" FontSize="1"/>
+                <Button Content="X" Background="Transparent" Width="20" Height="20"
                     VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0"
                     BorderThickness="0" Click="ButtonClose_Click"/>
-            <Button Content="_" Background="Transparent" Width="20" Height="20"
+                <Button Content="_" Background="Transparent" Width="20" Height="20"
                     VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,40,0"
                     BorderThickness="0" Click="ButtonMinimize_Click"/>
+            </Grid>
 
 
             <!--title-->
@@ -62,11 +65,11 @@
                     <TextBlock Text="Box size: " FontSize="24" HorizontalAlignment="Left"
                         VerticalAlignment="Top" Margin="20,90,0,0"/>
                     <TextBox x:Name="TextBoxBoxSize" Height="25" Margin="20,127,20,388" FontSize="18"/>
-                    
+
                     <!--spacing-->
                     <TextBlock Text="Spacing: " FontSize="24" HorizontalAlignment="Left"
                         VerticalAlignment="Top" Margin="20,170,0,0"/>
-                    <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="20,207,20,308" FontSize="18"/>
+                    <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="0,207,20,308" FontSize="18" HorizontalAlignment="Right" Width="400"/>
 
                     <!--back button-->
                     <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"

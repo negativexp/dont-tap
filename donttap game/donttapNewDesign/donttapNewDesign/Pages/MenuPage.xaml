@@ -9,7 +9,7 @@
       Background="Transparent"
       Loaded="Page_Loaded">
 
-    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0" MouseDown="MainBorder_MouseDown"
+    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0"
             Background="#D1D5DE">
 
         <!--main grid-->
@@ -18,6 +18,11 @@
                 <RowDefinition Height="8*"/>
                 <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
+
+            <Grid VerticalAlignment="Top" Height="30" MouseDown="Grid_MouseDown">
+                <TextBlock Text="a" FontSize="1"/>
+            </Grid>
+
 
             <Button Content="X" Background="Transparent" Width="20" Height="20"
                     VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0"

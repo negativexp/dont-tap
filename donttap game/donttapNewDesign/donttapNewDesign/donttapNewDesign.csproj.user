@@ -10,6 +10,9 @@
     <Compile Update="Pages\AboutPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Endurence\EndurenceGame.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Endurence\EndurenceMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\AboutPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Endurence\EndurenceGame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Endurence\EndurenceMainPage.xaml">

@@ -58,12 +58,33 @@ namespace donttapNewDesign
                 this.Content = frenzyMainPage;
             if (x == 5)
                 this.Content = patternMainPage;
+            if (x == 6)
+                this.Content = new Pages.Endurence.EndurenceGame(this);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             LoadPages();
             this.Content = menuPage;
+        }
+        bool isFullscreen = false;
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.F)
+            {
+                if(!isFullscreen)
+                {
+                    this.Background = new SolidColorBrush(Color.FromRgb(209, 213, 222));
+                    this.WindowState = WindowState.Maximized;
+                    isFullscreen = true;
+                }
+                else
+                {
+                    this.Background = new SolidColorBrush(Colors.Transparent);
+                    this.WindowState = WindowState.Normal;
+                    isFullscreen = false;
+                }
+            }
         }
     }
 }

@@ -46,5 +46,10 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow.WindowState = WindowState.Minimized;
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
+        }
     }
 }

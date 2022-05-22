@@ -30,11 +30,6 @@ namespace donttapNewDesign.Pages.Endurence
             InitializeComponent();
         }
 
-        private void MainBorder_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
-        }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Classes.CreateSettings.Create();
@@ -57,8 +52,8 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("starz");
             Classes.CreateSettings.Create();
+            _mainwindow.ChangeContent(6);
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
@@ -73,22 +68,59 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void Button30_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (clicks != 30)
+            {
+                clicks = 30;
+                Button30.Background = new SolidColorBrush(Colors.Green);
+                Button40.Background = new SolidColorBrush(Colors.Transparent);
+                Button50.Background = new SolidColorBrush(Colors.Transparent);
+                ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
+                TextBoxCustomClicks.Visibility = Visibility.Hidden;
+            }
         }
 
         private void Button40_Click(object sender, RoutedEventArgs e)
         {
+            if (clicks != 40)
+            {
+                clicks = 40;
+                Button30.Background = new SolidColorBrush(Colors.Transparent);
+                Button40.Background = new SolidColorBrush(Colors.Green);
+                Button50.Background = new SolidColorBrush(Colors.Transparent);
+                ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
+                TextBoxCustomClicks.Visibility = Visibility.Hidden;
 
+            }
         }
 
         private void Button50_Click(object sender, RoutedEventArgs e)
         {
-
+            if (clicks != 50)
+            {
+                clicks = 50;
+                Button30.Background = new SolidColorBrush(Colors.Transparent);
+                Button40.Background = new SolidColorBrush(Colors.Transparent);
+                Button50.Background = new SolidColorBrush(Colors.Green);
+                ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
+                TextBoxCustomClicks.Visibility = Visibility.Hidden;
+            }
         }
 
         private void ButtonCustom_Click(object sender, RoutedEventArgs e)
         {
+            if (clicks != 30 || clicks != 40 || clicks != 50)
+            {
+                Button30.Background = new SolidColorBrush(Colors.Transparent);
+                Button40.Background = new SolidColorBrush(Colors.Transparent);
+                Button50.Background = new SolidColorBrush(Colors.Transparent);
+                ButtonCustom.Background = new SolidColorBrush(Colors.Green);
+                TextBoxCustomClicks.Visibility = Visibility.Visible;
+            }
+        }
 
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
         }
     }
 }

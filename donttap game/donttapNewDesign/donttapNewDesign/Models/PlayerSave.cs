@@ -21,6 +21,8 @@ namespace donttapNewDesign.Models
         public int Boardsize { get; set; }
         public int Boxsize { get; set; }
         public int Spacing { get; set; }
+        public EndurenceSettings Endurence { get; set; }
+        public FrenzySettings Frenzy { get; set; }
     }
     public class EndurenceSettings
     {

@@ -28,7 +28,7 @@ namespace donttapNewDesign.Pages
             InitializeComponent();
         }
 
-        private void MainBorder_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             _mainwindow.DragMove();
         }

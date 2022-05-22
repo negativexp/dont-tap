@@ -29,25 +29,31 @@ namespace donttapNewDesign.Pages
             InitializeComponent();
         }
 
-        private void MainBorder_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
-        }
         int epicprank = 0;
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBoxBoardSize.Text == "")
+            if (TextBoxBoardSize.Text == "" || TextBoxBoardSize.Text[0] == '0')
                 TextBoxBoardSize.Text = "4";
-            if (TextBoxBoxSize.Text == "")
+
+            if (TextBoxBoxSize.Text == "" || TextBoxBoxSize.Text[0] == '0')
                 TextBoxBoxSize.Text = "165";
-            if (TextBoxSpacingSize.Text == "")
+
+            if (TextBoxSpacingSize.Text == "" || TextBoxSpacingSize.Text[0] == '0')
                 TextBoxSpacingSize.Text = "1";
 
             try
             {
                 int boxsize = Convert.ToInt32(TextBoxBoxSize.Text);
+                if(boxsize < 0)
+                    boxsize = 165;
                 int boardsize = Convert.ToInt32(TextBoxBoardSize.Text);
+                if (boardsize < 0)
+                    boardsize = 4;
                 int spacing = Convert.ToInt32(TextBoxSpacingSize.Text);
+                if (spacing < 0)
+                    spacing = 1;
+
+                bool create;
 
                 if (File.Exists("settings.json"))
                 {
@@ -101,6 +107,11 @@ namespace donttapNewDesign.Pages
                 TextBoxBoxSize.Text = data[1].ToString();
                 TextBoxSpacingSize.Text = data[2].ToString();
             }
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
         }
     }
 }

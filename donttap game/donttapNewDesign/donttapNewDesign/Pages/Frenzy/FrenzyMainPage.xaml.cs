@@ -39,11 +39,6 @@ namespace donttapNewDesign.Pages.Frenzy
             TextBlockSpacing.Text = "Spacing: " + data.Spacing.ToString();
         }
 
-        private void MainBorder_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
-        }
-
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.Close();
@@ -68,6 +63,11 @@ namespace donttapNewDesign.Pages.Frenzy
         private void ButtonInfo_Click(object sender, RoutedEventArgs e)
         {
             ButtonInfo.Content = "Me too...";
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
         }
     }
 }
