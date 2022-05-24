@@ -7,11 +7,11 @@ Everything is saved in folder where the game is located using json and can be ea
 Main settings are located under the name `settings.json`.
 There are 3 main settings...
 1. Board size
-  1. To set board size you type in a number like 4 and 4x4 board will appear. Board size cannot be less than 2 and will be converted to deafult settings (4).
+⋅⋅⋅To set board size you type in a number like 4 and 4x4 board will appear. Board size cannot be less than 2 and will be converted to deafult settings (4).
 2. Box size
-  2. Box size is measured in pixles and cannot be less than 1 and yet again will be converted to deafult settings (165).
+⋅⋅⋅Box size is measured in pixles and cannot be less than 1 and yet again will be converted to deafult settings (165).
 3. Spacing
-  3. Spacing is space between boxes and is measured in pixles. Spacing cannot be less than 0 and will be converted to deafult settings (1).
+⋅⋅⋅Spacing is space between boxes and is measured in pixles. Spacing cannot be less than 0 and will be converted to deafult settings (1).
 ### Endurance settings
 there is just one thing and thats `Amount of clicks`.
 ### Frenzy settings
