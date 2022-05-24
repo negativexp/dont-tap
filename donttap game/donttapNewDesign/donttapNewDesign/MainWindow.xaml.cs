@@ -76,15 +76,53 @@ namespace donttapNewDesign
                 {
                     this.Background = new SolidColorBrush(Color.FromRgb(209, 213, 222));
                     this.WindowState = WindowState.Maximized;
+                    ChangeSizeFullscreen();
                     isFullscreen = true;
                 }
                 else
                 {
                     this.Background = new SolidColorBrush(Colors.Transparent);
                     this.WindowState = WindowState.Normal;
+                    ChangeSizeNormal();
                     isFullscreen = false;
                 }
             }
+        }
+        private void ChangeSizeFullscreen()
+        {
+            double width = System.Windows.SystemParameters.WorkArea.Width;
+            double height = System.Windows.SystemParameters.WorkArea.Height;
+
+            menuPage.Width = width;
+            menuPage.Height = height;
+            settingsPage.Width = width;
+            settingsPage.Height = height;
+            aboutPage.Width = width;
+            aboutPage.Height = height;
+            endurenceMainPage.Width = width;
+            endurenceMainPage.Height = height;
+            frenzyMainPage.Width = width;
+            frenzyMainPage.Height = height;
+            patternMainPage.Width = width;
+            patternMainPage.Height = height;
+        }
+        private void ChangeSizeNormal()
+        {
+            double width = 450;
+            double height = 700;
+
+            menuPage.Width = width;
+            menuPage.Height = height;
+            settingsPage.Width = width;
+            settingsPage.Height = height;
+            aboutPage.Width = width;
+            aboutPage.Height = height;
+            endurenceMainPage.Width = width;
+            endurenceMainPage.Height = height;
+            frenzyMainPage.Width = width;
+            frenzyMainPage.Height = height;
+            patternMainPage.Width = width;
+            patternMainPage.Height = height;
         }
     }
 }

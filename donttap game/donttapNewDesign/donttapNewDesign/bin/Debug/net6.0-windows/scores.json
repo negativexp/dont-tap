@@ -31,6 +31,38 @@
       "Spacing": 1,
       "Time": "2022-05-24T09:52:50.9815918+02:00",
       "Clicks": 30
+    },
+    {
+      "Score": 26,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T10:38:10.6314948+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 70,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T10:38:42.1332822+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 22,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T10:50:30.4403092+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 11,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T10:50:42.2010282+02:00",
+      "Clicks": 30
     }
   ],
   "Frenzy": null,
