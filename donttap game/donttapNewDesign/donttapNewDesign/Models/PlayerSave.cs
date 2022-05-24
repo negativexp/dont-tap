@@ -12,8 +12,8 @@ namespace donttapNewDesign.Models
     }
     public class Player
     {
-        public string Name { get; set; }
         public int Score { get; set; }
+        public DateTime Time { get; set; }
         public Settings Settings { get; set; }
     }
     public class Settings

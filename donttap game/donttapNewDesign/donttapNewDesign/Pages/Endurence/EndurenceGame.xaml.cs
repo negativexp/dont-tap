@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Newtonsoft.Json;
+using System.Windows.Media.Animation;
+using System.Threading;
 
 namespace donttapNewDesign.Pages.Endurence
 {
@@ -29,12 +31,14 @@ namespace donttapNewDesign.Pages.Endurence
             InitializeComponent();
         }
 
-        static bool[]? clickables;
-        static Rectangle[]? boxes;
-        static int? time;
-        static int? boxSize;
-        static int? boardSize;
-        static int? spacing;
+        static bool[] clickables;
+        static int[] inUse;
+        static Rectangle[] boxes;
+        static int time;
+        static int boxSize;
+        static int boardSize;
+        static int spacing;
+        int countdown = 3;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -48,17 +52,16 @@ namespace donttapNewDesign.Pages.Endurence
             GridGame.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
             GridGame.Height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
 
-            if(this.Width < 355)
+            if(this.Width < 450)
             {
-                this.Width = 355;
-                this.Height = 505;
-                _mainwindow.Width = 355;
-                _mainwindow.Height = 505;
+                this.Width = 450;
+                this.Height = 700;
+                _mainwindow.Width = 450;
+                _mainwindow.Height = 700;
             }
 
             //set values
-            clickables = new bool[settings.Boardsize * settings.Boardsize];
-            boxes = new Rectangle[settings.Boardsize * settings.Boxsize];
+            inUse = new int[3];
             time = 10;
             boxSize = settings.Boxsize;
             boardSize = settings.Boardsize;
@@ -66,7 +69,7 @@ namespace donttapNewDesign.Pages.Endurence
 
             CreateDefinitions();
             CreateBoard();
-
+            StartCountDown();
         }
 
         private void CreateDefinitions()
@@ -85,6 +88,8 @@ namespace donttapNewDesign.Pages.Endurence
         }
         private void CreateBoard()
         {
+            boxes = new Rectangle[boardSize * boardSize];
+
             int index = -1;
             for(int i = 0; i < boardSize; i++)
             {
@@ -92,43 +97,156 @@ namespace donttapNewDesign.Pages.Endurence
                 {
                     index++;
                     boxes[index] = RectangleSettings();
+                    boxes[index].Tag = index;
                     boxes[index].SetValue(Grid.RowProperty, i);
                     boxes[index].SetValue(Grid.ColumnProperty, j);
                     GridGame.Children.Add(boxes[index]);
                 }
             }
         }
+        private void Box_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            int number = Convert.ToInt32((sender as Rectangle).Tag);
+            if (clickables[number])
+            {
+                clickables[number] = false;
+                ChangeColorToNotClickable(boxes[number]);
+                GenerateNewBox(number);
+            }
+            else
+            {
+                GameOver();
+            }
+        }
+        private void GenerateNewBox(int clicked)
+        {
+            Random rdm = new Random();
+            int index = Array.IndexOf(inUse, clicked);
+            int number = rdm.Next(0, boxes.Length);
+            while (inUse.Contains(number))
+                number = rdm.Next(0, boxes.Length);
+            inUse[index] = number;
+            clickables[number] = true;
+            ChangeColorToClickable(boxes[number]);
+        }
+        private void GenerateFirstBoxes()
+        {
+            clickables = new bool[boardSize * boardSize];
+
+            Random rdm = new Random();
+            for(int i = 0; i < inUse.Length; i++)
+            {
+                int number = rdm.Next(0, boardSize * boardSize);
+                while(inUse.Contains(number))
+                    number = rdm.Next(0, boardSize * boardSize);
+                inUse[i] = number;
+                clickables[number] = true;
+                ChangeColorToClickable(boxes[number]);
+            }     
+        }
         private Rectangle RectangleSettings()
         {
             Rectangle box = new Rectangle();
-            box.Fill = new SolidColorBrush(Colors.Black);
+            box.Fill = new SolidColorBrush(Colors.White);
             box.Width = (double)boxSize;
             box.Height = (double)boxSize;
 
             return box;
 
         }
+        private void ChangeColorToClickable(Rectangle box)
+        {
+            box.Fill = new SolidColorBrush(Colors.Black);
+        }
+        private void ChangeColorToNotClickable(Rectangle box)
+        {
+            box.Fill = new SolidColorBrush(Colors.White);
+        }
+        System.Windows.Threading.DispatcherTimer TimerTime = new System.Windows.Threading.DispatcherTimer();
+        private void StartTime()
+        {
+            TimerTime.Tick += new EventHandler(TimerTime_Tick);
+            TimerTime.Interval = new TimeSpan(0, 0, 1);
+            TimerTime.Start();
+        }
+        private void TimerTime_Tick(object sender, EventArgs e)
+        {
+            time--;
+            TextBlockTime.Text = time.ToString();
+            if(time == 0)
+            {
+                GameOver();
+                TimerTime.Stop();
+            }
+        }
+
+        System.Windows.Threading.DispatcherTimer TimerCountDown = new System.Windows.Threading.DispatcherTimer();
+        private void StartCountDown()
+        {
+            TimerCountDown.Tick += new EventHandler(TimerCountDown_Tick);
+            TimerCountDown.Interval = new TimeSpan(0, 0, 1);
+            TimerCountDown.Start();
+        }
+        private void TimerCountDown_Tick(object sender, EventArgs e)
+        {
+            countdown--;
+            if (countdown == -1)
+            {
+                GridCountDown.Visibility = Visibility.Hidden;
+                foreach (Rectangle r in boxes)
+                    r.MouseDown += Box_MouseDown;
+                GenerateFirstBoxes();
+                StartTime();
+                TimerCountDown.Stop();
+            }
+            TextBlockCountDown.Text = countdown.ToString();
+            if (countdown == 0)
+            {
+                TextBlockCountDown.Text = "Go!";
+            }
+        }
+        System.Windows.Threading.DispatcherTimer TimerGameOver = new System.Windows.Threading.DispatcherTimer();
+        private void GameOver()
+        {
+            foreach(Rectangle bruh in boxes)
+            {
+                bruh.MouseDown -= Box_MouseDown;
+            }
+            TimerTime.Stop();
+            GridCountDown.Visibility = Visibility.Visible;
+            TextBlockCountDown.Text = "Game\nOver";
+            TimerGameOver.Tick += new EventHandler(TimerGameOver_Tick);
+            TimerGameOver.Interval = new TimeSpan(0, 0, 2);
+            TimerGameOver.Start();
+        }
+        private void TimerGameOver_Tick(object? sender, EventArgs e)
+        {
+            _mainwindow.ChangeContent(3);
+            Reset();
+            TimerGameOver.Stop();
+        }
+
+        private void BoxNull_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //nothing loler
+        }
 
         private void Reset()
         {
             clickables = null;
+            inUse = null;
             boxes = null;
-            time = null;
-            boxSize = null;
-            boardSize = null;
-            spacing = null;
+            time = 10;
+            countdown = 3;
         }
-
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.Close();
         }
-
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.WindowState = WindowState.Minimized;
         }
-
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             _mainwindow.DragMove();

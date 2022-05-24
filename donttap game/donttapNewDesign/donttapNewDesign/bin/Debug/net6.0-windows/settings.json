@@ -1,7 +1,7 @@
 {
-  "Boardsize": 5,
+  "Boardsize": 4,
   "Boxsize": 165,
-  "Spacing": 1,
+  "Spacing": 0,
   "Endurence": null,
   "Frenzy": null
 }

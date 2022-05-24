@@ -38,9 +38,6 @@ namespace donttapNewDesign.Pages
             if (TextBoxBoxSize.Text == "" || TextBoxBoxSize.Text[0] == '0')
                 TextBoxBoxSize.Text = "165";
 
-            if (TextBoxSpacingSize.Text == "" || TextBoxSpacingSize.Text[0] == '0')
-                TextBoxSpacingSize.Text = "1";
-
             try
             {
                 int boxsize = Convert.ToInt32(TextBoxBoxSize.Text);
@@ -51,7 +48,7 @@ namespace donttapNewDesign.Pages
                     boardsize = 4;
                 int spacing = Convert.ToInt32(TextBoxSpacingSize.Text);
                 if (spacing < 0)
-                    spacing = 1;
+                    spacing = 0;
 
                 bool create;
 
