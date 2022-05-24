@@ -1,0 +1,38 @@
+{
+  "Endurence": [
+    {
+      "Score": 7,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T09:48:03.0097141+02:00",
+      "Clicks": 40
+    },
+    {
+      "Score": 11,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T09:48:47.2951876+02:00",
+      "Clicks": 40
+    },
+    {
+      "Score": 0,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T09:49:59.4021335+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 9,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-24T09:52:50.9815918+02:00",
+      "Clicks": 30
+    }
+  ],
+  "Frenzy": null,
+  "Pattern": null
+}

@@ -23,7 +23,8 @@ namespace donttapNewDesign.Pages.Endurence
     public partial class EndurenceMainPage : Page
     {
         private readonly MainWindow _mainwindow;
-        static int clicks;
+        int clicks;
+        bool custom;
         public EndurenceMainPage(MainWindow mw)
         {
             _mainwindow = mw;
@@ -52,8 +53,27 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-            Classes.CreateSettings.Create();
-            _mainwindow.ChangeContent(6);
+            if(custom)
+            {
+                try
+                {
+                    clicks = Convert.ToInt32(TextBoxCustomClicks.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Amount of clicks can be only numbers!");
+                }
+            }
+            if (clicks <= 0)
+            {
+                MessageBox.Show("Amount of clicks cannot be 0 or less!", "Value ERROR");
+            }
+            else
+            {
+                Classes.CreateSettings.Create();
+                Classes.CreateEndurenceSettings.Create(clicks);
+                _mainwindow.ChangeContent(6);
+            }
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
@@ -76,6 +96,7 @@ namespace donttapNewDesign.Pages.Endurence
                 Button50.Background = new SolidColorBrush(Colors.Transparent);
                 ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
                 TextBoxCustomClicks.Visibility = Visibility.Hidden;
+                custom = false;
             }
         }
 
@@ -89,7 +110,7 @@ namespace donttapNewDesign.Pages.Endurence
                 Button50.Background = new SolidColorBrush(Colors.Transparent);
                 ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
                 TextBoxCustomClicks.Visibility = Visibility.Hidden;
-
+                custom = false;
             }
         }
 
@@ -103,6 +124,7 @@ namespace donttapNewDesign.Pages.Endurence
                 Button50.Background = new SolidColorBrush(Colors.Green);
                 ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
                 TextBoxCustomClicks.Visibility = Visibility.Hidden;
+                custom = false;
             }
         }
 
@@ -115,6 +137,7 @@ namespace donttapNewDesign.Pages.Endurence
                 Button50.Background = new SolidColorBrush(Colors.Transparent);
                 ButtonCustom.Background = new SolidColorBrush(Colors.Green);
                 TextBoxCustomClicks.Visibility = Visibility.Visible;
+                custom = true;
             }
         }
 

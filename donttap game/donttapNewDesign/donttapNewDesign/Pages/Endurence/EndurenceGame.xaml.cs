@@ -31,18 +31,21 @@ namespace donttapNewDesign.Pages.Endurence
             InitializeComponent();
         }
 
-        static bool[] clickables;
-        static int[] inUse;
-        static Rectangle[] boxes;
-        static int time;
-        static int boxSize;
-        static int boardSize;
-        static int spacing;
+        bool[] clickables;
+        int[] inUse;
+        Rectangle[] boxes;
+        int time;
+        int boxSize;
+        int boardSize;
+        int spacing;
+        int clicks;
+        int points;
         int countdown = 3;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var settings = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
+            var endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
 
             //change window size
             _mainwindow.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing) + 100;
@@ -51,13 +54,15 @@ namespace donttapNewDesign.Pages.Endurence
             this.Height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing) + 250;
             GridGame.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
             GridGame.Height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
+            ProgessBarValue.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
 
-            if(this.Width < 450)
+            if (this.Width < 450)
             {
                 this.Width = 450;
                 this.Height = 700;
                 _mainwindow.Width = 450;
                 _mainwindow.Height = 700;
+                ProgessBarValue.Width = 400;
             }
 
             //set values
@@ -66,6 +71,7 @@ namespace donttapNewDesign.Pages.Endurence
             boxSize = settings.Boxsize;
             boardSize = settings.Boardsize;
             spacing = settings.Spacing;
+            clicks = endurenceSettings.Clicks;
 
             CreateDefinitions();
             CreateBoard();
@@ -109,6 +115,9 @@ namespace donttapNewDesign.Pages.Endurence
             int number = Convert.ToInt32((sender as Rectangle).Tag);
             if (clickables[number])
             {
+                points++;
+                GameRules();
+                UpdateTimeAndPoints();
                 clickables[number] = false;
                 ChangeColorToNotClickable(boxes[number]);
                 GenerateNewBox(number);
@@ -116,6 +125,36 @@ namespace donttapNewDesign.Pages.Endurence
             else
             {
                 GameOver();
+            }
+        }
+        System.Windows.Threading.DispatcherTimer TimerProgessBar = new System.Windows.Threading.DispatcherTimer();
+        private void StartProgessBar()
+        {
+            TimerProgessBar.Tick += new EventHandler(TimerProgessBar_Tick);
+            TimerProgessBar.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            TimerProgessBar.Start();
+        }
+        private void TimerProgessBar_Tick(object? sender, EventArgs e)
+        {
+            ProgessBarValue.Value -= 0.20;
+        }
+
+        private void PointsRules()
+        {
+
+        }
+        private void UpdateTimeAndPoints()
+        {
+            TextBlockPoints.Text = points.ToString();
+            TextBlockTime.Text = time.ToString();
+        }
+        private void GameRules()
+        {
+            ProgessBarValue.Value += 4;
+
+            if (points % clicks == 0)
+            {
+                time += 10;
             }
         }
         private void GenerateNewBox(int clicked)
@@ -196,6 +235,7 @@ namespace donttapNewDesign.Pages.Endurence
                 foreach (Rectangle r in boxes)
                     r.MouseDown += Box_MouseDown;
                 GenerateFirstBoxes();
+                StartProgessBar();
                 StartTime();
                 TimerCountDown.Stop();
             }
@@ -208,6 +248,7 @@ namespace donttapNewDesign.Pages.Endurence
         System.Windows.Threading.DispatcherTimer TimerGameOver = new System.Windows.Threading.DispatcherTimer();
         private void GameOver()
         {
+            Classes.CreatePlayerScore.Create(0, points);
             foreach(Rectangle bruh in boxes)
             {
                 bruh.MouseDown -= Box_MouseDown;
@@ -225,12 +266,6 @@ namespace donttapNewDesign.Pages.Endurence
             Reset();
             TimerGameOver.Stop();
         }
-
-        private void BoxNull_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            //nothing loler
-        }
-
         private void Reset()
         {
             clickables = null;

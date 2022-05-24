@@ -46,13 +46,13 @@
                                FontSize="35" Margin="0 0 0 -30" Grid.Column="0"/>
                     <TextBlock Text="Points:" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="35" Margin="0 0 0 50" Grid.Column="1"/>
-                    <TextBlock Text="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    <TextBlock Name="TextBlockPoints" Text="0" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="35" Margin="0 0 0 -30" Grid.Column="1"/>
                     <TextBlock Text="Time:" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="35" Margin="0 0 0 50" Grid.Column="2"/>
                     <TextBlock Name="TextBlockTime" Text="10" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="35" Margin="0 0 0 -30" Grid.Column="2"/>
-                    <ProgressBar Width="400" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="-50" Grid.ColumnSpan="3"/>
+                    <ProgressBar Name="ProgessBarValue" Width="400" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="-50" Grid.ColumnSpan="3"/>
                 </Grid>
             </Border>
 
