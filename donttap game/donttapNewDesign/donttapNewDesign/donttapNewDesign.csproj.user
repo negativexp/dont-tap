@@ -19,6 +19,9 @@
     <Compile Update="Pages\Frenzy\FrenzyMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\LeaderboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\MenuPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Frenzy\FrenzyMainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LeaderboardPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\MenuPage.xaml">

@@ -81,11 +81,6 @@ namespace donttapNewDesign.Pages.Endurence
             _mainwindow.ChangeContent(0);
         }
 
-        private void ButtonInfo_Click(object sender, RoutedEventArgs e)
-        {
-            ButtonInfo.Content = "Me too...";
-        }
-
         private void Button30_Click(object sender, RoutedEventArgs e)
         {
             if (clicks != 30)
@@ -144,6 +139,11 @@ namespace donttapNewDesign.Pages.Endurence
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             _mainwindow.DragMove();
+        }
+
+        private void ButtonLeaderBoard_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.ChangeContent(7);
         }
     }
 }

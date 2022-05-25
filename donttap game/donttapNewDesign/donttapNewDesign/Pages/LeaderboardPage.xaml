@@ -1,9 +1,9 @@
-﻿<Page x:Class="donttapNewDesign.Pages.Endurence.EndurenceMainPage"
+﻿<Page x:Class="donttapNewDesign.Pages.LeaderboardPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:donttapNewDesign.Pages.Endurence"
+      xmlns:local="clr-namespace:donttapNewDesign.Pages"
       mc:Ignorable="d" 
       Title="MainWindow" Height="700" Width="450"
       Background="Transparent"
@@ -35,7 +35,7 @@
             <Border Margin="5,30,5,0" CornerRadius="25" BorderThickness="0 1 0 1"
                     BorderBrush="Black" Grid.Row="0">
                 <Grid>
-                    <TextBlock Name="TextBlockTitle" Text="Endurence" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    <TextBlock Name="TextBlockTitle" Text="Leaderboard" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="45" Margin="0 0 0 10">
                         <TextBlock.Triggers>
                             <EventTrigger RoutedEvent="Loaded">
@@ -57,43 +57,19 @@
             <Border Margin="5 -1 5 0" CornerRadius="25" BorderThickness="0 1 0 0"
                     BorderBrush="Black" Grid.Row="1">
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="227*"/>
-                        <RowDefinition Height="313*"/>
-                    </Grid.RowDefinitions>
-
-                    <StackPanel Grid.Row="0">
-                        <TextBlock Text="Settings:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 40 0 10" FontSize="30"/>
-                        <TextBlock Name="TextBlockBoardSize" Text="Board size: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                        <TextBlock Name="TextBlockBoxSize" Text="Box size: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                        <TextBlock Name="TextBlockSpacing" Text="Spacing: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                    </StackPanel>
-
-                    <StackPanel Grid.Row="1">
-                        <TextBlock Text="Amount of clicks for +10s:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button Name="Button30" Click="Button30_Click" Content="30" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                            <Button Name="Button40" Click="Button40_Click" Content="40" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                            <Button Name="Button50" Click="Button50_Click" Content="50" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                            <Button Name="ButtonCustom" Click="ButtonCustom_Click" Content="Custom" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                        </StackPanel>
-                        <TextBox Name="TextBoxCustomClicks" Width="400" Height="25" Visibility="Visible"/>
-                    </StackPanel>
-
-
+                    <DataGrid Name="DataGridScores" Height="440"
+                              VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,10,0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Score" Width="1*"/>
+                            <DataGridTextColumn Header="Gamemode" Width="1*"/>
+                            <DataGridTextColumn Header="Settings" Width="1*"/>
+                            <DataGridTextColumn Header="Time" Width="1*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
                     <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                             Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
                             Content="Back" FontSize="18" Click="ButtonBack_Click" Grid.Row="1"/>
-
-                    <Button Name="ButtonStart" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                            Margin="0 0 30 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Start" FontSize="18" Click="ButtonStart_Click" Grid.Row="1"/>
-
-                    <Button Name="ButtonLeaderBoard" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                            Margin="0,0,0,30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Leaderboard" FontSize="18" Click="ButtonLeaderBoard_Click" Grid.Row="1"/>
                 </Grid>
-
             </Border>
         </Grid>
     </Border>
