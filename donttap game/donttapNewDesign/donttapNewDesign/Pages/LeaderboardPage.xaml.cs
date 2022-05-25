@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace donttapNewDesign.Pages
 {
@@ -26,10 +28,18 @@ namespace donttapNewDesign.Pages
             _mainwindow = mw;
             InitializeComponent();
         }
+        public class data
+        {
+            public string score { get; set; }
+            public string gamemode { get; set; }
+            public string settings { get; set; }
+            public string time { get; set; }
+        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            var result = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
+            DataGridScores.DataContext = result;
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
