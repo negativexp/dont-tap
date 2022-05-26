@@ -44,29 +44,29 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            TextBlockCountDown.Style = Application.Current.FindResource("CountDownFadeOut") as Style;
+
             var settings = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
             var endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
 
             int width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
             int height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
 
-            if (width < 450 | height < 700)
+            _mainwindow.Width = width + 100;
+            _mainwindow.Height = height + 250;
+            this.Width = width + 100;
+            this.Height = height + 250;
+            GridGame.Width = width;
+            GridGame.Height = height;
+            ProgessBarValue.Width = width;
+
+            if (this.Width < 450 | this.Height < 700)
             {
                 this.Width = 450;
                 this.Height = 700;
                 _mainwindow.Width = 450;
                 _mainwindow.Height = 700;
                 ProgessBarValue.Width = 400;
-            }
-            else
-            {
-                _mainwindow.Width = width + 100;
-                _mainwindow.Height = height + 250;
-                this.Width = width + 100;
-                this.Height = height + 250;
-                GridGame.Width = width;
-                GridGame.Height = height;
-                ProgessBarValue.Width = width;
             }
 
             //set values
@@ -108,6 +108,7 @@ namespace donttapNewDesign.Pages.Endurence
                     index++;
                     boxes[index] = RectangleSettings();
                     boxes[index].Tag = index;
+                    boxes[index].Style = Application.Current.FindResource("bruh") as Style;
                     boxes[index].SetValue(Grid.RowProperty, i);
                     boxes[index].SetValue(Grid.ColumnProperty, j);
                     GridGame.Children.Add(boxes[index]);
@@ -123,7 +124,7 @@ namespace donttapNewDesign.Pages.Endurence
                 GameRules();
                 UpdateTimeAndPoints();
                 clickables[number] = false;
-                ChangeColorToNotClickable(boxes[number]);
+                //ChangeColorToNotClickable(boxes[number]);
                 GenerateNewBox(number);
             }
             else
@@ -256,6 +257,7 @@ namespace donttapNewDesign.Pages.Endurence
             foreach(Rectangle bruh in boxes)
             {
                 bruh.MouseDown -= Box_MouseDown;
+                bruh.Style = null;
             }
             TimerTime.Stop();
             GridCountDown.Visibility = Visibility.Visible;

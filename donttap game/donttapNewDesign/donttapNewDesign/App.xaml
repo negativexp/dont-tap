@@ -26,9 +26,41 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#E6E6E6"/>
+                    <Setter Property="Background" Value="#7160E8"/>
                     <Setter Property="Cursor" Value="Hand"/>
                 </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Box fade out-->
+        <Style x:Key="bruh" TargetType="Rectangle">
+            <Setter Property="Fill" Value="Black"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseDown">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="Fill.Color"
+                                            Duration="0:0:0.15"
+                                            To="White"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <!--countdown fade out-->
+        <Style x:Key="CountDownFadeOut" TargetType="TextBlock">
+            <Setter Property="Opacity" Value="1"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation 
+                                             Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                             Duration="0:0:0.4"
+                                             From="1"
+                                             To="0"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
             </Style.Triggers>
         </Style>
     </Application.Resources>
