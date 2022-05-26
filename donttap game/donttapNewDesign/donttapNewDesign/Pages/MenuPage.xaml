@@ -76,26 +76,30 @@
                 <Grid>
 
                     <!--left button-->
-                    <Button Name="ButtonPattern" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                            Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Pattern" FontSize="18" Click="ButtonPattern_Click"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonPattern" 
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
+                            Content="Pattern" Click="ButtonPattern_Click"/>
 
-                    <Button Name="ButtonFrenzy" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                            Margin="30 0 0 90" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Frenzy" FontSize="18" Click="ButtonFrenzy_Click"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonFrenzy"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 90"
+                            Content="Frenzy" Click="ButtonFrenzy_Click"/>
 
-                    <Button Name="ButtonEndurance" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                            Margin="30 0 0 150" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Endurance" FontSize="18" Click="ButtonEndurance_Click"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonEndurance"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 150"
+                            Content="Endurance" Click="ButtonEndurance_Click"/>
                     <!--right buttons-->
 
-                    <Button Name="ButtonAbout" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                            Margin="0 0 30 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="About" FontSize="18" Click="ButtonAbout_Click"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonAbout"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
+                            Content="About" Click="ButtonAbout_Click"/>
 
-                    <Button Name="ButtonSettings" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                            Margin="0 0 30 90" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Settings" FontSize="18" Click="ButtonSettings_Click"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSettings"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 90"
+                            Content="Settings" Click="ButtonSettings_Click"/>
+
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonLeaderboard"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 150"
+                            Content="Leaderboard" Click="ButtonLeaderboard_Click"/>
 
                 </Grid>
 

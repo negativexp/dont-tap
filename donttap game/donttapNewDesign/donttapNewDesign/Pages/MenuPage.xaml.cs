@@ -76,5 +76,10 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow.ChangeContent(5);
         }
+
+        private void ButtonLeaderboard_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.ChangeContent(7);
+        }
     }
 }

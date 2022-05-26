@@ -74,3 +74,4 @@ C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\donttapNewDesign.csproj.CopyComplete
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\LeaderboardPage.g.cs
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\LeaderboardPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\App.baml

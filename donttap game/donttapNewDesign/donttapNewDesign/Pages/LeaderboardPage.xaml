@@ -57,12 +57,24 @@
             <Border Margin="5 -1 5 0" CornerRadius="25" BorderThickness="0 1 0 0"
                     BorderBrush="Black" Grid.Row="1">
                 <Grid>
-                    <DataGrid Name="DataGridScores" Height="440"
+                    <DataGrid Name="DataGridScores" Height="400"
                               VerticalAlignment="Top" Margin="10,20,10,0"
                               IsReadOnly="True">
                         <DataGrid.Columns>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button Name="ButtonPattern" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            Margin="0 0 30 75" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
+                            Content="Pattern" FontSize="18" Grid.Row="1"/>
+
+                    <Button Name="ButtonFrenzy" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                            Margin="00 0 0 75" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
+                            Content="Frenzy" FontSize="18" Grid.Row="1"/>
+
+                    <Button Name="ButtonEndurence" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                            Margin="30 0 0 75" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
+                            Content="Endurance" FontSize="18" Grid.Row="1"/>
+
                     <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                             Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
                             Content="Back" FontSize="18" Click="ButtonBack_Click" Grid.Row="1"/>
