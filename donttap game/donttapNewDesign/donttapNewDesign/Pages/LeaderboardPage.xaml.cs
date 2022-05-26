@@ -30,16 +30,34 @@ namespace donttapNewDesign.Pages
         }
         public class data
         {
-            public string score { get; set; }
-            public string gamemode { get; set; }
-            public string settings { get; set; }
-            public string time { get; set; }
+            public int Score { get; set; }
+            public string Gamemode { get; set; }
+            public string Settings { get; set; }
+            public string Time { get; set; }
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var result = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
-            DataGridScores.DataContext = result;
+            var json = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
+            List<data> mrdko = new List<data>();
+
+            foreach(var item in json.Endurence)
+            {
+                string gr = string.Format("{0}\n{1}\n{2}\n{3}", item.Boardsize, item.Boxsize, item.Spacing, item.Clicks);
+                mrdko.Add(new data
+                {
+                    Score = item.Score,
+                    Gamemode = "Endurence",
+                    Settings = gr,
+                    Time = item.Time.ToShortDateString() + "\n" + item.Time.ToShortTimeString()
+                });
+            }
+
+            DataGridScores.ItemsSource = mrdko;
+            foreach(var col in DataGridScores.Columns)
+            {
+                col.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+            }
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

@@ -71,6 +71,14 @@
       "Spacing": 1,
       "Time": "2022-05-25T09:01:37.753823+02:00",
       "Clicks": 30
+    },
+    {
+      "Score": 247,
+      "Boardsize": 2,
+      "Boxsize": 100,
+      "Spacing": 1,
+      "Time": "2022-05-26T10:22:48.6281188+02:00",
+      "Clicks": 30
     }
   ],
   "Frenzy": null,

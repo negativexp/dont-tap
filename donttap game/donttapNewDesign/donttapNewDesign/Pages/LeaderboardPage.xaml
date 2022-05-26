@@ -58,12 +58,9 @@
                     BorderBrush="Black" Grid.Row="1">
                 <Grid>
                     <DataGrid Name="DataGridScores" Height="440"
-                              VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,10,0">
+                              VerticalAlignment="Top" Margin="10,20,10,0"
+                              IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Score" Width="1*"/>
-                            <DataGridTextColumn Header="Gamemode" Width="1*"/>
-                            <DataGridTextColumn Header="Settings" Width="1*"/>
-                            <DataGridTextColumn Header="Time" Width="1*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
