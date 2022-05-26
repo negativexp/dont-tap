@@ -81,19 +81,18 @@
                     </StackPanel>
 
 
-                    <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                            Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Back" FontSize="18" Click="ButtonBack_Click" Grid.Row="1"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
+                            Content="Back" Click="ButtonBack_Click" Grid.Row="1"/>
 
-                    <Button Name="ButtonStart" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                            Margin="0 0 30 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Start" FontSize="18" Click="ButtonStart_Click" Grid.Row="1"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonStart"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
+                            Content="Start" Click="ButtonStart_Click" Grid.Row="1"/>
 
-                    <Button Name="ButtonLeaderBoard" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                            Margin="0,0,0,30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Leaderboard" FontSize="18" Click="ButtonLeaderBoard_Click" Grid.Row="1"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonLeaderBoard"
+                            HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30"
+                            Content="Leaderboard" Click="ButtonLeaderBoard_Click" Grid.Row="1"/>
                 </Grid>
-
             </Border>
         </Grid>
     </Border>

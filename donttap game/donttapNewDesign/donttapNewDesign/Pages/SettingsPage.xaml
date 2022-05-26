@@ -75,6 +75,10 @@
                     <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
                             Content="Back" Click="ButtonBack_Click"/>
+                    <!--Save-->
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSave"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
+                            Content="Save" Click="ButtonSave_Click"/>
                 </Grid>
             </Border>
         </Grid>

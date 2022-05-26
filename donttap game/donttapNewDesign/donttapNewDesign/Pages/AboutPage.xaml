@@ -61,9 +61,9 @@
                                Text="SEX"/>
 
                     <!--back button-->
-                    <Button Name="ButtonBack" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                            Margin="30 0 0 30" Background="#a7aab2" BorderBrush="Black" BorderThickness="1"
-                            Content="Back" FontSize="18" Click="ButtonBack_Click"/>
+                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
+                            Content="Back" Click="ButtonBack_Click"/>
                 </Grid>
             </Border>
         </Grid>

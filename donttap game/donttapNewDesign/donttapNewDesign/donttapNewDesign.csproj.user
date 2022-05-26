@@ -13,19 +13,13 @@
     <Compile Update="Pages\Endurence\EndurenceGame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Endurence\EndurenceLeaderboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Endurence\EndurenceMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\Frenzy\FrenzyMainPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\LeaderboardPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Pages\MenuPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\Pattern\PatternMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\SettingsPage.xaml.cs">
@@ -42,19 +36,13 @@
     <Page Update="Pages\Endurence\EndurenceGame.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\Endurence\EndurenceLeaderboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Endurence\EndurenceMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Frenzy\FrenzyMainPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\LeaderboardPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Pages\MenuPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Pattern\PatternMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SettingsPage.xaml">

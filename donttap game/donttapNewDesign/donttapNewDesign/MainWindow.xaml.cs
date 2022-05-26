@@ -30,9 +30,7 @@ namespace donttapNewDesign
         static Pages.SettingsPage settingsPage;
         static Pages.AboutPage aboutPage;
         static Pages.Endurence.EndurenceMainPage endurenceMainPage;
-        static Pages.Frenzy.FrenzyMainPage frenzyMainPage;
-        static Pages.Pattern.PatternMainPage patternMainPage;
-        static Pages.LeaderboardPage leaderboardMainPage;
+        static Pages.Endurence.EndurenceLeaderboardPage endurenceLeaderboardPage;
 
 
         private void LoadPages()
@@ -41,9 +39,7 @@ namespace donttapNewDesign
             settingsPage = new Pages.SettingsPage(this);
             aboutPage = new Pages.AboutPage(this);
             endurenceMainPage = new Pages.Endurence.EndurenceMainPage(this);
-            frenzyMainPage = new Pages.Frenzy.FrenzyMainPage(this);
-            patternMainPage = new Pages.Pattern.PatternMainPage(this);
-            leaderboardMainPage = new Pages.LeaderboardPage(this);
+            endurenceLeaderboardPage = new Pages.Endurence.EndurenceLeaderboardPage(this);
         }
 
         public void ChangeContent(int x)
@@ -56,14 +52,11 @@ namespace donttapNewDesign
                 this.Content = aboutPage;
             if (x == 3)
                 this.Content = endurenceMainPage;
-            if (x == 4)
-                this.Content = frenzyMainPage;
-            if (x == 5)
-                this.Content = patternMainPage;
+            //...
             if (x == 6)
                 this.Content = new Pages.Endurence.EndurenceGame(this);
             if (x == 7)
-                this.Content = leaderboardMainPage;
+                this.Content = endurenceLeaderboardPage;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -80,53 +73,15 @@ namespace donttapNewDesign
                 {
                     this.Background = new SolidColorBrush(Color.FromRgb(209, 213, 222));
                     this.WindowState = WindowState.Maximized;
-                    ChangeSizeFullscreen();
                     isFullscreen = true;
                 }
                 else
                 {
                     this.Background = new SolidColorBrush(Colors.Transparent);
                     this.WindowState = WindowState.Normal;
-                    ChangeSizeNormal();
                     isFullscreen = false;
                 }
             }
-        }
-        private void ChangeSizeFullscreen()
-        {
-            double width = System.Windows.SystemParameters.WorkArea.Width;
-            double height = System.Windows.SystemParameters.WorkArea.Height;
-
-            menuPage.Width = width;
-            menuPage.Height = height;
-            settingsPage.Width = width;
-            settingsPage.Height = height;
-            aboutPage.Width = width;
-            aboutPage.Height = height;
-            endurenceMainPage.Width = width;
-            endurenceMainPage.Height = height;
-            frenzyMainPage.Width = width;
-            frenzyMainPage.Height = height;
-            patternMainPage.Width = width;
-            patternMainPage.Height = height;
-        }
-        private void ChangeSizeNormal()
-        {
-            double width = 450;
-            double height = 700;
-
-            menuPage.Width = width;
-            menuPage.Height = height;
-            settingsPage.Width = width;
-            settingsPage.Height = height;
-            aboutPage.Width = width;
-            aboutPage.Height = height;
-            endurenceMainPage.Width = width;
-            endurenceMainPage.Height = height;
-            frenzyMainPage.Width = width;
-            frenzyMainPage.Height = height;
-            patternMainPage.Width = width;
-            patternMainPage.Height = height;
         }
     }
 }

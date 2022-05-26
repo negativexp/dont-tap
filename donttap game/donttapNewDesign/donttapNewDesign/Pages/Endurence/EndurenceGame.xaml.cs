@@ -47,22 +47,26 @@ namespace donttapNewDesign.Pages.Endurence
             var settings = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
             var endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
 
-            //change window size
-            _mainwindow.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing) + 100;
-            _mainwindow.Height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing) + 250;
-            this.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing) + 100;
-            this.Height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing) + 250;
-            GridGame.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
-            GridGame.Height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
-            ProgessBarValue.Width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
+            int width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
+            int height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
 
-            if (this.Width < 450)
+            if (width < 450 | height < 700)
             {
                 this.Width = 450;
                 this.Height = 700;
                 _mainwindow.Width = 450;
                 _mainwindow.Height = 700;
                 ProgessBarValue.Width = 400;
+            }
+            else
+            {
+                _mainwindow.Width = width + 100;
+                _mainwindow.Height = height + 250;
+                this.Width = width + 100;
+                this.Height = height + 250;
+                GridGame.Width = width;
+                GridGame.Height = height;
+                ProgessBarValue.Width = width;
             }
 
             //set values

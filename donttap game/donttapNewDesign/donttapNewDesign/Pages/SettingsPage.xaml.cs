@@ -32,16 +32,49 @@ namespace donttapNewDesign.Pages
         int epicprank = 0;
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
+            _mainwindow.ChangeContent(0);
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.Close();
+        }
+        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.WindowState = WindowState.Minimized;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if(File.Exists("settings.json"))
+            {
+                int[] data = Classes.LoadSettings.Load();
+                TextBoxBoardSize.Text = data[0].ToString();
+                TextBoxBoxSize.Text = data[1].ToString();
+                TextBoxSpacingSize.Text = data[2].ToString();
+            }
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
+        }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
             if (TextBoxBoardSize.Text == "" || TextBoxBoardSize.Text[0] == '0')
                 TextBoxBoardSize.Text = "4";
 
             if (TextBoxBoxSize.Text == "" || TextBoxBoxSize.Text[0] == '0')
                 TextBoxBoxSize.Text = "165";
 
+            if (TextBoxSpacingSize.Text == "" || TextBoxSpacingSize.Text[0] == '0')
+                TextBoxSpacingSize.Text = "0";
+
             try
             {
                 int boxsize = Convert.ToInt32(TextBoxBoxSize.Text);
-                if(boxsize < 0)
+                if (boxsize < 0)
                     boxsize = 165;
                 int boardsize = Convert.ToInt32(TextBoxBoardSize.Text);
                 if (boardsize < 0)
@@ -68,11 +101,10 @@ namespace donttapNewDesign.Pages
                     settings.Spacing = spacing;
                     File.WriteAllText("settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
                 }
-                _mainwindow.ChangeContent(0);
             }
             catch (Exception ex)
             {
-                if(epicprank == 4)
+                if (epicprank == 4)
                 {
                     MessageBox.Show("are you retarted", "bruh");
                     epicprank = 0;
@@ -83,32 +115,6 @@ namespace donttapNewDesign.Pages
                     epicprank++;
                 }
             }
-
-        }
-
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.Close();
-        }
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.WindowState = WindowState.Minimized;
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            if(File.Exists("settings.json"))
-            {
-                int[] data = Classes.LoadSettings.Load();
-                TextBoxBoardSize.Text = data[0].ToString();
-                TextBoxBoxSize.Text = data[1].ToString();
-                TextBoxSpacingSize.Text = data[2].ToString();
-            }
-        }
-
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
         }
     }
 }
