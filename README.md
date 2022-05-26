@@ -1,6 +1,6 @@
 # DONT TAP!
 A clicking game where you try to get the most points by clicking on randomly selected squares.
-This game is still W.I.P and currently only gamemode endurance is working.
+This game is still W.I.P and currently only working gamemode is endurance.
 # Data
 Everything is saved in folder where the game is located using json and can be easily modifed.
 ## Settings
@@ -25,3 +25,5 @@ In endurance you try to play as long as possible and gameover is declared when t
 Here you try to play as fast as possible until you miss or time runs up. You can choose your own time.
 ## Pattern
 This one is boring, you just clear patterns.
+# Notes
+Yes, I know there are bunch of `endurence` things insted of Endurance and no, I'm not renaming it all. Too lazy.
