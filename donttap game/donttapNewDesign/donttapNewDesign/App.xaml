@@ -2,8 +2,80 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:donttapNewDesign"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--width and height-->
+        <sys:Double x:Key="Height">700</sys:Double>
+        <sys:Double x:Key="Width">450</sys:Double>
+        <!--grid for dragging-->
+        <Style x:Key="MouseDownGridTemplate" TargetType="Grid">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <!--Border title-->
+        <Style x:Key="TitleBorderTemplate" TargetType="Border">
+            <Setter Property="Background" Value="#FDFDFD"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Margin" Value="-2"/>
+        </Style>
+        <!--main border-->
+        <Style x:Key="MainBorderTemplate" TargetType="Border">
+            <Setter Property="Background" Value="#BDBDC7"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+        <!--x and _ buttons-->
+        <Style x:Key="xButtonTemplate" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Content" Value="X"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0 5 20 0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="1"
+                                BorderBrush="Black">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="_ButtonTemplate" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Content" Value="_"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0 5 45 0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="1"
+                                BorderBrush="Black">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <!--buttons-->
         <Style x:Key="RoundButtonTemplate" TargetType="Button">
             <Setter Property="Background" Value="White"/>

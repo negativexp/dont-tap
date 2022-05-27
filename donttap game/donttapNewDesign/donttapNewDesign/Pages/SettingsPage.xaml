@@ -5,12 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:donttapNewDesign.Pages"
       mc:Ignorable="d" 
-        Title="MainWindow" Height="700" Width="450"
+        Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
         Background="Transparent"
       Loaded="Page_Loaded">
 
-    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0"
-            Background="#D1D5DE">
+    <Border Style="{StaticResource MainBorderTemplate}">
 
         <!--main grid-->
         <Grid>
@@ -19,21 +18,13 @@
                 <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
 
-            <Grid VerticalAlignment="Top" Height="30" MouseDown="Grid_MouseDown">
-                <TextBlock Text="a" FontSize="1"/>
-                <Button Content="X" Background="Transparent" Width="20" Height="20"
-                    VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0"
-                    BorderThickness="0" Click="ButtonClose_Click"/>
-                <Button Content="_" Background="Transparent" Width="20" Height="20"
-                    VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,40,0"
-                    BorderThickness="0" Click="ButtonMinimize_Click"/>
-            </Grid>
-
-
             <!--title-->
-            <Border Margin="5,30,5,0" CornerRadius="25" BorderThickness="0 1 0 1"
-                    BorderBrush="Black" Grid.Row="0">
+            <Border Style="{StaticResource TitleBorderTemplate}">
                 <Grid>
+                    <Grid Style="{StaticResource MouseDownGridTemplate}" MouseDown="Grid_MouseDown">
+                        <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
+                        <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
+                    </Grid>
                     <TextBlock Name="TextBlockTitle" Text="Settings" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="45" Margin="0 0 0 10">
                         <TextBlock.Triggers>
@@ -53,34 +44,31 @@
             </Border>
 
             <!--Buttons-->
-            <Border Margin="5 -1 5 0" CornerRadius="25" BorderThickness="0 1 0 0"
-                    BorderBrush="Black" Grid.Row="1">
-                <Grid>
-                    <!--Board size-->
-                    <TextBlock Text="Board size: " FontSize="24" HorizontalAlignment="Left"
+            <Grid Grid.Row="1">
+                <!--Board size-->
+                <TextBlock Text="Board size: " FontSize="24" HorizontalAlignment="Left"
                                VerticalAlignment="Top" Margin="20 20 0 0"/>
-                    <TextBox Name="TextBoxBoardSize" Height="25" Margin="20,52,20,463" FontSize="18"/>
+                <TextBox Name="TextBoxBoardSize" Margin="0,57,0,0" FontSize="18" HorizontalAlignment="Center" Width="406" Height="25" VerticalAlignment="Top"/>
 
-                    <!--box size-->
-                    <TextBlock Text="Box size: " FontSize="24" HorizontalAlignment="Left"
+                <!--box size-->
+                <TextBlock Text="Box size: " FontSize="24" HorizontalAlignment="Left"
                         VerticalAlignment="Top" Margin="20,90,0,0"/>
-                    <TextBox x:Name="TextBoxBoxSize" Height="25" Margin="20,127,20,388" FontSize="18"/>
+                <TextBox x:Name="TextBoxBoxSize" Height="25" Margin="0,127,0,0" FontSize="18" HorizontalAlignment="Center" Width="406" VerticalAlignment="Top"/>
 
-                    <!--spacing-->
-                    <TextBlock Text="Spacing: " FontSize="24" HorizontalAlignment="Left"
+                <!--spacing-->
+                <TextBlock Text="Spacing: " FontSize="24" HorizontalAlignment="Left"
                         VerticalAlignment="Top" Margin="20,170,0,0"/>
-                    <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="0,207,20,308" FontSize="18" HorizontalAlignment="Right" Width="400"/>
+                <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="0,207,0,0" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center" Width="406"/>
 
-                    <!--back button-->
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
+                <!--back button-->
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
                             Content="Back" Click="ButtonBack_Click"/>
-                    <!--Save-->
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSave"
+                <!--Save-->
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSave"
                             HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
                             Content="Save" Click="ButtonSave_Click"/>
-                </Grid>
-            </Border>
+            </Grid>
         </Grid>
     </Border>
 </Page>

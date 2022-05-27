@@ -15,7 +15,6 @@ C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\donttapNewDesign.AssemblyInfo.cs
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\donttapNewDesign.csproj.CoreCompileInputs.cache
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\donttapNewDesign.dll
-C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\refint\donttapNewDesign.dll
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\donttapNewDesign.pdb
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\donttapNewDesign.genruntimeconfig.cache
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\ref\donttapNewDesign.dll
@@ -70,3 +69,4 @@ C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Endurence\EndurenceLeaderboardPage.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\App.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Endurence\EndurenceLeaderboardPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\net6.0-windows\ref\donttapNewDesign.dll

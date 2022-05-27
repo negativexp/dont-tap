@@ -383,6 +383,118 @@
       "Spacing": 1,
       "Time": "2022-05-26T18:03:42.1517006+02:00",
       "Clicks": 50
+    },
+    {
+      "Score": 17,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T08:41:52.9535806+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 5,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T08:43:47.8499958+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 38,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:05:39.2656197+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 19,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:12:14.3005674+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 23,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:21:23.356204+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 38,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:22:10.3722352+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 11,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:25:43.2786476+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 17,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:26:34.8637517+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 30,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:26:49.7191851+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 218,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:27:55.6505932+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 5,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:28:05.7533525+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 10,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:29:08.8471091+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 8,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:29:20.4393786+02:00",
+      "Clicks": 30
+    },
+    {
+      "Score": 1,
+      "Boardsize": 4,
+      "Boxsize": 165,
+      "Spacing": 1,
+      "Time": "2022-05-27T10:29:31.5667793+02:00",
+      "Clicks": 30
     }
   ],
   "Frenzy": null,

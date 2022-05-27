@@ -5,12 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:donttapNewDesign.Pages"
       mc:Ignorable="d" 
-      Title="MainWindow" Height="700" Width="450"
+      Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
       Background="Transparent"
       Loaded="Page_Loaded">
 
-    <Border Name="MainBorder" CornerRadius="25" BorderThickness="0"
-            Background="#D1D5DE">
+    <Border Style="{StaticResource MainBorderTemplate}">
 
         <!--main grid-->
         <Grid>
@@ -19,23 +18,13 @@
                 <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
 
-            <Grid VerticalAlignment="Top" Height="30" MouseDown="Grid_MouseDown">
-                <TextBlock Text="a" FontSize="1"/>
-            </Grid>
-
-
-            <Button Content="X" Background="Transparent" Width="20" Height="20"
-                    VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,15,0"
-                    BorderThickness="0" Click="ButtonClose_Click"/>
-            <Button Content="_" Background="Transparent" Width="20" Height="20"
-                    VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,40,0"
-                    BorderThickness="0" Click="ButtonMinimize_Click"/>
-
-
             <!--title-->
-            <Border Margin="5,30,5,0" CornerRadius="25" BorderThickness="0 1 0 1"
-                    BorderBrush="Black" Grid.Row="0">
+            <Border Style="{StaticResource TitleBorderTemplate}">
                 <Grid>
+                    <Grid Style="{StaticResource MouseDownGridTemplate}" MouseDown="Grid_MouseDown">
+                        <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
+                        <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
+                    </Grid>
                     <TextBlock Name="TextBlockTitle" Text="Dont tap!" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="45" Margin="0 0 0 10">
                         <TextBlock.Triggers>
@@ -66,40 +55,29 @@
                             </EventTrigger>
                         </TextBlock.Triggers>
                     </TextBlock>
-
                 </Grid>
             </Border>
 
             <!--Buttons-->
-            <Border Margin="5 -1 5 0" CornerRadius="25" BorderThickness="0 1 0 0"
-                    BorderBrush="Black" Grid.Row="1">
-                <Grid>
-
-                    <!--left button-->
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonPattern" 
+            <Grid Grid.Row="1">
+                <!--left button-->
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonPattern" 
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
                             Content="Pattern" Click="ButtonPattern_Click"/>
-
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonFrenzy"
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonFrenzy"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 90"
                             Content="Frenzy" Click="ButtonFrenzy_Click"/>
-
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonEndurance"
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonEndurance"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 150"
                             Content="Endurance" Click="ButtonEndurance_Click"/>
-                    <!--right buttons-->
-
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonAbout"
+                <!--right buttons-->
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonAbout"
                             HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
                             Content="About" Click="ButtonAbout_Click"/>
-
-                    <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSettings"
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSettings"
                             HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 90"
                             Content="Settings" Click="ButtonSettings_Click"/>
-
-                </Grid>
-
-            </Border>
+            </Grid>
         </Grid>
     </Border>
 </Page>

@@ -36,9 +36,11 @@ namespace donttapNewDesign.Pages.Endurence
             Classes.CreateSettings.Create();
 
             var data = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
+            var lastscore = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
             TextBlockBoardSize.Text = "Board size: " + data.Boardsize.ToString();
             TextBlockBoxSize.Text = "Box size: " + data.Boxsize.ToString();
             TextBlockSpacing.Text = "Spacing: " + data.Spacing.ToString();
+            TextBlockLastScore.Text = "Last score: " + lastscore.Endurence[lastscore.Endurence.Count-1].Score.ToString();
         }
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
