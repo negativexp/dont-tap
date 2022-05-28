@@ -31,6 +31,7 @@ namespace donttapNewDesign
         static Pages.AboutPage aboutPage;
         static Pages.Endurence.EndurenceMainPage endurenceMainPage;
         static Pages.Endurence.EndurenceLeaderboardPage endurenceLeaderboardPage;
+        static Pages.Frenzy.FrenzyMainPage frenzyMainPage;
 
 
         private void LoadPages()
@@ -40,6 +41,7 @@ namespace donttapNewDesign
             aboutPage = new Pages.AboutPage(this);
             endurenceMainPage = new Pages.Endurence.EndurenceMainPage(this);
             endurenceLeaderboardPage = new Pages.Endurence.EndurenceLeaderboardPage(this);
+            frenzyMainPage = new Pages.Frenzy.FrenzyMainPage(this);
         }
 
         public void ChangeContent(int x)
@@ -52,6 +54,8 @@ namespace donttapNewDesign
                 this.Content = aboutPage;
             if (x == 3)
                 this.Content = endurenceMainPage;
+            if (x == 4)
+                this.Content = frenzyMainPage;
             //...
             if (x == 6)
                 this.Content = new Pages.Endurence.EndurenceGame(this);
@@ -71,7 +75,8 @@ namespace donttapNewDesign
             {
                 if(!isFullscreen)
                 {
-                    this.Background = new SolidColorBrush(Color.FromRgb(209, 213, 222));
+                    //189 189 199
+                    this.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                     this.WindowState = WindowState.Maximized;
                     isFullscreen = true;
                 }

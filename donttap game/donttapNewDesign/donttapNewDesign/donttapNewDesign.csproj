@@ -9,13 +9,9 @@
 
   <ItemGroup>
     <Compile Remove="Pages\a\**" />
-    <Compile Remove="Pages\Frenzy\**" />
     <EmbeddedResource Remove="Pages\a\**" />
-    <EmbeddedResource Remove="Pages\Frenzy\**" />
     <None Remove="Pages\a\**" />
-    <None Remove="Pages\Frenzy\**" />
     <Page Remove="Pages\a\**" />
-    <Page Remove="Pages\Frenzy\**" />
   </ItemGroup>
 
   <ItemGroup>

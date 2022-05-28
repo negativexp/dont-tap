@@ -141,12 +141,7 @@ namespace donttapNewDesign.Pages.Endurence
         }
         private void TimerProgessBar_Tick(object? sender, EventArgs e)
         {
-            ProgessBarValue.Value -= 0.20;
-        }
-
-        private void PointsRules()
-        {
-
+            ProgessBarValue.Value -= 0.30;
         }
         private void UpdateTimeAndPoints()
         {
@@ -260,13 +255,14 @@ namespace donttapNewDesign.Pages.Endurence
                 bruh.Style = null;
             }
             TimerTime.Stop();
+            TimerProgessBar.Stop();
             GridCountDown.Visibility = Visibility.Visible;
             TextBlockCountDown.Text = "Game\nOver";
             TimerGameOver.Tick += new EventHandler(TimerGameOver_Tick);
             TimerGameOver.Interval = new TimeSpan(0, 0, 2);
             TimerGameOver.Start();
         }
-        private void TimerGameOver_Tick(object? sender, EventArgs e)
+        private void TimerGameOver_Tick(object sender, EventArgs e)
         {
             _mainwindow.ChangeContent(3);
             Reset();

@@ -29,18 +29,16 @@ namespace donttapNewDesign.Pages.Endurence
         {
             _mainwindow = mw;
             InitializeComponent();
+            LoadData();
         }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void LoadData()
         {
-            Classes.CreateSettings.Create();
-
-            var data = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
-            var lastscore = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
-            TextBlockBoardSize.Text = "Board size: " + data.Boardsize.ToString();
-            TextBlockBoxSize.Text = "Box size: " + data.Boxsize.ToString();
-            TextBlockSpacing.Text = "Spacing: " + data.Spacing.ToString();
-            TextBlockLastScore.Text = "Last score: " + lastscore.Endurence[lastscore.Endurence.Count-1].Score.ToString();
+            int[] settings = Classes.LoadSettings.Load();
+            int lastscore = Classes.LoadLastScore.Load(0);
+            TextBlockBoardSize.Text = "Board size: " + settings[0];
+            TextBlockBoxSize.Text = "Box size: " + settings[1];
+            TextBlockSpacing.Text = "Spacing: " + settings[2];
+            TextBlockLastScore.Text = "Last score: " + lastscore;
         }
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
@@ -59,11 +57,11 @@ namespace donttapNewDesign.Pages.Endurence
             {
                 try
                 {
-                    clicks = Convert.ToInt32(TextBoxCustomClicks.Text);
+                    clicks = Convert.ToInt32(TextBoxCustom.Text);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Amount of clicks can be only numbers!");
+                    MessageBox.Show("Amount of clicks can be only numbers!", "Value ERROR");
                 }
             }
             if (clicks <= 0)
@@ -83,61 +81,6 @@ namespace donttapNewDesign.Pages.Endurence
             _mainwindow.ChangeContent(0);
         }
 
-        private void Button30_Click(object sender, RoutedEventArgs e)
-        {
-            if (clicks != 30)
-            {
-                clicks = 30;
-                Button30.Background = new SolidColorBrush(Colors.Green);
-                Button40.Background = new SolidColorBrush(Colors.Transparent);
-                Button50.Background = new SolidColorBrush(Colors.Transparent);
-                ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
-                TextBoxCustomClicks.Visibility = Visibility.Hidden;
-                custom = false;
-            }
-        }
-
-        private void Button40_Click(object sender, RoutedEventArgs e)
-        {
-            if (clicks != 40)
-            {
-                clicks = 40;
-                Button30.Background = new SolidColorBrush(Colors.Transparent);
-                Button40.Background = new SolidColorBrush(Colors.Green);
-                Button50.Background = new SolidColorBrush(Colors.Transparent);
-                ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
-                TextBoxCustomClicks.Visibility = Visibility.Hidden;
-                custom = false;
-            }
-        }
-
-        private void Button50_Click(object sender, RoutedEventArgs e)
-        {
-            if (clicks != 50)
-            {
-                clicks = 50;
-                Button30.Background = new SolidColorBrush(Colors.Transparent);
-                Button40.Background = new SolidColorBrush(Colors.Transparent);
-                Button50.Background = new SolidColorBrush(Colors.Green);
-                ButtonCustom.Background = new SolidColorBrush(Colors.Transparent);
-                TextBoxCustomClicks.Visibility = Visibility.Hidden;
-                custom = false;
-            }
-        }
-
-        private void ButtonCustom_Click(object sender, RoutedEventArgs e)
-        {
-            if (clicks != 30 || clicks != 40 || clicks != 50)
-            {
-                Button30.Background = new SolidColorBrush(Colors.Transparent);
-                Button40.Background = new SolidColorBrush(Colors.Transparent);
-                Button50.Background = new SolidColorBrush(Colors.Transparent);
-                ButtonCustom.Background = new SolidColorBrush(Colors.Green);
-                TextBoxCustomClicks.Visibility = Visibility.Visible;
-                custom = true;
-            }
-        }
-
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             _mainwindow.DragMove();
@@ -146,6 +89,45 @@ namespace donttapNewDesign.Pages.Endurence
         private void ButtonLeaderBoard_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.ChangeContent(7);
+        }
+
+        private void CheckBox30Clicks_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox40Clicks.IsChecked = false;
+            CheckBox50Clicks.IsChecked = false;
+            CheckBoxCustom.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Hidden;
+            custom = false;
+            clicks = 30;
+        }
+
+        private void CheckBox40Clicks_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox30Clicks.IsChecked = false;
+            CheckBox50Clicks.IsChecked = false;
+            CheckBoxCustom.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Hidden;
+            custom = false;
+            clicks = 40;
+        }
+
+        private void CheckBox50Clicks_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox30Clicks.IsChecked = false;
+            CheckBox40Clicks.IsChecked = false;
+            CheckBoxCustom.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Hidden;
+            custom = false;
+            clicks = 50;
+        }
+
+        private void CheckBoxCustom_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox30Clicks.IsChecked = false;
+            CheckBox40Clicks.IsChecked = false;
+            CheckBox50Clicks.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Visible;
+            custom = true;
         }
     }
 }

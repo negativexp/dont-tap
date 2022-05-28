@@ -27,8 +27,23 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow = mw;
             InitializeComponent();
+            LoadData();
+        }
+        private async void LoadData()
+        {
+            if (File.Exists("settings.json"))
+            {
+                int[] data = Classes.LoadSettings.Load();
+                TextBoxBoardSize.Text = data[0].ToString();
+                TextBoxBoxSize.Text = data[1].ToString();
+                TextBoxSpacingSize.Text = data[2].ToString();
+            }
         }
 
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
+        }
         int epicprank = 0;
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
@@ -43,23 +58,6 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow.WindowState = WindowState.Minimized;
         }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            if(File.Exists("settings.json"))
-            {
-                int[] data = Classes.LoadSettings.Load();
-                TextBoxBoardSize.Text = data[0].ToString();
-                TextBoxBoxSize.Text = data[1].ToString();
-                TextBoxSpacingSize.Text = data[2].ToString();
-            }
-        }
-
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
-        }
-
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             if (TextBoxBoardSize.Text == "" || TextBoxBoardSize.Text[0] == '0')

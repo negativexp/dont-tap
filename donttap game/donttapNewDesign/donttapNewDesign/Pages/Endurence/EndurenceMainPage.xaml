@@ -6,8 +6,7 @@
       xmlns:local="clr-namespace:donttapNewDesign.Pages.Endurence"
       mc:Ignorable="d" 
       Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
-      Background="Transparent"
-      Loaded="Page_Loaded">
+      Background="Transparent">
 
     <Border Style="{StaticResource MainBorderTemplate}">
 
@@ -44,44 +43,60 @@
             </Border>
 
             <!--Buttons-->
-            <Grid Grid.Row="1">
+            <Grid Margin="0 0 0 90" Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="227*"/>
-                    <RowDefinition Height="313*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
-
-                <StackPanel Grid.Row="0">
-                    <TextBlock Text="Settings:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 40 0 10" FontSize="30"/>
-                    <TextBlock Name="TextBlockBoardSize" Text="Board size: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                    <TextBlock Name="TextBlockBoxSize" Text="Box size: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                    <TextBlock Name="TextBlockSpacing" Text="Spacing: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                    <TextBlock Name="TextBlockLastScore" Text="Last score: 99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" FontSize="18"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="1">
-                    <TextBlock Text="Amount of clicks for +10s:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Name="Button30" Click="Button30_Click" Content="30" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                        <Button Name="Button40" Click="Button40_Click" Content="40" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                        <Button Name="Button50" Click="Button50_Click" Content="50" Background="Transparent" Width="50" Height="50" Margin="10"/>
-                        <Button Name="ButtonCustom" Click="ButtonCustom_Click" Content="Custom" Background="Transparent" Width="50" Height="50" Margin="10"/>
+                <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 20 20 10" Grid.Row="0">
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Settings:" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
+                        <TextBlock Name="TextBlockBoardSize" Text="Board size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                        <TextBlock Name="TextBlockBoxSize" Text="Box size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                        <TextBlock Name="TextBlockSpacing" Text="Spacing: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                        <TextBlock Name="TextBlockLastScore" Text="Last score: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
                     </StackPanel>
-                    <TextBox Name="TextBoxCustomClicks" Width="400" Height="25" Visibility="Visible"/>
-                </StackPanel>
-
-
-                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
+                </Border>
+                <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 10 20 20" Grid.Row="1">
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Time regeneration (+10s):" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Name="CheckBox30Clicks" Checked="CheckBox30Clicks_Checked" Content="30 Clicks" Margin="20 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox Name="CheckBox40Clicks" Checked="CheckBox40Clicks_Checked" Content="40 Clicks" Margin="15 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox Name="CheckBox50Clicks" Checked="CheckBox50Clicks_Checked" Content="50 Clicks" Margin="15 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox Name="CheckBoxCustom" Checked="CheckBoxCustom_Checked" Content="Custom" Margin="15 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+                        <TextBox Name="TextBoxCustom" Margin="20" Height="25" Visibility="Hidden" FontSize="18"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
                             Content="Back" Click="ButtonBack_Click" Grid.Row="1"/>
 
-                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonStart"
+            <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonStart"
                             HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
                             Content="Start" Click="ButtonStart_Click" Grid.Row="1"/>
 
-                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonLeaderBoard"
+            <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonLeaderBoard"
                             HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30"
                             Content="Leaderboard" Click="ButtonLeaderBoard_Click" Grid.Row="1"/>
-            </Grid>
         </Grid>
     </Border>
 </Page>

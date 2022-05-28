@@ -1,0 +1,82 @@
+﻿<Page x:Class="donttapNewDesign.Pages.Frenzy.FrenzyMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:donttapNewDesign.Pages.Frenzy"
+      mc:Ignorable="d" 
+      Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
+      Background="Transparent">
+
+    <Border Style="{StaticResource MainBorderTemplate}">
+
+        <!--main grid-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="27*"/>
+            </Grid.RowDefinitions>
+
+            <!--title-->
+            <Border Style="{StaticResource TitleBorderTemplate}">
+                <Grid>
+                    <Grid Style="{StaticResource MouseDownGridTemplate}">
+                        <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
+                        <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
+                    </Grid>
+                    <TextBlock Name="TextBlockTitle" Text="Frenzy" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontSize="45" Margin="0 0 0 10">
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="TextBlockTitle"
+                                            Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                            From="0" To="1" Duration="0:0:0.75"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+            <!--Buttons-->
+            <Grid Margin="0 0 0 90" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 20 20 10" Grid.Row="0">
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Settings:" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
+                        <TextBlock Name="TextBlockBoardSize" Text="Board size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                        <TextBlock Name="TextBlockBoxSize" Text="Box size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                        <TextBlock Name="TextBlockSpacing" Text="Spacing: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                        <TextBlock Name="TextBlockLastScore" Text="Last score: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 10 20 20" Grid.Row="1">
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Time:" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
+                        <StackPanel Orientation="Horizontal">
+                        </StackPanel>
+                        <TextBox Name="TextBoxCustom" Margin="20" Height="25" Visibility="Hidden" FontSize="18"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
+                            Content="Back" Click="ButtonBack_Click" Grid.Row="1"/>
+
+            <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonStart"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
+                            Content="Start" Click="ButtonStart_Click" Grid.Row="1"/>
+
+            <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonLeaderBoard"
+                            HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30"
+                            Content="Leaderboard" Click="ButtonLeaderBoard_Click" Grid.Row="1"/>
+        </Grid>
+    </Border>
+</Page>

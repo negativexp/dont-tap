@@ -70,3 +70,5 @@ C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNe
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\App.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Endurence\EndurenceLeaderboardPage.baml
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\net6.0-windows\ref\donttapNewDesign.dll
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyMainPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyMainPage.baml

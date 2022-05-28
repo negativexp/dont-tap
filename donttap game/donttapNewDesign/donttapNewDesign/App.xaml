@@ -103,10 +103,13 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <!--Box fade out-->
+        <!--Box fade out and cursor-->
         <Style x:Key="bruh" TargetType="Rectangle">
             <Setter Property="Fill" Value="Black"/>
             <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
                 <EventTrigger RoutedEvent="MouseDown">
                     <BeginStoryboard>
                         <Storyboard>
@@ -134,6 +137,13 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Style.Triggers>
+        </Style>
+        <!--content border-->
+        <Style x:Key="ContentBorderTemplate" TargetType="Border">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="BorderThickness" Value="2 2 2 2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
         </Style>
     </Application.Resources>
 </Application>
