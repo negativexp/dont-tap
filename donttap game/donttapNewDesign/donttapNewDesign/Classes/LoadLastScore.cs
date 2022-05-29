@@ -10,29 +10,12 @@ namespace donttapNewDesign.Classes
 {
     internal class LoadLastScore
     {
-        public static int Load(int x)
+        public static int Load()
         {
-            //nefunguje pokud neexistuje
-            try
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            if(data.Scores.Endurance != null)
             {
-                if (x == 0)
-                {
-                    var lastscore = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
-                    return lastscore.Endurence[lastscore.Endurence.Count - 1].Score;
-                }
-                if (x == 1)
-                {
-                    var lastscore = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
-                    return lastscore.Frenzy[lastscore.Endurence.Count - 1].Score;
-                }
-                if (x == 2)
-                {
-                    var lastscore = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
-                    return lastscore.Pattern[lastscore.Endurence.Count - 1].Score;
-                }
-            }
-            catch (Exception)
-            {
+                return data.Scores.Endurance[data.Scores.Endurance.Count - 1].Score;
             }
             return -1;
         }

@@ -10,15 +10,16 @@ namespace donttapNewDesign.Classes
 {
     internal class CreateSettings
     {
-        public static void Create()
+        public static void CreateDeafult()
         {
-            if(!File.Exists("settings.json"))
+            if(!File.Exists("data.json"))
             {
-                Models.Settings settings = new Models.Settings();
-                settings.Boardsize = 4;
-                settings.Boxsize = 165;
-                settings.Spacing = 1;
-                File.WriteAllText("settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
+                Models.Data data = new Models.Data();
+                data.Settings = new Models.Settings();
+                data.Settings.Boardsize = 4;
+                data.Settings.Boxsize = 165;
+                data.Settings.Spacing = 1;
+                File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
             }
         }
     }

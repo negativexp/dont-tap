@@ -24,6 +24,7 @@ namespace donttapNewDesign
         public MainWindow()
         {
             InitializeComponent();
+            Classes.CreateData.Create(); 
         }
 
         static Pages.MenuPage menuPage;

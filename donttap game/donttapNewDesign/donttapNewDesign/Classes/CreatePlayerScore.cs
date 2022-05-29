@@ -12,45 +12,25 @@ namespace donttapNewDesign.Classes
     {
         public static void Create(int gamemode, int score)
         {
-            Models.PlayerSave scores;
-            Models.Settings settings = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
-
-            if (File.Exists("scores.json"))
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            if(data.Scores == null)
             {
-                scores = JsonConvert.DeserializeObject<Models.PlayerSave>(File.ReadAllText("scores.json"));
-                Models.EndurenceSettings endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
-
-
-                if (gamemode == 0)
-                {
-                    endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
-                    scores.Endurence.Add(new Models.EndurenceSettings
-                    {
-                        Score = score,
-                        Boardsize = settings.Boardsize,
-                        Boxsize = settings.Boxsize,
-                        Spacing = settings.Spacing,
-                        Time = DateTime.Now,
-                        Clicks = endurenceSettings.Clicks
-                    });
-                    File.WriteAllText("scores.json", JsonConvert.SerializeObject(scores, Formatting.Indented));
-                }
+                data.Scores = new Models.PlayerSave();
+                data.Scores.Endurance = new List<Models.EnduranceSave>();
             }
-            else
-            {
-                if (gamemode == 0)
-                {
-                    Models.EndurenceSettings endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
 
-                    Models.PlayerSave _scores = new Models.PlayerSave();
-                    endurenceSettings.Score = score;
-                    endurenceSettings.Boardsize = settings.Boardsize;
-                    endurenceSettings.Boxsize = settings.Boxsize;
-                    endurenceSettings.Spacing = settings.Spacing;
-                    endurenceSettings.Time = DateTime.Now;
-                    _scores.Endurence = new List<Models.EndurenceSettings>() { endurenceSettings };
-                    File.WriteAllText("scores.json", JsonConvert.SerializeObject(_scores, Formatting.Indented));
-                }
+            if (gamemode == 0)
+            {
+                data.Scores.Endurance.Add(new Models.EnduranceSave
+                {
+                    Score = score,
+                    Boardsize = data.Settings.Boardsize,
+                    Boxsize = data.Settings.Boxsize,
+                    Spacing = data.Settings.Spacing,
+                    Time = DateTime.Now,
+                    Clicks = data.EnduranceSettings.Clicks
+                });
+                File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
             }
         }
     }

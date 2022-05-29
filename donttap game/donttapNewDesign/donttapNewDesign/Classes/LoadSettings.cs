@@ -13,10 +13,13 @@ namespace donttapNewDesign.Classes
         public static int[] Load()
         {
             int[] toReturn = new int[3];
-            var data = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
-            toReturn[0] = data.Boardsize;
-            toReturn[1] = data.Boxsize;
-            toReturn[2] = data.Spacing;
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            if(data.Settings != null)
+            {
+                toReturn[0] = data.Settings.Boardsize;
+                toReturn[1] = data.Settings.Boxsize;
+                toReturn[2] = data.Settings.Spacing;
+            }
             return toReturn;
         }
     }

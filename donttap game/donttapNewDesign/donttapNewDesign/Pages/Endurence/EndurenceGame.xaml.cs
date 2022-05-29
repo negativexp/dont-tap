@@ -46,11 +46,10 @@ namespace donttapNewDesign.Pages.Endurence
         {
             TextBlockCountDown.Style = Application.Current.FindResource("CountDownFadeOut") as Style;
 
-            var settings = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
-            var endurenceSettings = JsonConvert.DeserializeObject<Models.EndurenceSettings>(File.ReadAllText("settingsEndurence.json"));
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
 
-            int width = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
-            int height = (settings.Boardsize * settings.Boxsize) + (settings.Boardsize * settings.Spacing);
+            int width = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
+            int height = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
 
             _mainwindow.Width = width + 100;
             _mainwindow.Height = height + 250;
@@ -72,10 +71,10 @@ namespace donttapNewDesign.Pages.Endurence
             //set values
             inUse = new int[3];
             time = 10;
-            boxSize = settings.Boxsize;
-            boardSize = settings.Boardsize;
-            spacing = settings.Spacing;
-            clicks = endurenceSettings.Clicks;
+            boxSize = data.Settings.Boxsize;
+            boardSize = data.Settings.Boardsize;
+            spacing = data.Settings.Spacing;
+            clicks = data.EnduranceSettings.Clicks;
 
             CreateDefinitions();
             CreateBoard();

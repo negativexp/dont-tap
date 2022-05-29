@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:donttapNewDesign.Pages"
       mc:Ignorable="d" 
       Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
-      Background="Transparent">
+      Background="Transparent"
+      Loaded="Page_Loaded">
 
     <Border Style="{StaticResource MainBorderTemplate}">
 

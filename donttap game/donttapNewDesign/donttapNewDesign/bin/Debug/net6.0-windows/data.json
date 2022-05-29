@@ -1,0 +1,24 @@
+{
+  "Scores": {
+    "Endurance": [
+      {
+        "Score": 4,
+        "Time": "2022-05-29T11:37:42.2387085+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "Clicks": 40
+      }
+    ],
+    "Frenzy": null
+  },
+  "Settings": {
+    "Boardsize": 4,
+    "Boxsize": 165,
+    "Spacing": 0
+  },
+  "EnduranceSettings": {
+    "Clicks": 40
+  },
+  "FrenzySettings": null
+}

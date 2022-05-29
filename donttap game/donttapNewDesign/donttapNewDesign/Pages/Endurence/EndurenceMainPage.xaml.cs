@@ -34,7 +34,7 @@ namespace donttapNewDesign.Pages.Endurence
         private async void LoadData()
         {
             int[] settings = Classes.LoadSettings.Load();
-            int lastscore = Classes.LoadLastScore.Load(0);
+            int lastscore = Classes.LoadLastScore.Load();
             TextBlockBoardSize.Text = "Board size: " + settings[0];
             TextBlockBoxSize.Text = "Box size: " + settings[1];
             TextBlockSpacing.Text = "Spacing: " + settings[2];
@@ -70,7 +70,7 @@ namespace donttapNewDesign.Pages.Endurence
             }
             else
             {
-                Classes.CreateSettings.Create();
+                Classes.CreateSettings.CreateDeafult();
                 Classes.CreateEndurenceSettings.Create(clicks);
                 _mainwindow.ChangeContent(6);
             }

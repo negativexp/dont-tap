@@ -12,9 +12,10 @@ namespace donttapNewDesign.Classes
     {
         public static void Create(int x)
         {
-            Models.EndurenceSettings endurenceSettings = new Models.EndurenceSettings();
-            endurenceSettings.Clicks = x;
-            File.WriteAllText("settingsEndurence.json", JsonConvert.SerializeObject(endurenceSettings, Formatting.Indented));
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            data.EnduranceSettings = new Models.EnduranceSettings();
+            data.EnduranceSettings.Clicks = x;
+            File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
         }
     }
 }

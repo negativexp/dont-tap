@@ -27,29 +27,23 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow = mw;
             InitializeComponent();
-            LoadData();
         }
         private async void LoadData()
         {
-            if (File.Exists("settings.json"))
-            {
-                int[] data = Classes.LoadSettings.Load();
-                TextBoxBoardSize.Text = data[0].ToString();
-                TextBoxBoxSize.Text = data[1].ToString();
-                TextBoxSpacingSize.Text = data[2].ToString();
-            }
+            int[] data = Classes.LoadSettings.Load();
+            TextBoxBoardSize.Text = data[0].ToString();
+            TextBoxBoxSize.Text = data[1].ToString();
+            TextBoxSpacingSize.Text = data[2].ToString();
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             _mainwindow.DragMove();
         }
-        int epicprank = 0;
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.ChangeContent(0);
         }
-
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.Close();
@@ -58,6 +52,7 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow.WindowState = WindowState.Minimized;
         }
+        int epicprank = 0;
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             if (TextBoxBoardSize.Text == "" || TextBoxBoardSize.Text[0] == '0')
@@ -83,23 +78,14 @@ namespace donttapNewDesign.Pages
 
                 bool create;
 
-                if (File.Exists("settings.json"))
-                {
-                    var data = JsonConvert.DeserializeObject<Models.Settings>(File.ReadAllText("settings.json"));
-                    data.Boxsize = boxsize;
-                    data.Boardsize = boardsize;
-                    data.Spacing = spacing;
-                    File.WriteAllText("settings.json", JsonConvert.SerializeObject(data, Formatting.Indented));
-                }
-                else
-                {
-                    Models.Settings settings = new Models.Settings();
-                    settings.Boardsize = boardsize;
-                    settings.Boxsize = boxsize;
-                    settings.Spacing = spacing;
-                    File.WriteAllText("settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
-                }
+                Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+                data.Settings = new Models.Settings();
+                data.Settings.Boxsize = boxsize;
+                data.Settings.Boardsize = boardsize;
+                data.Settings.Spacing = spacing;
+                File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
             }
+
             catch (Exception ex)
             {
                 if (epicprank == 4)
@@ -113,6 +99,11 @@ namespace donttapNewDesign.Pages
                     epicprank++;
                 }
             }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadData();
         }
     }
 }

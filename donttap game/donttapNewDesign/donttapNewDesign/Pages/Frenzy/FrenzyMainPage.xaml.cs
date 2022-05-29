@@ -30,11 +30,11 @@ namespace donttapNewDesign.Pages.Frenzy
         private async void LoadData()
         {
             int[] settings = Classes.LoadSettings.Load();
-            int lastscore = Classes.LoadLastScore.Load(1);
+            //int lastscore = Classes.LoadLastScore.Load(1);
             TextBlockBoardSize.Text = "Board size: " + settings[0];
             TextBlockBoxSize.Text = "Box size: " + settings[1];
             TextBlockSpacing.Text = "Spacing: " + settings[2];
-            TextBlockLastScore.Text = "Last score: " + lastscore;
+            //TextBlockLastScore.Text = "Last score: " + lastscore;
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
