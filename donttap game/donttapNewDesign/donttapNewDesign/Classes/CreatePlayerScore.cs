@@ -13,11 +13,6 @@ namespace donttapNewDesign.Classes
         public static void Create(int gamemode, int score)
         {
             Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
-            if(data.Scores == null)
-            {
-                data.Scores = new Models.PlayerSave();
-                data.Scores.Endurance = new List<Models.EnduranceSave>();
-            }
 
             if (gamemode == 0)
             {
@@ -29,6 +24,19 @@ namespace donttapNewDesign.Classes
                     Spacing = data.Settings.Spacing,
                     Time = DateTime.Now,
                     Clicks = data.EnduranceSettings.Clicks
+                });
+                File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
+            }
+            if (gamemode == 1)
+            {
+                data.Scores.Frenzy.Add(new Models.FrenzySave
+                {
+                    Score = score,
+                    Boardsize = data.Settings.Boardsize,
+                    Boxsize = data.Settings.Boxsize,
+                    Spacing = data.Settings.Spacing,
+                    Time = DateTime.Now,
+                    GameTime = data.FrenzySettings.GameTime
                 });
                 File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
             }

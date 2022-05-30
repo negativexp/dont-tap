@@ -8,16 +8,13 @@ using Newtonsoft.Json;
 
 namespace donttapNewDesign.Classes
 {
-    internal class LoadLastScore
+    internal class CreateFrenzySettings
     {
-        public static int Load()
+        public static void Create(int x)
         {
             Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
-            if(data.Scores.Endurance != null)
-            {
-                return data.Scores.Endurance[data.Scores.Endurance.Count - 1].Score;
-            }
-            return -1;
+            data.FrenzySettings.GameTime = x;
+            File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
         }
     }
 }

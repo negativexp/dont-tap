@@ -25,6 +25,11 @@ namespace donttapNewDesign.Pages.Frenzy
         {
             _mainwindow = mw;
             InitializeComponent();
+        }
+        int x;
+        bool custom;
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
             LoadData();
         }
         private async void LoadData()
@@ -44,7 +49,27 @@ namespace donttapNewDesign.Pages.Frenzy
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-
+            if (custom)
+            {
+                try
+                {
+                    x = Convert.ToInt32(TextBoxCustom.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Amount of clicks can be only numbers!", "Value ERROR");
+                }
+            }
+            if (x <= 0)
+            {
+                MessageBox.Show("Amount of clicks cannot be 0 or less!", "Value ERROR");
+            }
+            else
+            {
+                Classes.CreateFrenzySettings.Create(x);
+                _mainwindow.ChangeContent(5);
+            }
+            
         }
 
         private void ButtonLeaderBoard_Click(object sender, RoutedEventArgs e)
@@ -60,6 +85,47 @@ namespace donttapNewDesign.Pages.Frenzy
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.WindowState = WindowState.Minimized;
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainwindow.DragMove();
+        }
+
+        private void CheckBox30_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox60.IsChecked = false;
+            CheckBox90.IsChecked = false;
+            CheckBoxCustom.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Hidden;
+            x = 30;
+
+        }
+
+        private void CheckBox60_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox30.IsChecked = false;
+            CheckBox90.IsChecked = false;
+            CheckBoxCustom.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Hidden;
+            x = 60;
+        }
+
+        private void CheckBox90_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox30.IsChecked = false;
+            CheckBox60.IsChecked = false;
+            CheckBoxCustom.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Hidden;
+            x = 90;        
+        }
+
+        private void CheckBoxCustom_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox30.IsChecked = false;
+            CheckBox60.IsChecked = false;
+            CheckBox90.IsChecked = false;
+            TextBoxCustom.Visibility = Visibility.Visible;
         }
     }
 }

@@ -19,6 +19,9 @@
     <Compile Update="Pages\Endurence\EndurenceMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Frenzy\FrenzyGame.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Frenzy\FrenzyMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Endurence\EndurenceMainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Frenzy\FrenzyGame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Frenzy\FrenzyMainPage.xaml">

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\
 donttapNewDesign
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
-882889551
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
+9-869842869
 
-2037325838
-195255911892
-MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EndurenceGame.xaml;Pages\Endurence\EndurenceLeaderboardPage.xaml;Pages\Endurence\EndurenceMainPage.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
+20-101413985
+1951618213618
+MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EndurenceGame.xaml;Pages\Endurence\EndurenceLeaderboardPage.xaml;Pages\Endurence\EndurenceMainPage.xaml;Pages\Frenzy\FrenzyGame.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
 
 False
 

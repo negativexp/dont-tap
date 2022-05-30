@@ -57,6 +57,8 @@ namespace donttapNewDesign
                 this.Content = endurenceMainPage;
             if (x == 4)
                 this.Content = frenzyMainPage;
+            if (x == 5)
+                this.Content = new Pages.Frenzy.FrenzyGame(this);
             //...
             if (x == 6)
                 this.Content = new Pages.Endurence.EndurenceGame(this);

@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:donttapNewDesign.Pages.Frenzy"
       mc:Ignorable="d" 
       Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
-      Background="Transparent">
+      Background="Transparent"
+      Loaded="Page_Loaded">
 
     <Border Style="{StaticResource MainBorderTemplate}">
 
@@ -20,7 +21,7 @@
             <!--title-->
             <Border Style="{StaticResource TitleBorderTemplate}">
                 <Grid>
-                    <Grid Style="{StaticResource MouseDownGridTemplate}">
+                    <Grid Style="{StaticResource MouseDownGridTemplate}" MouseDown="Grid_MouseDown">
                         <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
                         <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
                     </Grid>
@@ -59,8 +60,28 @@
                 </Border>
                 <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 10 20 20" Grid.Row="1">
                     <StackPanel Grid.Row="0">
-                        <TextBlock Text="Time:" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
+                        <TextBlock Text="Time (seconds):" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
                         <StackPanel Orientation="Horizontal">
+                            <CheckBox Name="CheckBox30" Checked="CheckBox30_Checked" Content="30" Margin="20 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox Name="CheckBox60" Checked="CheckBox60_Checked" Content="60" Margin="20 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox Name="CheckBox90" Checked="CheckBox90_Checked" Content="90" Margin="20 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                            <CheckBox Name="CheckBoxCustom" Checked="CheckBoxCustom_Checked" Content="Custom" Margin="20 20 0 0">
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
                         </StackPanel>
                         <TextBox Name="TextBoxCustom" Margin="20" Height="25" Visibility="Hidden" FontSize="18"/>
                     </StackPanel>

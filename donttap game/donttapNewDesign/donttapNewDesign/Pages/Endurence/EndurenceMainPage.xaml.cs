@@ -29,16 +29,19 @@ namespace donttapNewDesign.Pages.Endurence
         {
             _mainwindow = mw;
             InitializeComponent();
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
             LoadData();
         }
+
         private async void LoadData()
         {
             int[] settings = Classes.LoadSettings.Load();
-            int lastscore = Classes.LoadLastScore.Load();
             TextBlockBoardSize.Text = "Board size: " + settings[0];
             TextBlockBoxSize.Text = "Box size: " + settings[1];
             TextBlockSpacing.Text = "Spacing: " + settings[2];
-            TextBlockLastScore.Text = "Last score: " + lastscore;
+            //TextBlockLastScore.Text = "Last score: " + lastscore;
         }
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
@@ -70,7 +73,6 @@ namespace donttapNewDesign.Pages.Endurence
             }
             else
             {
-                Classes.CreateSettings.CreateDeafult();
                 Classes.CreateEndurenceSettings.Create(clicks);
                 _mainwindow.ChangeContent(6);
             }

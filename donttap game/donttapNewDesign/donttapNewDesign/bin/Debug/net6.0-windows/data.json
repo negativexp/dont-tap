@@ -3,14 +3,31 @@
     "Endurance": [
       {
         "Score": 4,
-        "Time": "2022-05-29T11:37:42.2387085+02:00",
+        "Time": "2022-05-30T10:25:31.1696779+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
         "Spacing": 0,
-        "Clicks": 40
+        "Clicks": 30
+      },
+      {
+        "Score": 26,
+        "Time": "2022-05-30T10:29:50.1722255+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "Clicks": 30
       }
     ],
-    "Frenzy": null
+    "Frenzy": [
+      {
+        "Score": 7,
+        "Time": "2022-05-30T10:25:45.5315255+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      }
+    ]
   },
   "Settings": {
     "Boardsize": 4,
@@ -18,7 +35,9 @@
     "Spacing": 0
   },
   "EnduranceSettings": {
-    "Clicks": 40
+    "Clicks": 30
   },
-  "FrenzySettings": null
+  "FrenzySettings": {
+    "GameTime": 30
+  }
 }
