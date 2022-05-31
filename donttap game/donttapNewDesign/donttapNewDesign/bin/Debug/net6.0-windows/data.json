@@ -16,14 +16,127 @@
         "Boxsize": 165,
         "Spacing": 0,
         "Clicks": 40
+      },
+      {
+        "Score": 25,
+        "Time": "31.05.2022 16:26:48",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "Clicks": 40
+      },
+      {
+        "Score": 19,
+        "Time": "31.05.2022 16:27:11",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "Clicks": 40
+      },
+      {
+        "Score": 57,
+        "Time": "31.05.2022 16:27:31",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "Clicks": 40
+      },
+      {
+        "Score": 150,
+        "Time": "31.05.2022 16:28:11",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "Clicks": 40
       }
     ],
-    "Frenzy": []
+    "Frenzy": [
+      {
+        "Score": 141,
+        "Time": "31.05.2022 16:28:52",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 20,
+        "Time": "31.05.2022 16:30:35",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 16,
+        "Time": "31.05.2022 16:30:57",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 53,
+        "Time": "31.05.2022 16:31:25",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 66,
+        "Time": "31.05.2022 16:32:12",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 35,
+        "Time": "31.05.2022 16:32:31",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 13,
+        "Time": "31.05.2022 16:32:41",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 1,
+        "Time": "31.05.2022 16:32:48",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 76,
+        "Time": "31.05.2022 16:33:22",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 5,
+        "GameTime": 30
+      },
+      {
+        "Score": 146,
+        "Time": "31.05.2022 16:34:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 5,
+        "GameTime": 30
+      }
+    ]
   },
   "Settings": {
     "Boardsize": 4,
     "Boxsize": 165,
-    "Spacing": 0
+    "Spacing": 5
   },
   "EnduranceSettings": {
     "Clicks": 40

@@ -1,0 +1,20 @@
+﻿donttapNewDesign
+
+
+winexe
+C#
+.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\
+donttapNewDesign
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
+9-869842869
+
+21-1249112438
+195255911892
+MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EndurenceGame.xaml;Pages\Endurence\EndurenceLeaderboardPage.xaml;Pages\Endurence\EndurenceMainPage.xaml;Pages\Frenzy\FrenzyGame.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
+
+False
+

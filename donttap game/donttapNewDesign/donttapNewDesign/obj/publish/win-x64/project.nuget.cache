@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "wWZZd9Tv3u7o8Rn4jjQ/kK/29hKkjVKmyc3G3vIFDJaAmeBrpqknsH4Jzz34jE6sqrj8n2m5mQhMK0O/I19wuQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\matta\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\donttapNewDesign.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\matta\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\matta\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.3\\microsoft.netcore.app.runtime.win-x64.6.0.3.nupkg.sha512",
+    "C:\\Users\\matta\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.3.nupkg.sha512",
+    "C:\\Users\\matta\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.3\\microsoft.aspnetcore.app.runtime.win-x64.6.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
