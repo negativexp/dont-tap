@@ -27,7 +27,7 @@ namespace donttapNewDesign.Models
     public class EnduranceSave
     {
         public int Score { get; set; }
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
         public int Boardsize { get; set; }
         public int Boxsize { get; set; }
         public int Spacing { get; set; }
@@ -36,7 +36,7 @@ namespace donttapNewDesign.Models
     public class FrenzySave
     {
         public int Score { get; set; }
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
         public int Boardsize { get; set; }
         public int Boxsize { get; set; }
         public int Spacing { get; set; }

@@ -59,8 +59,19 @@
 
             <!--Buttons-->
             <Grid Grid.Row="1">
-                <ListView Height="200" Width="400" Name="ListViewBruh">
-                </ListView>
+                <DataGrid Name="DataGridMrdko"
+                          ColumnWidth="*" EnableColumnVirtualization="False"
+                          CanUserAddRows="False" CanUserReorderColumns="False"
+                          IsReadOnly="True" Margin="10,10,10,65">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Score" Binding="{Binding Score}"/>
+                        <!--<DataGridTextColumn Header="Time" Binding="{Binding Time}"/>
+                        <DataGridTextColumn Header="Board size" Binding="{Binding Boardsize}"/>
+                        <DataGridTextColumn Header="Box size" Binding="{Binding Boxsize}"/>
+                        <DataGridTextColumn Header="Spacing" Binding="{Binding Spacing}"/>
+                        <DataGridTextColumn Header="Clicks" Binding="{Binding Clicks}"/>-->
+                    </DataGrid.Columns>
+                </DataGrid>
 
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonEndurence"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"

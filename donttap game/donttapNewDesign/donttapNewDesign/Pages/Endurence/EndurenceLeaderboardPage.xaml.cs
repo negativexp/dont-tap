@@ -31,8 +31,9 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ListViewBruh.DataContext = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
-           
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            DataGridMrdko.ItemsSource = data.Scores.Endurance;
+
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
