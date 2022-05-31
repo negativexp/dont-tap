@@ -2,29 +2,77 @@
   "Scores": {
     "Endurance": [
       {
-        "Score": 4,
-        "Time": "2022-05-30T10:25:31.1696779+02:00",
+        "Score": 47,
+        "Time": "2022-05-31T11:40:20.9845401+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
-        "Spacing": 0,
+        "Spacing": 10,
         "Clicks": 30
       },
       {
-        "Score": 26,
-        "Time": "2022-05-30T10:29:50.1722255+02:00",
+        "Score": 95,
+        "Time": "2022-05-31T11:55:50.9408669+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
-        "Spacing": 0,
+        "Spacing": 10,
         "Clicks": 30
+      },
+      {
+        "Score": 31,
+        "Time": "2022-05-31T11:57:30.1275829+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 10,
+        "Clicks": 30
+      },
+      {
+        "Score": 32,
+        "Time": "2022-05-31T12:04:43.8885429+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 10,
+        "Clicks": 40
+      },
+      {
+        "Score": 79,
+        "Time": "2022-05-31T12:05:16.4596229+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 10,
+        "Clicks": 5
       }
     ],
     "Frenzy": [
       {
-        "Score": 7,
-        "Time": "2022-05-30T10:25:45.5315255+02:00",
+        "Score": 4,
+        "Time": "2022-05-31T11:10:26.0889037+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
         "Spacing": 0,
+        "GameTime": 30
+      },
+      {
+        "Score": 73,
+        "Time": "2022-05-31T11:56:48.4587105+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 10,
+        "GameTime": 30
+      },
+      {
+        "Score": 88,
+        "Time": "2022-05-31T12:09:03.954439+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 10,
+        "GameTime": 69
+      },
+      {
+        "Score": 30,
+        "Time": "2022-05-31T12:10:12.8671881+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 10,
         "GameTime": 30
       }
     ]
@@ -32,10 +80,10 @@
   "Settings": {
     "Boardsize": 4,
     "Boxsize": 165,
-    "Spacing": 0
+    "Spacing": 10
   },
   "EnduranceSettings": {
-    "Clicks": 30
+    "Clicks": 5
   },
   "FrenzySettings": {
     "GameTime": 30

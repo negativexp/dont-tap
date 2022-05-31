@@ -28,12 +28,18 @@ namespace donttapNewDesign.Pages
             _mainwindow = mw;
             InitializeComponent();
         }
-        private async void LoadData()
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            int[] data = Classes.LoadSettings.Load();
-            TextBoxBoardSize.Text = data[0].ToString();
-            TextBoxBoxSize.Text = data[1].ToString();
-            TextBoxSpacingSize.Text = data[2].ToString();
+            LoadData();
+        }
+
+        private async Task LoadData()
+        {
+            Task<int[]> task = Classes.LoadSettings.Load();
+            int[] settigns = await task;
+            TextBoxBoardSize.Text = settigns[0].ToString();
+            TextBoxBoxSize.Text = settigns[1].ToString();
+            TextBoxSpacingSize.Text = settigns[2].ToString();
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -99,11 +105,6 @@ namespace donttapNewDesign.Pages
                     epicprank++;
                 }
             }
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoadData();
         }
     }
 }

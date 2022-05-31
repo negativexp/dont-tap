@@ -26,20 +26,37 @@ namespace donttapNewDesign.Pages.Frenzy
             _mainwindow = mw;
             InitializeComponent();
         }
-        int x;
+        int time;
         bool custom;
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             LoadData();
         }
-        private async void LoadData()
+        private async Task LoadData()
         {
-            int[] settings = Classes.LoadSettings.Load();
-            //int lastscore = Classes.LoadLastScore.Load(1);
-            TextBlockBoardSize.Text = "Board size: " + settings[0];
-            TextBlockBoxSize.Text = "Box size: " + settings[1];
-            TextBlockSpacing.Text = "Spacing: " + settings[2];
-            //TextBlockLastScore.Text = "Last score: " + lastscore;
+            Task<int[]> task = Classes.LoadSettings.Load();
+            int[] settigns = await task;
+            TextBlockBoardSize.Text = "Board size: " + settigns[0];
+            TextBlockBoxSize.Text = "Box size: " + settigns[1];
+            TextBlockSpacing.Text = "Spacing: " + settigns[2];
+
+            Task<int> task2 = Classes.LoadLastScore.Load(1);
+            int lastscore = await task2;
+            TextBlockLastScore.Text = "Last score: " + lastscore.ToString();
+
+            Task<int> task3 = Classes.LoadFrenzySettings.Load();
+            int frenzysettings = await task3;
+            if (frenzysettings == 30)
+                CheckBox30.IsChecked = true;
+            else if (frenzysettings == 60)
+                CheckBox60.IsChecked = true;
+            else if (frenzysettings == 90)
+                CheckBox90.IsChecked = true;
+            else
+            {
+                CheckBoxCustom.IsChecked = true;
+                TextBoxCustom.Text = frenzysettings.ToString();
+            }
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
@@ -53,20 +70,20 @@ namespace donttapNewDesign.Pages.Frenzy
             {
                 try
                 {
-                    x = Convert.ToInt32(TextBoxCustom.Text);
+                    time = Convert.ToInt32(TextBoxCustom.Text);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Amount of clicks can be only numbers!", "Value ERROR");
                 }
             }
-            if (x <= 0)
+            if (time <= 0)
             {
                 MessageBox.Show("Amount of clicks cannot be 0 or less!", "Value ERROR");
             }
             else
             {
-                Classes.CreateFrenzySettings.Create(x);
+                Classes.CreateFrenzySettings.Create(time);
                 _mainwindow.ChangeContent(5);
             }
             
@@ -98,7 +115,8 @@ namespace donttapNewDesign.Pages.Frenzy
             CheckBox90.IsChecked = false;
             CheckBoxCustom.IsChecked = false;
             TextBoxCustom.Visibility = Visibility.Hidden;
-            x = 30;
+            custom = false;
+            time = 30;
 
         }
 
@@ -108,7 +126,8 @@ namespace donttapNewDesign.Pages.Frenzy
             CheckBox90.IsChecked = false;
             CheckBoxCustom.IsChecked = false;
             TextBoxCustom.Visibility = Visibility.Hidden;
-            x = 60;
+            custom = false;
+            time = 60;
         }
 
         private void CheckBox90_Checked(object sender, RoutedEventArgs e)
@@ -117,7 +136,8 @@ namespace donttapNewDesign.Pages.Frenzy
             CheckBox60.IsChecked = false;
             CheckBoxCustom.IsChecked = false;
             TextBoxCustom.Visibility = Visibility.Hidden;
-            x = 90;        
+            custom = false;
+            time = 90;        
         }
 
         private void CheckBoxCustom_Checked(object sender, RoutedEventArgs e)
@@ -126,6 +146,7 @@ namespace donttapNewDesign.Pages.Frenzy
             CheckBox60.IsChecked = false;
             CheckBox90.IsChecked = false;
             TextBoxCustom.Visibility = Visibility.Visible;
+            custom = true;
         }
     }
 }

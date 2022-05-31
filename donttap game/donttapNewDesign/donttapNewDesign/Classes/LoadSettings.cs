@@ -10,7 +10,7 @@ namespace donttapNewDesign.Classes
 {
     internal class LoadSettings
     {
-        public static int[] Load()
+        public static async Task<int[]> Load()
         {
             int[] toReturn = new int[3];
             Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));

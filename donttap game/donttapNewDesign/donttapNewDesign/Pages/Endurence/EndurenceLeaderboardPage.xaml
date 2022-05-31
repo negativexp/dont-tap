@@ -59,12 +59,8 @@
 
             <!--Buttons-->
             <Grid Grid.Row="1">
-                <DataGrid Name="DataGridScores" Height="430"
-                              VerticalAlignment="Top" Margin="30,30,30,0"
-                              IsReadOnly="True">
-                    <DataGrid.Columns>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <ListView Height="200" Width="400" Name="ListViewBruh">
+                </ListView>
 
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonEndurence"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"

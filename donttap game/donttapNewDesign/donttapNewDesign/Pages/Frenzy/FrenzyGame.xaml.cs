@@ -72,6 +72,7 @@ namespace donttapNewDesign.Pages.Frenzy
             boardSize = data.Settings.Boardsize;
             spacing = data.Settings.Spacing;
             time = data.FrenzySettings.GameTime;
+            TextBlockTime.Text = time.ToString();
 
             CreateDefinitions();
             CreateBoard();
@@ -254,7 +255,7 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void TimerGameOver_Tick(object sender, EventArgs e)
         {
-            _mainwindow.ChangeContent(3);
+            _mainwindow.ChangeContent(4);
             Reset();
             TimerGameOver.Stop();
         }

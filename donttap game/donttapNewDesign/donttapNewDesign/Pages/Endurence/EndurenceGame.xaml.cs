@@ -234,7 +234,7 @@ namespace donttapNewDesign.Pages.Endurence
                 foreach (Rectangle r in boxes)
                     r.MouseDown += Box_MouseDown;
                 GenerateFirstBoxes();
-                StartProgessBar();
+                //StartProgessBar();
                 StartTime();
                 TimerCountDown.Stop();
             }

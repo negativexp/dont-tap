@@ -34,14 +34,31 @@ namespace donttapNewDesign.Pages.Endurence
         {
             LoadData();
         }
-
-        private async void LoadData()
+        private async Task LoadData()
         {
-            int[] settings = Classes.LoadSettings.Load();
-            TextBlockBoardSize.Text = "Board size: " + settings[0];
-            TextBlockBoxSize.Text = "Box size: " + settings[1];
-            TextBlockSpacing.Text = "Spacing: " + settings[2];
-            //TextBlockLastScore.Text = "Last score: " + lastscore;
+            Task<int[]> task = Classes.LoadSettings.Load();
+            int[] settigns = await task;
+            TextBlockBoardSize.Text = "Board size: " + settigns[0];
+            TextBlockBoxSize.Text = "Box size: " + settigns[1];
+            TextBlockSpacing.Text = "Spacing: " + settigns[2];
+
+            Task<int> task2 = Classes.LoadLastScore.Load(0);
+            int lastscore = await task2;
+            TextBlockLastScore.Text = "Last score: " + lastscore.ToString();
+
+            Task<int> task3 = Classes.LoadEnduranceSettings.Load();
+            int endurancesettings = await task3;
+            if (endurancesettings == 30)
+                CheckBox30Clicks.IsChecked = true;
+            else if (endurancesettings == 40)
+                CheckBox40Clicks.IsChecked = true;
+            else if (endurancesettings == 50)
+                CheckBox50Clicks.IsChecked = true;
+            else
+            {
+                CheckBoxCustom.IsChecked = true;
+                TextBoxCustom.Text = endurancesettings.ToString();
+            }
         }
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)

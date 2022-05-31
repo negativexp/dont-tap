@@ -61,14 +61,11 @@
             <!--Buttons-->
             <Grid Grid.Row="1">
                 <!--left button-->
-                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonPattern" 
-                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
-                            Content="Pattern" Click="ButtonPattern_Click"/>
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonFrenzy"
-                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 90"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
                             Content="Frenzy" Click="ButtonFrenzy_Click"/>
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonEndurance"
-                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 150"
+                            HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 90"
                             Content="Endurance" Click="ButtonEndurance_Click"/>
                 <!--right buttons-->
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonAbout"

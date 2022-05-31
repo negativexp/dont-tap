@@ -31,7 +31,8 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            ListViewBruh.DataContext = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+           
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
