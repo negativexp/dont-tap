@@ -78,3 +78,5 @@ C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyGame.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyGame.baml
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\net6.0-windows\ref\donttapNewDesign.dll
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyLeaderboardPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\Pages\Frenzy\FrenzyLeaderboardPage.baml

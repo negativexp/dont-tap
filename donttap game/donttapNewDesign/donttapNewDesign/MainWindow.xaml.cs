@@ -33,6 +33,7 @@ namespace donttapNewDesign
         static Pages.Endurence.EndurenceMainPage endurenceMainPage;
         static Pages.Endurence.EndurenceLeaderboardPage endurenceLeaderboardPage;
         static Pages.Frenzy.FrenzyMainPage frenzyMainPage;
+        static Pages.Frenzy.FrenzyLeaderboardPage frenzyLeaderboardPage;
 
 
         private void LoadPages()
@@ -43,6 +44,7 @@ namespace donttapNewDesign
             endurenceMainPage = new Pages.Endurence.EndurenceMainPage(this);
             endurenceLeaderboardPage = new Pages.Endurence.EndurenceLeaderboardPage(this);
             frenzyMainPage = new Pages.Frenzy.FrenzyMainPage(this);
+            frenzyLeaderboardPage = new Pages.Frenzy.FrenzyLeaderboardPage(this);
         }
 
         public void ChangeContent(int x)
@@ -59,11 +61,12 @@ namespace donttapNewDesign
                 this.Content = frenzyMainPage;
             if (x == 5)
                 this.Content = new Pages.Frenzy.FrenzyGame(this);
-            //...
             if (x == 6)
                 this.Content = new Pages.Endurence.EndurenceGame(this);
             if (x == 7)
                 this.Content = endurenceLeaderboardPage;
+            if (x == 8)
+                this.Content = frenzyLeaderboardPage;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

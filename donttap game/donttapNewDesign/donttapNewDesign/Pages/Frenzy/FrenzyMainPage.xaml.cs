@@ -91,7 +91,7 @@ namespace donttapNewDesign.Pages.Frenzy
 
         private void ButtonLeaderBoard_Click(object sender, RoutedEventArgs e)
         {
-
+            _mainwindow.ChangeContent(8);
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)

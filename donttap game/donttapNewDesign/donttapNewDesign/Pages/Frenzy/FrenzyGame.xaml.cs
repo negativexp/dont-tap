@@ -26,6 +26,21 @@ namespace donttapNewDesign.Pages.Frenzy
         public FrenzyGame(MainWindow mw)
         {
             _mainwindow = mw;
+            InitializeComponent();
+        }
+
+        bool[] clickables;
+        int[] inUse;
+        Rectangle[] boxes;
+        int time;
+        int boxSize;
+        int boardSize;
+        int spacing;
+        int points;
+        int countdown = 3;
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
             Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
 
             int width = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
@@ -47,22 +62,7 @@ namespace donttapNewDesign.Pages.Frenzy
                 _mainwindow.Height = Convert.ToInt32(Application.Current.FindResource("Height"));
                 ProgessBarValue.Width = 400;
             }
-            InitializeComponent();
-        }
 
-        bool[] clickables;
-        int[] inUse;
-        Rectangle[] boxes;
-        int time;
-        int boxSize;
-        int boardSize;
-        int spacing;
-        int points;
-        int countdown = 3;
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
             //set values
             inUse = new int[3];
             time = data.FrenzySettings.GameTime;
@@ -114,7 +114,6 @@ namespace donttapNewDesign.Pages.Frenzy
             int number = Convert.ToInt32((sender as Rectangle).Tag);
             if (clickables[number])
             {
-                points++;
                 GameRules();
                 UpdateTimeAndPoints();
                 clickables[number] = false;
@@ -135,7 +134,7 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void TimerProgessBar_Tick(object? sender, EventArgs e)
         {
-            ProgessBarValue.Value -= 0.5;
+            ProgessBarValue.Value -= 1;
         }
         private void UpdateTimeAndPoints()
         {
@@ -144,7 +143,18 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void GameRules()
         {
-            ProgessBarValue.Value += 7.5;
+            ProgessBarValue.Value += 10;
+            if (ProgessBarValue.Value < 25)
+                points++;
+            if (ProgessBarValue.Value > 25)
+                points+=2;
+            if (ProgessBarValue.Value > 50)
+                points += 3;
+            if (ProgessBarValue.Value > 75)
+                points += 4;
+            if (ProgessBarValue.Value > 90)
+                points += 5;
+
         }
         private void GenerateNewBox(int clicked)
         {

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\net6.0-windows\
 donttapNewDesign
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
-9-869842869
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
+10-1089955260
 
-21-1249112438
-195-451612977
-MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EndurenceGame.xaml;Pages\Endurence\EndurenceLeaderboardPage.xaml;Pages\Endurence\EndurenceMainPage.xaml;Pages\Frenzy\FrenzyGame.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
+22-137387926
+195255911892
+MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EndurenceGame.xaml;Pages\Endurence\EndurenceLeaderboardPage.xaml;Pages\Endurence\EndurenceMainPage.xaml;Pages\Frenzy\FrenzyGame.xaml;Pages\Frenzy\FrenzyLeaderboardPage.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
 
 False
 

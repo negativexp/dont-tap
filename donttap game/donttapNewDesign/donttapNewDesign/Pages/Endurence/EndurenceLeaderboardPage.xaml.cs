@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace donttapNewDesign.Pages.Endurence
 {
@@ -29,6 +30,12 @@ namespace donttapNewDesign.Pages.Endurence
             _mainwindow = mw;
             InitializeComponent();
         }
+        private void ReLoad()
+        {
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            DataGridMrdko.ItemsSource = data.Scores.Endurance;
+            DataGridMrdko.Columns[1].Width = new DataGridLength(1.0, DataGridLengthUnitType.SizeToCells);
+        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -38,14 +45,14 @@ namespace donttapNewDesign.Pages.Endurence
         }
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            var test = JObject.Parse(File.ReadAllText("data.json"));
-            var index = test["Scores"]["Endurance"].Select((x, index) => new { Score = x.Value<int>("Score"), Node = x, Index = index })
-                                                   .Single(x => x.Score == DataGridMrdko.sele)
+            Models.EnduranceSave bruh = DataGridMrdko.SelectedItem as Models.EnduranceSave;
+            var data = JObject.Parse(File.ReadAllText("data.json"));
+            var index = data["Scores"]["Endurance"].Select((x, index) => new { Time = x.Value<DateTime>("Time"), Node = x, Index = index })
+                                                   .Single(x => x.Time == bruh.Time)
                                                    .Index;
-            MessageBox.Show(index.ToString());
-
-
-            //File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
+            data["Scores"]["Endurance"][index].Remove();
+            File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
+            ReLoad();
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
