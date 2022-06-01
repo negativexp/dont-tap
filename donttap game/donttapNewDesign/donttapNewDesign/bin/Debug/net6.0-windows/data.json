@@ -10,16 +10,24 @@
         "Clicks": 40
       },
       {
-        "Score": 35,
-        "Time": "2022-06-01T07:57:22.4083987+02:00",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
+        "Score": 178,
+        "Time": "2022-06-01T07:58:20.8974254+02:00",
+        "Boardsize": 5,
+        "Boxsize": 100,
+        "Spacing": 5,
         "Clicks": 40
       },
       {
-        "Score": 178,
-        "Time": "2022-06-01T07:58:20.8974254+02:00",
+        "Score": 29,
+        "Time": "2022-06-01T09:52:48.8995864+02:00",
+        "Boardsize": 5,
+        "Boxsize": 100,
+        "Spacing": 5,
+        "Clicks": 40
+      },
+      {
+        "Score": 16,
+        "Time": "2022-06-01T09:53:01.282012+02:00",
         "Boardsize": 5,
         "Boxsize": 100,
         "Spacing": 5,

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GoROD/b73ncqkCAFuxuqUTNGWSMmVtcbM6zre0VN3b1UJGKyz+PTTz0Z9aC3tZVOtI/BYH82wlVO+OPKdiNeZg==",
+  "dgSpecHash": "LFQzpOo39pgVcLyU4ky/HFaphruPwvPbe5Do9wZ1oV/qWZNDvoffBdbgbHJcygiqlp6A3ZfZBxNWKIY9bqHrXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matta\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\donttapNewDesign.csproj",
+  "projectFilePath": "C:\\Users\\matyas.schuller\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\donttapNewDesign.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\matta\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\matyas.schuller\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
