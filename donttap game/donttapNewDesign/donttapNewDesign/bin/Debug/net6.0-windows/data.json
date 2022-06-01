@@ -2,140 +2,35 @@
   "Scores": {
     "Endurance": [
       {
-        "Score": 19,
-        "Time": "31.49 13:49",
+        "Score": 59,
+        "Time": "2022-06-01T07:57:07.5409916+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
         "Spacing": 0,
         "Clicks": 40
-      },
-      {
-        "Score": 0,
-        "Time": "31.05.2022 13:50:19",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "Clicks": 40
-      },
-      {
-        "Score": 25,
-        "Time": "31.05.2022 16:26:48",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "Clicks": 40
-      },
-      {
-        "Score": 19,
-        "Time": "31.05.2022 16:27:11",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "Clicks": 40
-      },
-      {
-        "Score": 57,
-        "Time": "31.05.2022 16:27:31",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "Clicks": 40
-      },
-      {
-        "Score": 150,
-        "Time": "31.05.2022 16:28:11",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "Clicks": 40
-      }
-    ],
-    "Frenzy": [
-      {
-        "Score": 141,
-        "Time": "31.05.2022 16:28:52",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
-      },
-      {
-        "Score": 20,
-        "Time": "31.05.2022 16:30:35",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
-      },
-      {
-        "Score": 16,
-        "Time": "31.05.2022 16:30:57",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
-      },
-      {
-        "Score": 53,
-        "Time": "31.05.2022 16:31:25",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
-      },
-      {
-        "Score": 66,
-        "Time": "31.05.2022 16:32:12",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
       },
       {
         "Score": 35,
-        "Time": "31.05.2022 16:32:31",
+        "Time": "2022-06-01T07:57:22.4083987+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
         "Spacing": 0,
-        "GameTime": 30
+        "Clicks": 40
       },
       {
-        "Score": 13,
-        "Time": "31.05.2022 16:32:41",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
-      },
-      {
-        "Score": 1,
-        "Time": "31.05.2022 16:32:48",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 0,
-        "GameTime": 30
-      },
-      {
-        "Score": 76,
-        "Time": "31.05.2022 16:33:22",
-        "Boardsize": 4,
-        "Boxsize": 165,
+        "Score": 178,
+        "Time": "2022-06-01T07:58:20.8974254+02:00",
+        "Boardsize": 5,
+        "Boxsize": 100,
         "Spacing": 5,
-        "GameTime": 30
-      },
-      {
-        "Score": 146,
-        "Time": "31.05.2022 16:34:00",
-        "Boardsize": 4,
-        "Boxsize": 165,
-        "Spacing": 5,
-        "GameTime": 30
+        "Clicks": 40
       }
-    ]
+    ],
+    "Frenzy": []
   },
   "Settings": {
-    "Boardsize": 4,
-    "Boxsize": 165,
+    "Boardsize": 5,
+    "Boxsize": 100,
     "Spacing": 5
   },
   "EnduranceSettings": {

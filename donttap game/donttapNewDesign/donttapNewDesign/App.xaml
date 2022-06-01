@@ -7,7 +7,7 @@
     <Application.Resources>
         <!--width and height-->
         <sys:Double x:Key="Height">700</sys:Double>
-        <sys:Double x:Key="Width">450</sys:Double>
+        <sys:Double x:Key="Width">500</sys:Double>
         <!--grid for dragging-->
         <Style x:Key="MouseDownGridTemplate" TargetType="Grid">
             <Setter Property="Background" Value="Transparent"/>

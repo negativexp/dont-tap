@@ -33,7 +33,12 @@ namespace donttapNewDesign.Pages.Endurence
         {
             Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
             DataGridMrdko.ItemsSource = data.Scores.Endurance;
-
+            DataGridMrdko.Columns[1].Width = new DataGridLength(1.0, DataGridLengthUnitType.SizeToCells);
+        }
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            data.Scores.Endurance.RemoveAt(DataGridMrdko.SelectedIndex);
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

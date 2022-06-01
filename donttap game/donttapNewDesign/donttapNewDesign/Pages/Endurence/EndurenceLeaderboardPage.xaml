@@ -62,7 +62,8 @@
                 <DataGrid Name="DataGridMrdko"
                           ColumnWidth="*" EnableColumnVirtualization="False"
                           CanUserAddRows="False" CanUserReorderColumns="False"
-                          IsReadOnly="True" Margin="10,10,10,65">
+                          AlternationCount="2" AlternatingRowBackground="Bisque"
+                          IsReadOnly="True" Margin="30,30,30,90">
                     <DataGrid.Columns>
                     </DataGrid.Columns>
                 </DataGrid>
@@ -74,6 +75,10 @@
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 30"
                             Content="Back" Click="ButtonBack_Click"/>
+                
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonDelete"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
+                            Content="Delete" Click="ButtonDelete_Click"/>
             </Grid>
         </Grid>
     </Border>

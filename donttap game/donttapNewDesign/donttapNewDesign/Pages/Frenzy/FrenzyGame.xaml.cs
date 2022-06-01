@@ -26,6 +26,27 @@ namespace donttapNewDesign.Pages.Frenzy
         public FrenzyGame(MainWindow mw)
         {
             _mainwindow = mw;
+            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+
+            int width = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
+            int height = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
+
+            _mainwindow.Width = width + 100;
+            _mainwindow.Height = height + 250;
+            this.Width = width + 100;
+            this.Height = height + 250;
+            GridGame.Width = width;
+            GridGame.Height = height;
+            ProgessBarValue.Width = width;
+
+            if (this.Width < Convert.ToInt32(Application.Current.FindResource("Width")) | this.Height < Convert.ToInt32(Application.Current.FindResource("Height")))
+            {
+                this.Width = Convert.ToInt32(Application.Current.FindResource("Wídth"));
+                this.Height = Convert.ToInt32(Application.Current.FindResource("Height"));
+                _mainwindow.Width = Convert.ToInt32(Application.Current.FindResource("Wídth"));
+                _mainwindow.Height = Convert.ToInt32(Application.Current.FindResource("Height"));
+                ProgessBarValue.Width = 400;
+            }
             InitializeComponent();
         }
 
@@ -41,30 +62,7 @@ namespace donttapNewDesign.Pages.Frenzy
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            TextBlockCountDown.Style = Application.Current.FindResource("CountDownFadeOut") as Style;
-
             Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
-
-            int width = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
-            int height = (data.Settings.Boardsize * data.Settings.Boxsize) + (data.Settings.Boardsize * data.Settings.Spacing);
-
-            _mainwindow.Width = width + 100;
-            _mainwindow.Height = height + 250;
-            this.Width = width + 100;
-            this.Height = height + 250;
-            GridGame.Width = width;
-            GridGame.Height = height;
-            ProgessBarValue.Width = width;
-
-            if (this.Width < 450 | this.Height < 700)
-            {
-                this.Width = 450;
-                this.Height = 700;
-                _mainwindow.Width = 450;
-                _mainwindow.Height = 700;
-                ProgessBarValue.Width = 400;
-            }
-
             //set values
             inUse = new int[3];
             time = data.FrenzySettings.GameTime;

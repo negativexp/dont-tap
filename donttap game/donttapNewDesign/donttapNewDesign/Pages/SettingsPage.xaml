@@ -48,17 +48,17 @@
                 <!--Board size-->
                 <TextBlock Text="Board size: " FontSize="24" HorizontalAlignment="Left"
                                VerticalAlignment="Top" Margin="20 20 0 0"/>
-                <TextBox Name="TextBoxBoardSize" Margin="0,57,0,0" FontSize="18" HorizontalAlignment="Center" Width="406" Height="25" VerticalAlignment="Top"/>
+                <TextBox Name="TextBoxBoardSize" Margin="30,57,30,0" FontSize="18" Height="25" VerticalAlignment="Top"/>
 
                 <!--box size-->
                 <TextBlock Text="Box size: " FontSize="24" HorizontalAlignment="Left"
                         VerticalAlignment="Top" Margin="20,90,0,0"/>
-                <TextBox x:Name="TextBoxBoxSize" Height="25" Margin="0,127,0,0" FontSize="18" HorizontalAlignment="Center" Width="406" VerticalAlignment="Top"/>
+                <TextBox x:Name="TextBoxBoxSize" Height="25" Margin="30,127,30,0" FontSize="18" VerticalAlignment="Top"/>
 
                 <!--spacing-->
                 <TextBlock Text="Spacing: " FontSize="24" HorizontalAlignment="Left"
                         VerticalAlignment="Top" Margin="20,170,0,0"/>
-                <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="0,207,0,0" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center" Width="406"/>
+                <TextBox x:Name="TextBoxSpacingSize" Height="25" Margin="30,207,30,0" FontSize="18" VerticalAlignment="Top"/>
 
                 <!--back button-->
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"

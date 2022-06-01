@@ -22,7 +22,7 @@ namespace donttapNewDesign.Classes
                     Boardsize = data.Settings.Boardsize,
                     Boxsize = data.Settings.Boxsize,
                     Spacing = data.Settings.Spacing,
-                    Time = DateTime.Now.ToString(),
+                    Time = DateTime.Now,
                     Clicks = data.EnduranceSettings.Clicks
                 });
                 File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
@@ -35,7 +35,7 @@ namespace donttapNewDesign.Classes
                     Boardsize = data.Settings.Boardsize,
                     Boxsize = data.Settings.Boxsize,
                     Spacing = data.Settings.Spacing,
-                    Time = DateTime.Now.ToString(),
+                    Time = DateTime.Now,
                     GameTime = data.FrenzySettings.GameTime
                 });
                 File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
