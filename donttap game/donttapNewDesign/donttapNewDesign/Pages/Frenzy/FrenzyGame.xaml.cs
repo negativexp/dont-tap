@@ -134,7 +134,7 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void TimerProgessBar_Tick(object? sender, EventArgs e)
         {
-            ProgessBarValue.Value -= 1;
+            ProgessBarValue.Value -= 0.9;
         }
         private void UpdateTimeAndPoints()
         {

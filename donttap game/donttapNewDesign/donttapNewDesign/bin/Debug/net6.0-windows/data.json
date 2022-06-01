@@ -202,13 +202,61 @@
         "Boxsize": 165,
         "Spacing": 5,
         "GameTime": 30
+      },
+      {
+        "Score": 57,
+        "Time": "2022-06-01T21:46:39.7962552+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 7,
+        "Time": "2022-06-01T21:46:48.2803011+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 31,
+        "Time": "2022-06-01T21:47:00.8410138+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 81,
+        "Time": "2022-06-01T21:47:18.6418778+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 564,
+        "Time": "2022-06-01T21:49:03.8952939+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 624,
+        "Time": "2022-06-01T21:49:23.8936944+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
       }
     ]
   },
   "Settings": {
     "Boardsize": 4,
     "Boxsize": 165,
-    "Spacing": 5
+    "Spacing": 1
   },
   "EnduranceSettings": {
     "Clicks": 40
