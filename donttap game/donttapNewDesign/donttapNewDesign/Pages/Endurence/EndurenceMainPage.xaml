@@ -50,41 +50,43 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 20 20 10" Grid.Row="0">
-                    <StackPanel Grid.Row="0">
+                    <Grid>
                         <TextBlock Text="Settings:" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
-                        <TextBlock Name="TextBlockBoardSize" Text="Board size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
-                        <TextBlock Name="TextBlockBoxSize" Text="Box size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
-                        <TextBlock Name="TextBlockSpacing" Text="Spacing: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
-                        <TextBlock Name="TextBlockLastScore" Text="Last score: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150 2.5 0 0" FontSize="18"/>
-                    </StackPanel>
+                        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Name="TextBlockBoardSize" Text="Board size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 10 0 00" FontSize="18"/>
+                            <TextBlock Name="TextBlockBoxSize" Text="Box size: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 10 0 0" FontSize="18"/>
+                            <TextBlock Name="TextBlockSpacing" Text="Spacing: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 10 0 0" FontSize="18"/>
+                            <TextBlock Name="TextBlockLastScore" Text="Last score: 99" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 10 0 0" FontSize="18"/>
+                        </StackPanel>
+                    </Grid>
                 </Border>
                 <Border Style="{StaticResource ContentBorderTemplate}" Margin="20 10 20 20" Grid.Row="1">
-                    <StackPanel Grid.Row="0">
-                        <TextBlock Text="Time regeneration (+10s):" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
-                        <StackPanel Orientation="Horizontal">
-                            <CheckBox Name="CheckBox30Clicks" Checked="CheckBox30Clicks_Checked" Content="30 Clicks" Margin="20 20 0 0">
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Time regeneration (seconds):" TextDecorations="Underline" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 10 10 5" FontSize="30"/>
+                        <TextBox Name="TextBoxCustom" Margin="20 100 20 0" Height="25" Visibility="Visible" FontSize="18"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <CheckBox Name="CheckBox30Clicks" Checked="CheckBox30Clicks_Checked" Content="30" Margin="20 20 0 0">
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <CheckBox Name="CheckBox40Clicks" Checked="CheckBox40Clicks_Checked" Content="40 Clicks" Margin="15 20 0 0">
+                            <CheckBox Name="CheckBox40Clicks" Checked="CheckBox40Clicks_Checked" Content="40" Margin="20 20 0 0">
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <CheckBox Name="CheckBox50Clicks" Checked="CheckBox50Clicks_Checked" Content="50 Clicks" Margin="15 20 0 0">
+                            <CheckBox Name="CheckBox50Clicks" Checked="CheckBox50Clicks_Checked" Content="50" Margin="20 20 0 0">
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
-                            <CheckBox Name="CheckBoxCustom" Checked="CheckBoxCustom_Checked" Content="Custom" Margin="15 20 0 0">
+                            <CheckBox Name="CheckBoxCustom" Checked="CheckBoxCustom_Checked" Content="Custom" Margin="20 20 0 0">
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                                 </CheckBox.LayoutTransform>
                             </CheckBox>
                         </StackPanel>
-                        <TextBox Name="TextBoxCustom" Margin="20" Height="25" Visibility="Hidden" FontSize="18"/>
-                    </StackPanel>
+                    </Grid>
                 </Border>
             </Grid>
             <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"

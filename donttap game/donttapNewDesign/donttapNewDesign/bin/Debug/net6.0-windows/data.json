@@ -250,6 +250,22 @@
         "Boxsize": 165,
         "Spacing": 1,
         "GameTime": 30
+      },
+      {
+        "Score": 12,
+        "Time": "2022-06-02T09:31:01.6312787+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 58,
+        "Time": "2022-06-02T09:31:21.9914974+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
       }
     ]
   },

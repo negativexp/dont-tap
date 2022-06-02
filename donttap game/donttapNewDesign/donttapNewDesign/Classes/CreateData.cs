@@ -18,7 +18,7 @@ namespace donttapNewDesign.Classes
                 data.Scores = new Models.PlayerSave();
                 data.Scores.Endurance = new List<Models.EnduranceSave>();
                 data.Scores.Frenzy = new List<Models.FrenzySave>();
-                data.Settings = new Models.Settings() { Boardsize = 4, Boxsize = 165, Spacing = 0};
+                data.Settings = new Models.Settings() { Boardsize = 4, Boxsize = 165, Spacing = 1};
                 data.EnduranceSettings = new Models.EnduranceSettings() { Clicks = 40 };
                 data.FrenzySettings = new Models.FrenzySettings() { GameTime = 30 };
                 File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
