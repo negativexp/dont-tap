@@ -16,4 +16,4 @@ Here you try to play on time. You have the option to choose how much time in sec
 ## How is everything stored?
 Everything is stored in one json file called `data.json` and is generated in the same directory where the `game.exe` is.
 **Please _DON'T_ edit `data.json` while the program _IS RUNNING_ or if you have no idea what you are doing. The program will crash and you will have to delete** `data.json`**.**
-
+# Bugs and reports
