@@ -1,0 +1,7 @@
+C:\Users\matta\Desktop\release\donttapNewDesign.pdb
+C:\Users\matta\Desktop\release\D3DCompiler_47_cor3.dll
+C:\Users\matta\Desktop\release\PenImc_cor3.dll
+C:\Users\matta\Desktop\release\PresentationNative_cor3.dll
+C:\Users\matta\Desktop\release\vcruntime140_cor3.dll
+C:\Users\matta\Desktop\release\wpfgfx_cor3.dll
+C:\Users\matta\Desktop\release\donttapNewDesign.exe

@@ -505,9 +505,6 @@ C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNe
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\donttapNewDesign.csproj.AssemblyReference.cache
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\MainWindow.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\AboutPage.g.cs
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EndurenceGame.g.cs
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EndurenceLeaderboardPage.g.cs
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EndurenceMainPage.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Frenzy\FrenzyGame.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Frenzy\FrenzyMainPage.g.cs
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\MenuPage.g.cs
@@ -518,9 +515,6 @@ C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNe
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\App.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\MainWindow.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\AboutPage.baml
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EndurenceGame.baml
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EndurenceLeaderboardPage.baml
-C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EndurenceMainPage.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Frenzy\FrenzyGame.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Frenzy\FrenzyMainPage.baml
 C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\MenuPage.baml
@@ -578,3 +572,11 @@ C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\donttapNewDesign.pdb
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\donttapNewDesign.genruntimeconfig.cache
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\ref\donttapNewDesign.dll
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EnduranceGame.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EnduranceLeaderboardPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EnduranceMainPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Frenzy\FrenzyLeaderboardPage.g.cs
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EnduranceGame.baml
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EnduranceLeaderboardPage.baml
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Endurence\EnduranceMainPage.baml
+C:\Users\matta\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\win-x64\Pages\Frenzy\FrenzyLeaderboardPage.baml
