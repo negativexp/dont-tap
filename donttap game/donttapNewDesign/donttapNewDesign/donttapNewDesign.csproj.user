@@ -12,13 +12,13 @@
     <Compile Update="Pages\AboutPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\Endurence\EndurenceGame.xaml.cs">
+    <Compile Update="Pages\Endurence\EnduranceGame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\Endurence\EndurenceLeaderboardPage.xaml.cs">
+    <Compile Update="Pages\Endurence\EnduranceLeaderboardPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\Endurence\EndurenceMainPage.xaml.cs">
+    <Compile Update="Pages\Endurence\EnduranceMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\Frenzy\FrenzyGame.xaml.cs">
@@ -44,13 +44,13 @@
     <Page Update="Pages\AboutPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Endurence\EndurenceGame.xaml">
+    <Page Update="Pages\Endurence\EnduranceGame.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Endurence\EndurenceLeaderboardPage.xaml">
+    <Page Update="Pages\Endurence\EnduranceLeaderboardPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Endurence\EndurenceMainPage.xaml">
+    <Page Update="Pages\Endurence\EnduranceMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Frenzy\FrenzyGame.xaml">

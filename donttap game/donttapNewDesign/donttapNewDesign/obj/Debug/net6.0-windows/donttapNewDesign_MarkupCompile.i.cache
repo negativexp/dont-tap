@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\App.xaml
-10-1089955260
+101549042093
 
-24-795535336
+24399109311
 1951618213618
-MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EndurenceGame.xaml;Pages\Endurence\EndurenceLeaderboardPage.xaml;Pages\Endurence\EndurenceMainPage.xaml;Pages\Frenzy\FrenzyGame.xaml;Pages\Frenzy\FrenzyLeaderboardPage.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
+MainWindow.xaml;Pages\AboutPage.xaml;Pages\Endurence\EnduranceGame.xaml;Pages\Endurence\EnduranceLeaderboardPage.xaml;Pages\Endurence\EnduranceMainPage.xaml;Pages\Frenzy\FrenzyGame.xaml;Pages\Frenzy\FrenzyLeaderboardPage.xaml;Pages\Frenzy\FrenzyMainPage.xaml;Pages\MenuPage.xaml;Pages\SettingsPage.xaml;
 
-True
+False
 
