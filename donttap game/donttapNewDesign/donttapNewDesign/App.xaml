@@ -113,9 +113,12 @@
                 <EventTrigger RoutedEvent="MouseDown">
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="Fill.Color"
-                                            Duration="0:0:0.15"
-                                            To="White"/>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.Color"
+                                                          BeginTime="0:0:0.0"
+                                                          Duration="0:0:0.15">
+                                <LinearColorKeyFrame KeyTime="0:0:0.075" Value="Lime"/>
+                                <LinearColorKeyFrame KeyTime="0:0:0.15" Value="White"/>
+                            </ColorAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>

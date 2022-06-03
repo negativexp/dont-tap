@@ -16,6 +16,30 @@
         "Boxsize": 165,
         "Spacing": 5,
         "Clicks": 40
+      },
+      {
+        "Score": 1,
+        "Time": "2022-06-03T09:26:33.1548666+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 40
+      },
+      {
+        "Score": 32,
+        "Time": "2022-06-03T09:27:12.0999368+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 40
+      },
+      {
+        "Score": 119,
+        "Time": "2022-06-03T09:32:36.9261974+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 40
       }
     ],
     "Frenzy": [
@@ -262,6 +286,54 @@
       {
         "Score": 58,
         "Time": "2022-06-02T09:31:21.9914974+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 18,
+        "Time": "2022-06-03T09:28:17.3932888+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 17,
+        "Time": "2022-06-03T09:30:01.1425618+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 40,
+        "Time": "2022-06-03T09:32:56.5571266+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 28,
+        "Time": "2022-06-03T09:33:15.6977207+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 3,
+        "Time": "2022-06-03T09:33:23.556+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 62,
+        "Time": "2022-06-03T09:33:44.9822426+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
         "Spacing": 1,
