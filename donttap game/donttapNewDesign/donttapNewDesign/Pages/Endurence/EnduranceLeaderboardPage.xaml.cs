@@ -30,16 +30,16 @@ namespace donttapNewDesign.Pages.Endurence
             _mainwindow = mw;
             InitializeComponent();
         }
-        private void ReLoad()
+        private async Task ReLoad()
         {
-            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            Models.Data data = await Task.Run(() => Classes.LoadLeaderboardData.Load());
             DataGridMrdko.ItemsSource = data.Scores.Endurance;
             DataGridMrdko.Columns[1].Width = new DataGridLength(1.0, DataGridLengthUnitType.SizeToCells);
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Models.Data data = JsonConvert.DeserializeObject<Models.Data>(File.ReadAllText("data.json"));
+            Models.Data data = await Task.Run(() => Classes.LoadLeaderboardData.Load());
             DataGridMrdko.ItemsSource = data.Scores.Endurance;
             DataGridMrdko.Columns[1].Width = new DataGridLength(1.0, DataGridLengthUnitType.SizeToCells);
         }

@@ -36,18 +36,15 @@ namespace donttapNewDesign.Pages.Endurence
         }
         private async Task LoadData()
         {
-            Task<int[]> task = Classes.LoadSettings.Load();
-            int[] settigns = await task;
+            int[] settigns = await Task.Run(() => Classes.LoadSettings.Load());
             TextBlockBoardSize.Text = "Board size: " + settigns[0];
             TextBlockBoxSize.Text = "Box size: " + settigns[1];
             TextBlockSpacing.Text = "Spacing: " + settigns[2];
 
-            Task<int> task2 = Classes.LoadLastScore.Load(0);
-            int lastscore = await task2;
+            int lastscore = await Task.Run(() => Classes.LoadLastScore.Load(0)); ;
             TextBlockLastScore.Text = "Last score: " + lastscore.ToString();
 
-            Task<int> task3 = Classes.LoadEnduranceSettings.Load();
-            int endurancesettings = await task3;
+            int endurancesettings = await Task.Run(() => Classes.LoadEnduranceSettings.Load());
             if (endurancesettings == 30)
                 CheckBox30Clicks.IsChecked = true;
             else if (endurancesettings == 40)

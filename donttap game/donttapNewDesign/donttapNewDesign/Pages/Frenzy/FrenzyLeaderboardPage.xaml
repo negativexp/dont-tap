@@ -63,6 +63,7 @@
                           ColumnWidth="*" EnableColumnVirtualization="False"
                           CanUserAddRows="False" CanUserReorderColumns="False"
                           AlternationCount="2" AlternatingRowBackground="Bisque"
+                          Background="#BDBDC7"
                           IsReadOnly="True" Margin="20,20,20,70">
                     <DataGrid.Columns>
                     </DataGrid.Columns>

@@ -17,7 +17,7 @@
         <!--Border title-->
         <Style x:Key="TitleBorderTemplate" TargetType="Border">
             <Setter Property="Background" Value="#FDFDFD"/>
-            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="CornerRadius" Value="15"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="Margin" Value="-2"/>
@@ -25,7 +25,7 @@
         <!--main border-->
         <Style x:Key="MainBorderTemplate" TargetType="Border">
             <Setter Property="Background" Value="#BDBDC7"/>
-            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="CornerRadius" Value="15"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="BorderBrush" Value="Black"/>
         </Style>

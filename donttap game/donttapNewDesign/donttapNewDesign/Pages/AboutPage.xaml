@@ -44,7 +44,7 @@
 
             <!--Buttons-->
             <Grid Grid.Row="1">
-                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0"
+                <TextBlock Name="TextBlockBody" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0"
                                Text="SEX"/>
 
                 <!--back button-->

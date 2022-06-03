@@ -34,18 +34,15 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private async Task LoadData()
         {
-            Task<int[]> task = Classes.LoadSettings.Load();
-            int[] settigns = await task;
+            int[] settigns = await Task.Run(() => Classes.LoadSettings.Load());
             TextBlockBoardSize.Text = "Board size: " + settigns[0];
             TextBlockBoxSize.Text = "Box size: " + settigns[1];
             TextBlockSpacing.Text = "Spacing: " + settigns[2];
 
-            Task<int> task2 = Classes.LoadLastScore.Load(1);
-            int lastscore = await task2;
+            int lastscore = await Task.Run(() => Classes.LoadLastScore.Load(1));
             TextBlockLastScore.Text = "Last score: " + lastscore.ToString();
 
-            Task<int> task3 = Classes.LoadFrenzySettings.Load();
-            int frenzysettings = await task3;
+            int frenzysettings = await Task.Run(() => Classes.LoadFrenzySettings.Load());
             if (frenzysettings == 30)
                 CheckBox30.IsChecked = true;
             else if (frenzysettings == 60)

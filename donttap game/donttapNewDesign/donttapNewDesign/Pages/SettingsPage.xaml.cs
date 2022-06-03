@@ -35,8 +35,7 @@ namespace donttapNewDesign.Pages
 
         private async Task LoadData()
         {
-            Task<int[]> task = Classes.LoadSettings.Load();
-            int[] settigns = await task;
+            int[] settigns = await Task.Run(() => Classes.LoadSettings.Load());
             TextBoxBoardSize.Text = settigns[0].ToString();
             TextBoxBoxSize.Text = settigns[1].ToString();
             TextBoxSpacingSize.Text = settigns[2].ToString();
