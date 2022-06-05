@@ -20,6 +20,13 @@
 
             <!--title-->
             <Border Style="{StaticResource TitleBorderTemplate}">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#7160E8" Offset="0.0"/>
+                        <GradientStop Color="White" Offset="0.4"/>
+
+                    </LinearGradientBrush>
+                </Border.Background>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -44,7 +51,7 @@
                                FontSize="25" Margin="0 0 0 -40" Grid.Column="2"/>
                     <ProgressBar Name="ProgessBarValue" Width="400" Height="30" VerticalAlignment="Bottom"
                                  HorizontalAlignment="Center" Margin="-50" Grid.ColumnSpan="3"
-                                 BorderThickness="2" BorderBrush="#E3E3E1" Background="Transparent" Visibility="Hidden"/>
+                                 BorderThickness="2" BorderBrush="#E3E3E1" Background="Transparent" Foreground="#7160E8" Visibility="Hidden"/>
                 </Grid>
             </Border>
             <Grid Grid.Row="1">

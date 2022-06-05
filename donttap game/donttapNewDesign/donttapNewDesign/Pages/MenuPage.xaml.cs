@@ -81,5 +81,21 @@ namespace donttapNewDesign.Pages
         {
             _mainwindow.ChangeContent(7);
         }
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            _mainwindow.Close();
+        }
+        int clicked;
+        private void Page_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (clicked == 5)
+            {
+                System.Diagnostics.Process.Start(@"C:\Program Files\Internet Explorer\iexplore.exe", "https://www.instagram.com/p/Cd51zPoLJS7/");
+                clicked = 0;
+            }
+            else
+                clicked++;
+        }
     }
 }

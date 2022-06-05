@@ -11,13 +11,13 @@
         <!--grid for dragging-->
         <Style x:Key="MouseDownGridTemplate" TargetType="Grid">
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Height" Value="30"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
         </Style>
         <!--Border title-->
         <Style x:Key="TitleBorderTemplate" TargetType="Border">
             <Setter Property="Background" Value="#FDFDFD"/>
-            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="CornerRadius" Value="0"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="Margin" Value="-2"/>
@@ -31,14 +31,16 @@
         </Style>
         <!--x and _ buttons-->
         <Style x:Key="xButtonTemplate" TargetType="Button">
-            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="12"/>
-            <Setter Property="Width" Value="20"/>
-            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
             <Setter Property="Content" Value="X"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
-            <Setter Property="Margin" Value="0 5 20 0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <!--<Setter Property="Margin" Value="0 5 20 0"/>-->
+            <Setter Property="Margin" Value="0,10,20,0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -54,14 +56,16 @@
             </Setter>
         </Style>
         <Style x:Key="_ButtonTemplate" TargetType="Button">
-            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontSize" Value="12"/>
-            <Setter Property="Width" Value="20"/>
-            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
             <Setter Property="Content" Value="_"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
-            <Setter Property="Margin" Value="0 5 45 0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <!--<Setter Property="Margin" Value="0 5 20 0"/>-->
+            <Setter Property="Margin" Value="0,10,50,0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">

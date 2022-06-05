@@ -72,7 +72,7 @@ namespace donttapNewDesign.Pages.Endurence
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            _mainwindow.ChangeContent(0);
+            _mainwindow.ChangeContent(3);
         }
     }
 }

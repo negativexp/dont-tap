@@ -134,7 +134,7 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void TimerProgessBar_Tick(object? sender, EventArgs e)
         {
-            ProgessBarValue.Value -= 0.9;
+            ProgessBarValue.Value -= 0.8;
         }
         private void UpdateTimeAndPoints()
         {
@@ -143,7 +143,7 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void GameRules()
         {
-            ProgessBarValue.Value += 10;
+            ProgessBarValue.Value += 8;
             if (ProgessBarValue.Value < 25)
                 points++;
             if (ProgessBarValue.Value > 25)

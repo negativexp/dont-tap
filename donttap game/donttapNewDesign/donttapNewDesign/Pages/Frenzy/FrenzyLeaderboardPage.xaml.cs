@@ -71,7 +71,7 @@ namespace donttapNewDesign.Pages.Frenzy
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            _mainwindow.ChangeContent(0);
+            _mainwindow.ChangeContent(4);
         }
     }
 }

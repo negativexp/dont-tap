@@ -48,6 +48,22 @@
         "Boxsize": 165,
         "Spacing": 1,
         "Clicks": 40
+      },
+      {
+        "Score": 46,
+        "Time": "2022-06-05T13:16:54.9566046+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 40
+      },
+      {
+        "Score": 75,
+        "Time": "2022-06-05T13:56:58.7006607+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 40
       }
     ],
     "Frenzy": [
@@ -342,6 +358,118 @@
       {
         "Score": 62,
         "Time": "2022-06-03T09:33:44.9822426+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 74,
+        "Time": "2022-06-05T13:12:46.6043781+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 8,
+        "Time": "2022-06-05T13:13:16.2795012+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 25,
+        "Time": "2022-06-05T13:30:38.6680472+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 5,
+        "Time": "2022-06-05T13:30:48.5046945+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 8,
+        "Time": "2022-06-05T13:32:18.1001353+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 235,
+        "Time": "2022-06-05T13:33:35.0363496+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 1,
+        "Time": "2022-06-05T13:33:43.0795234+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 549,
+        "Time": "2022-06-05T13:34:01.8900796+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 12,
+        "Time": "2022-06-05T13:34:12.3986243+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 6,
+        "Time": "2022-06-05T13:34:43.6714678+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 2,
+        "Time": "2022-06-05T13:35:04.9200788+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 447,
+        "Time": "2022-06-05T13:35:23.8738454+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 1,
+        "Time": "2022-06-05T13:35:31.113419+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "GameTime": 30
+      },
+      {
+        "Score": 35,
+        "Time": "2022-06-05T13:35:42.5432334+02:00",
         "Boardsize": 4,
         "Boxsize": 165,
         "Spacing": 1,

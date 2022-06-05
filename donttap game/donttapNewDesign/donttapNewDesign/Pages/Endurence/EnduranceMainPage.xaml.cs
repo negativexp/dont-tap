@@ -25,6 +25,9 @@ namespace donttapNewDesign.Pages.Endurence
         private readonly MainWindow _mainwindow;
         int clicks;
         bool custom;
+        int boardsize;
+        int boxsize;
+        int spacing;
         public EndurenceMainPage(MainWindow mw)
         {
             _mainwindow = mw;
@@ -40,6 +43,9 @@ namespace donttapNewDesign.Pages.Endurence
             TextBlockBoardSize.Text = "Board size: " + settigns[0];
             TextBlockBoxSize.Text = "Box size: " + settigns[1];
             TextBlockSpacing.Text = "Spacing: " + settigns[2];
+            boardsize = settigns[0];
+            boxsize = settigns[1];
+            spacing = settigns[2];
 
             int lastscore = await Task.Run(() => Classes.LoadLastScore.Load(0)); ;
             TextBlockLastScore.Text = "Last score: " + lastscore.ToString();

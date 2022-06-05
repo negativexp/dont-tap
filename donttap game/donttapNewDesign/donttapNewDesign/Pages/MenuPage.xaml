@@ -7,26 +7,32 @@
       mc:Ignorable="d" 
       Title="MainWindow" Height="{StaticResource Height}" Width="{StaticResource Width}"
       Background="Transparent"
-      Loaded="Page_Loaded">
+      Loaded="Page_Loaded"
+      MouseDown="Page_MouseDown">
 
     <Border Style="{StaticResource MainBorderTemplate}">
-
         <!--main grid-->
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="8*"/>
                 <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
-
             <!--title-->
             <Border Style="{StaticResource TitleBorderTemplate}">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#7160E8" Offset="0.0"/>
+                        <GradientStop Color="White" Offset="0.4"/>
+                        
+                    </LinearGradientBrush>
+                </Border.Background>
                 <Grid>
                     <Grid Style="{StaticResource MouseDownGridTemplate}" MouseDown="Grid_MouseDown">
                         <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
                         <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
                     </Grid>
-                    <TextBlock Name="TextBlockTitle" Text="Dont tap!" VerticalAlignment="Center" HorizontalAlignment="Center"
-                               FontSize="45" Margin="0 0 0 10">
+                   <TextBlock Name="TextBlockTitle" Text="DON'T TAP!" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontSize="50" Margin="0 0 0 10">
                         <TextBlock.Triggers>
                             <EventTrigger RoutedEvent="Loaded">
                                 <BeginStoryboard>
@@ -57,7 +63,7 @@
                     </TextBlock>
                 </Grid>
             </Border>
-
+            
             <!--Buttons-->
             <Grid Grid.Row="1">
                 <!--left button-->
@@ -68,11 +74,14 @@
                             HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 0 0 90"
                             Content="Endurance" Click="ButtonEndurance_Click"/>
                 <!--right buttons-->
-                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonAbout"
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonExit"
                             HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 30"
+                            Content="Exit" Click="ButtonExit_Click"/>
+                <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonAbout"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 90"
                             Content="About" Click="ButtonAbout_Click"/>
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonSettings"
-                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 90"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 30 150"
                             Content="Settings" Click="ButtonSettings_Click"/>
             </Grid>
         </Grid>
