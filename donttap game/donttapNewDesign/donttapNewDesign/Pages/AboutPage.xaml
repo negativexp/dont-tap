@@ -31,8 +31,8 @@
                         <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
                         <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
                     </Grid>
-                    <TextBlock Name="TextBlockTitle" Text="ICH LIEBE FORTNITE" VerticalAlignment="Center" HorizontalAlignment="Center"
-                               FontSize="45" Margin="0 0 0 10">
+                    <TextBlock Name="TextBlockTitle" Text="DON'T TAP!" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontSize="50" Margin="0 0 0 10">
                         <TextBlock.Triggers>
                             <EventTrigger RoutedEvent="Loaded">
                                 <BeginStoryboard>
@@ -52,7 +52,7 @@
             <!--Buttons-->
             <Grid Grid.Row="1">
                 <TextBlock Name="TextBlockBody" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0"
-                               Text="SEX"/>
+                               Text="A clicking game based on http://www.donttap.com where you try to score as many points as possible without missing or running out of time."/>
 
                 <!--back button-->
                 <Button Style="{StaticResource RoundButtonTemplate}" Name="ButtonBack"

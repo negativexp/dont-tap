@@ -64,6 +64,22 @@
         "Boxsize": 165,
         "Spacing": 1,
         "Clicks": 40
+      },
+      {
+        "Score": 147,
+        "Time": "2022-06-06T10:12:15.6978702+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 30
+      },
+      {
+        "Score": 12,
+        "Time": "2022-06-06T10:44:42.0865666+02:00",
+        "Boardsize": 4,
+        "Boxsize": 165,
+        "Spacing": 1,
+        "Clicks": 30
       }
     ],
     "Frenzy": [
@@ -483,7 +499,7 @@
     "Spacing": 1
   },
   "EnduranceSettings": {
-    "Clicks": 40
+    "Clicks": 30
   },
   "FrenzySettings": {
     "GameTime": 30

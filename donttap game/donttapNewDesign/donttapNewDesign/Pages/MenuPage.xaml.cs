@@ -89,9 +89,9 @@ namespace donttapNewDesign.Pages
         int clicked;
         private void Page_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (clicked == 5)
+            if (clicked == 14)
             {
-                System.Diagnostics.Process.Start(@"C:\Program Files\Internet Explorer\iexplore.exe", "https://www.instagram.com/p/Cd51zPoLJS7/");
+                System.Diagnostics.Process.Start("cmd", "/C start https://www.instagram.com/p/Cd51zPoLJS7/");
                 clicked = 0;
             }
             else
