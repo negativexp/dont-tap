@@ -91,21 +91,6 @@ namespace donttapNewDesign.Pages.Frenzy
             _mainwindow.ChangeContent(8);
         }
 
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.Close();
-        }
-
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.WindowState = WindowState.Minimized;
-        }
-
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
-        }
-
         private void CheckBox30_Checked(object sender, RoutedEventArgs e)
         {
             CheckBox60.IsChecked = false;

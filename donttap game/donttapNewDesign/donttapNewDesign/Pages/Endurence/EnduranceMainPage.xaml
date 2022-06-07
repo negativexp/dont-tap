@@ -20,18 +20,8 @@
 
             <!--title-->
             <Border Style="{StaticResource TitleBorderTemplate}">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="#7160E8" Offset="0.0"/>
-                        <GradientStop Color="White" Offset="0.4"/>
-
-                    </LinearGradientBrush>
-                </Border.Background>
                 <Grid>
-                    <Grid Style="{StaticResource MouseDownGridTemplate}" MouseDown="Grid_MouseDown">
-                        <Button Style="{StaticResource xButtonTemplate}" Click="ButtonClose_Click"/>
-                        <Button Style="{StaticResource _ButtonTemplate}" Click="ButtonMinimize_Click"/>
-                    </Grid>
+                    <ContentControl Style="{StaticResource MoveableControl}"/>
                     <TextBlock Name="TextBlockTitle" Text="Endurence" VerticalAlignment="Center" HorizontalAlignment="Center"
                                FontSize="45" Margin="0 0 0 10">
                         <TextBlock.Triggers>

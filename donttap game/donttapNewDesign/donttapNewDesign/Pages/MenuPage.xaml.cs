@@ -45,18 +45,6 @@ namespace donttapNewDesign.Pages
             //TextBlockRandomText.Text = txt[rdm.Next(0, txt.Length - 1)];
         }
 
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.Close();
-        }
-
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            //edit or create settings.json
-
-            _mainwindow.WindowState = WindowState.Minimized;
-        }
-
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.ChangeContent(2);

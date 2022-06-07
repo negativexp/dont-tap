@@ -64,16 +64,6 @@ namespace donttapNewDesign.Pages.Endurence
             }
         }
 
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.WindowState = WindowState.Minimized;
-        }
-
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.Close();
-        }
-
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
             if(custom)
@@ -101,11 +91,6 @@ namespace donttapNewDesign.Pages.Endurence
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
             _mainwindow.ChangeContent(0);
-        }
-
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
         }
 
         private void ButtonLeaderBoard_Click(object sender, RoutedEventArgs e)

@@ -274,17 +274,5 @@ namespace donttapNewDesign.Pages.Frenzy
             boxes = null;
             countdown = 3;
         }
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.Close();
-        }
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            _mainwindow.WindowState = WindowState.Minimized;
-        }
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            _mainwindow.DragMove();
-        }
     }
 }

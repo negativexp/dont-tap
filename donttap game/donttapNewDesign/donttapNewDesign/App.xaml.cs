@@ -13,5 +13,19 @@ namespace donttapNewDesign
     /// </summary>
     public partial class App : Application
     {
+        private void ButtonX_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Close();
+        }
+
+        private void Button__Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        private void Border_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            App.Current.MainWindow.DragMove();
+        }
     }
 }
