@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DONT TAP", "donttapNewDesign\DONT TAP.csproj", "{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{4103D019-7A12-4B50-B0F0-3B3E29767111}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4103D019-7A12-4B50-B0F0-3B3E29767111}.All|Any CPU.ActiveCfg = Debug
-		{4103D019-7A12-4B50-B0F0-3B3E29767111}.Debug|Any CPU.ActiveCfg = Debug
-		{4103D019-7A12-4B50-B0F0-3B3E29767111}.Release|Any CPU.ActiveCfg = Release
+		{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}.All|Any CPU.ActiveCfg = Debug
+		{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}.Debug|Any CPU.ActiveCfg = Debug
+		{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
