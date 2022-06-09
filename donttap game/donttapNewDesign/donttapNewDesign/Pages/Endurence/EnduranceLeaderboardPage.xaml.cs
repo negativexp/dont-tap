@@ -45,14 +45,17 @@ namespace donttapNewDesign.Pages.Endurence
         }
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            Models.EnduranceSave bruh = DataGridMrdko.SelectedItem as Models.EnduranceSave;
-            var data = JObject.Parse(File.ReadAllText("data.json"));
-            var index = data["Scores"]["Endurance"].Select((x, index) => new { Time = x.Value<DateTime>("Time"), Node = x, Index = index })
-                                                   .Single(x => x.Time == bruh.Time)
-                                                   .Index;
-            data["Scores"]["Endurance"][index].Remove();
-            File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
-            ReLoad();
+            if(DataGridMrdko.SelectedItem != null)
+            {
+                Models.EnduranceSave bruh = DataGridMrdko.SelectedItem as Models.EnduranceSave;
+                var data = JObject.Parse(File.ReadAllText("data.json"));
+                var index = data["Scores"]["Endurance"].Select((x, index) => new { Time = x.Value<DateTime>("Time"), Node = x, Index = index })
+                                                       .Single(x => x.Time == bruh.Time)
+                                                       .Index;
+                data["Scores"]["Endurance"][index].Remove();
+                File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
+                ReLoad();
+            }
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

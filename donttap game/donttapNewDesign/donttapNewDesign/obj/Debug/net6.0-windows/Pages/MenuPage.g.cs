@@ -109,7 +109,7 @@ namespace donttapNewDesign.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/donttapNewDesign;component/pages/menupage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DONT TAP;component/pages/menupage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\MenuPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

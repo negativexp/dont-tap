@@ -80,6 +80,7 @@ namespace donttapNewDesign.Pages.Frenzy
             }
             else
             {
+                Classes.CreateData.Create();
                 Classes.CreateFrenzySettings.Create(time);
                 _mainwindow.ChangeContent(5);
             }

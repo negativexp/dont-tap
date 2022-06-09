@@ -44,14 +44,17 @@ namespace donttapNewDesign.Pages.Frenzy
         }
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            Models.FrenzySave bruh = DataGridMrdko.SelectedItem as Models.FrenzySave;
-            var data = JObject.Parse(File.ReadAllText("data.json"));
-            var index = data["Scores"]["Frenzy"].Select((x, index) => new { Time = x.Value<DateTime>("Time"), Node = x, Index = index })
-                                                   .Single(x => x.Time == bruh.Time)
-                                                   .Index;
-            data["Scores"]["Frenzy"][index].Remove();
-            File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
-            ReLoad();
+            if(DataGridMrdko.SelectedItem != null)
+            {
+                Models.FrenzySave bruh = DataGridMrdko.SelectedItem as Models.FrenzySave;
+                var data = JObject.Parse(File.ReadAllText("data.json"));
+                var index = data["Scores"]["Frenzy"].Select((x, index) => new { Time = x.Value<DateTime>("Time"), Node = x, Index = index })
+                                                       .Single(x => x.Time == bruh.Time)
+                                                       .Index;
+                data["Scores"]["Frenzy"][index].Remove();
+                File.WriteAllText("data.json", JsonConvert.SerializeObject(data, Formatting.Indented));
+                ReLoad();
+            }
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)

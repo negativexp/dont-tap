@@ -83,6 +83,7 @@ namespace donttapNewDesign.Pages.Endurence
             }
             else
             {
+                Classes.CreateData.Create();
                 Classes.CreateEndurenceSettings.Create(clicks);
                 _mainwindow.ChangeContent(6);
             }

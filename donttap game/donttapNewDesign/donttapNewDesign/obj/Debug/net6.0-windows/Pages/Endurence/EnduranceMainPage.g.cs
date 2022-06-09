@@ -157,7 +157,7 @@ namespace donttapNewDesign.Pages.Endurence {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/donttapNewDesign;component/pages/endurence/endurancemainpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DONT TAP;component/pages/endurence/endurancemainpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\Endurence\EnduranceMainPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

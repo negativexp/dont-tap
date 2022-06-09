@@ -10,21 +10,23 @@
         <sys:Double x:Key="Width">500</sys:Double>
         <!--grid for dragging-->
         <Style x:Key="MoveableControl" TargetType="{x:Type ContentControl}">
-            <Setter Property="Height" Value="50"/>
+            <Setter Property="Height" Value="40"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate>
                         <Border MouseDown="Border_MouseDown">
                             <Border.Background>
-                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <LinearGradientBrush StartPoint="0 0" EndPoint="0 1">
                                     <GradientStop Color="#7160E8" Offset="0.0"/>
-                                    <GradientStop Color="White" Offset="1"/>
+                                    <GradientStop Color="White" Offset="0.9"/>
                                 </LinearGradientBrush>
                             </Border.Background>
                             <Grid>
-                                <Button Style="{DynamicResource _ButtonTemplate}" Click="Button__Click"/>
-                                <Button Style="{DynamicResource xButtonTemplate}" Click="ButtonX_Click"/>
+                                <Button Style="{DynamicResource _ButtonTemplate}" Click="Button__Click"
+                                        VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 45 0"/>
+                                <Button Style="{DynamicResource xButtonTemplate}" Click="ButtonX_Click"
+                                        VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 15 0"/>
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -34,7 +36,7 @@
         <!--Border title-->
         <Style x:Key="TitleBorderTemplate" TargetType="Border">
             <Setter Property="Background" Value="#FDFDFD"/>
-            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="CornerRadius" Value="15"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="Margin" Value="-2"/>
@@ -56,8 +58,6 @@
             <Setter Property="Content" Value="X"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
-            <!--<Setter Property="Margin" Value="0 5 20 0"/>-->
-            <Setter Property="Margin" Value="0,10,20,0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -81,8 +81,6 @@
             <Setter Property="Content" Value="_"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
-            <!--<Setter Property="Margin" Value="0 5 20 0"/>-->
-            <Setter Property="Margin" Value="0,10,50,0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">

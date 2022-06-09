@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "donttapNewDesign", "donttapNewDesign\donttapNewDesign.csproj", "{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DONT TAP", "donttapNewDesign\DONT TAP.csproj", "{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{EC4833FE-F39C-447B-A95B-7334291C788D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7CCCDAC-B229-4BB6-9F84-B1633260B6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4833FE-F39C-447B-A95B-7334291C788D}.Debug|Any CPU.ActiveCfg = Debug
+		{EC4833FE-F39C-447B-A95B-7334291C788D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

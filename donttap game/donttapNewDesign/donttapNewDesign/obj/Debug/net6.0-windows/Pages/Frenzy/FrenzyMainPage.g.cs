@@ -157,7 +157,7 @@ namespace donttapNewDesign.Pages.Frenzy {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/donttapNewDesign;component/pages/frenzy/frenzymainpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DONT TAP;component/pages/frenzy/frenzymainpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\Frenzy\FrenzyMainPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

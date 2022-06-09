@@ -53,9 +53,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matyas.schuller\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\donttapNewDesign.csproj",
-      "projectName": "donttapNewDesign",
-      "projectPath": "C:\\Users\\matyas.schuller\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\donttapNewDesign.csproj",
+      "projectUniqueName": "C:\\Users\\matyas.schuller\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\DONT TAP.csproj",
+      "projectName": "DONT TAP",
+      "projectPath": "C:\\Users\\matyas.schuller\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\DONT TAP.csproj",
       "packagesPath": "C:\\Users\\matyas.schuller\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\matyas.schuller\\Documents\\GitHub\\dont-tap\\donttap game\\donttapNewDesign\\donttapNewDesign\\obj\\",
       "projectStyle": "PackageReference",

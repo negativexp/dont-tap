@@ -1,0 +1,43 @@
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Release\net6.0-windows\DONT TAP.exe
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Release\net6.0-windows\DONT TAP.deps.json
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Release\net6.0-windows\DONT TAP.runtimeconfig.json
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Release\net6.0-windows\DONT TAP.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Release\net6.0-windows\DONT TAP.pdb
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Release\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.csproj.AssemblyReference.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\MainWindow.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\AboutPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Endurence\EnduranceGame.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Endurence\EnduranceLeaderboardPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Endurence\EnduranceMainPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Frenzy\FrenzyGame.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Frenzy\FrenzyLeaderboardPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Frenzy\FrenzyMainPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\MenuPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\SettingsPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\App.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP_MarkupCompile.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP_MarkupCompile.lref
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\App.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\MainWindow.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\AboutPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Endurence\EnduranceGame.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Endurence\EnduranceLeaderboardPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Endurence\EnduranceMainPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Frenzy\FrenzyGame.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Frenzy\FrenzyLeaderboardPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\Frenzy\FrenzyMainPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\MenuPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\Pages\SettingsPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.g.resources
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.AssemblyInfoInputs.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.AssemblyInfo.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.csproj.CoreCompileInputs.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.csproj.CopyComplete
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\refint\DONT TAP.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.pdb
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP.genruntimeconfig.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\ref\DONT TAP.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Release\net6.0-windows\DONT TAP_Content.g.cs

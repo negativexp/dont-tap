@@ -1,0 +1,41 @@
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.csproj.AssemblyReference.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\AboutPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Endurence\EnduranceGame.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Endurence\EnduranceLeaderboardPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Endurence\EnduranceMainPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Frenzy\FrenzyGame.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Frenzy\FrenzyLeaderboardPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Frenzy\FrenzyMainPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\MenuPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\SettingsPage.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\AboutPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Endurence\EnduranceGame.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Endurence\EnduranceLeaderboardPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Endurence\EnduranceMainPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Frenzy\FrenzyGame.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Frenzy\FrenzyLeaderboardPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\Frenzy\FrenzyMainPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\MenuPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\Pages\SettingsPage.baml
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.AssemblyInfoInputs.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.AssemblyInfo.cs
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.csproj.CoreCompileInputs.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.csproj.CopyComplete
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\donttapNewDesign.genruntimeconfig.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\DON'T TAP.exe
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\DON'T TAP.deps.json
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\DON'T TAP.runtimeconfig.json
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\DON'T TAP.runtimeconfig.dev.json
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\DON'T TAP.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\bin\Debug\netcoreapp3.1\DON'T TAP.pdb
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\DON'T TAP_MarkupCompile.cache
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\DON'T TAP_MarkupCompile.lref
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\DON'T TAP.g.resources
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\DON'T TAP.dll
+C:\Users\matyas.schuller\Documents\GitHub\dont-tap\donttap game\donttapNewDesign\donttapNewDesign\obj\Debug\netcoreapp3.1\DON'T TAP.pdb
