@@ -1,0 +1,17 @@
+{
+  "Scores": {
+    "Endurance": [],
+    "Frenzy": []
+  },
+  "Settings": {
+    "Boardsize": 4,
+    "Boxsize": 165,
+    "Spacing": 1
+  },
+  "EnduranceSettings": {
+    "Clicks": 40
+  },
+  "FrenzySettings": {
+    "GameTime": 30
+  }
+}
