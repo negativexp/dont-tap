@@ -20,10 +20,14 @@
             <!--title-->
             <Border Style="{StaticResource TitleBorderTemplate}">
                 <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="62*"/>
+                        <RowDefinition Height="97*"/>
+                    </Grid.RowDefinitions>
                     <ContentControl Style="{StaticResource MoveableControl}">
                     </ContentControl>
-                    <TextBlock Name="TextBlockTitle" Text="DON'T TAP!" VerticalAlignment="Center" HorizontalAlignment="Center"
-                               FontSize="50" Margin="0 0 0 10">
+                    <TextBlock Name="TextBlockTitle" Text="DON'T TAP!" VerticalAlignment="Top" HorizontalAlignment="Center"
+                               FontSize="50" Margin="0,41,0,0" Grid.RowSpan="2">
                         <TextBlock.Triggers>
                             <EventTrigger RoutedEvent="Loaded">
                                 <BeginStoryboard>
@@ -37,8 +41,8 @@
                             </EventTrigger>
                         </TextBlock.Triggers>
                     </TextBlock>
-                    <TextBlock Name="TextBlockTitleUnderText" Text="Advanced" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                               Margin="20" FontSize="16">
+                    <TextBlock Name="TextBlockTitleUnderText" Text="Advanced" VerticalAlignment="Top" HorizontalAlignment="Center"
+                               Margin="0,56,0,0" FontSize="16" Grid.Row="1">
                         <TextBlock.Triggers>
                             <EventTrigger RoutedEvent="Loaded">
                                 <BeginStoryboard>
@@ -54,7 +58,7 @@
                     </TextBlock>
                 </Grid>
             </Border>
-            
+
             <!--Buttons-->
             <Grid Grid.Row="1">
                 <!--left button-->

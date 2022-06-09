@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DONT TAP", "donttapNewDesig
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupHomePC", "SetupHomePC\SetupHomePC.vdproj", "{97A5D155-EC97-411F-82C8-AE17E4D9A048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -23,6 +25,9 @@ Global
 		{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}.All|Any CPU.ActiveCfg = Debug
 		{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}.Debug|Any CPU.ActiveCfg = Debug
 		{D6E4BA97-0859-4E48-9BE6-72BA77B37E84}.Release|Any CPU.ActiveCfg = Release
+		{97A5D155-EC97-411F-82C8-AE17E4D9A048}.All|Any CPU.ActiveCfg = Debug
+		{97A5D155-EC97-411F-82C8-AE17E4D9A048}.Debug|Any CPU.ActiveCfg = Debug
+		{97A5D155-EC97-411F-82C8-AE17E4D9A048}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
