@@ -15,11 +15,12 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate>
-                        <Border MouseDown="Border_MouseDown" CornerRadius="13.9">
+                        <Border MouseDown="Border_MouseDown" CornerRadius="15" BorderThickness="2 2 2 0" BorderBrush="Black"
+                                Margin="-2">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0 0" EndPoint="0 1">
                                     <GradientStop Color="#7160E8" Offset="0.0"/>
-                                    <GradientStop Color="White" Offset="0.9"/>
+                                    <GradientStop Color="White" Offset="1.0"/>
                                 </LinearGradientBrush>
                             </Border.Background>
                             <Grid>
